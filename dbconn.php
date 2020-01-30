@@ -11,4 +11,5 @@
     }
     // $conarr is an array of values of connection string
     print_r($conarr); 
+    print_r($conn);
 ?>
