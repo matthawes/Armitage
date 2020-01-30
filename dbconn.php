@@ -10,6 +10,8 @@
         $conarr[$k] = substr($value,strpos($value,'=')+1);
     }
     // $conarr is an array of values of connection string
-    print_r($conarr); 
-    print_r($conn);
+    print_r($conarr[1]);
+    print_r($conarr[2]);
+    print_r($conarr[3]);
+    print_r($conarr[4]);
 ?>
