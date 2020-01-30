@@ -1,24 +1,24 @@
 <?php 
-//create database connection info in an array
-$db['db_host'] = "127.0.0.1:50642";
-$db['db_user'] = "azure";
-$db['db_pass'] = "6#vWHD_$";
-$db['db_db'] = "localdb";
-$db['db_port'] = "8889";
+//create database connection info
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
-//for each key convert to uppercase and create a constant
-foreach($db as $key => $value){
-define(strtoupper($key), $value);
+// Parsing connnection string
+foreach ($_SERVER as $key => $value) {
+    if (strpos($key, "MYSQLCONNSTR_") !== 0) {
+        continue;
+    }
+    
+    $servername = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+    $dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
+    $username = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+    $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
 //connect to a database
-$connect = mysqli_connect(
-DB_HOST,
-DB_USER,
-DB_PASS,
-DB_DB,
-DB_PORT
-);
+$connect = mysqli_connect($servername, $username, $password, $dbname);
 
 $query = "SET NAMES utf8";
 
