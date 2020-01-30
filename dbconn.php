@@ -1,17 +1,28 @@
-<?php 
-    //below  will give the whole connectionstring in a single string
-    $conn = getenv("MYSQLCONNSTR_localdb"); 
+<?php
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
-    //Let's split it and decorate it in an array
-    $conarr2 = explode(";",$conn); 
-    $conarr = array();
-    foreach($conarr2 as $key=>$value){
-        $k = substr($value,0,strpos($value,'='));
-        $conarr[$k] = substr($value,strpos($value,'=')+1);
+// Parsing connnection string
+foreach ($_SERVER as $key => $value) {
+    if (strpos($key, "MYSQLCONNSTR_") !== 0) {
+        continue;
     }
-    // $conarr is an array of values of connection string
-    print($conarr[1]);
-    print($conarr[2]);
-    print($conarr[3]);
-    print($conarr[4]);
+    
+    $servername = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+    $dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
+    $username = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+    $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+}
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "connection successful<br/>";
+}
+$conn->close();
 ?>
