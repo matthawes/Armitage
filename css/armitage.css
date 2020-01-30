@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn-warning{
+	background-color: #ff9c00;
+		border-color: #ff9c00;
+}
+.bg-warning{
+	background-color: #ff9c00 !important;
+}
