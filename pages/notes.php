@@ -188,4 +188,4 @@ if(!isset($_SESSION['user_id'])){
 	};
 </script>
 	
-<?php include "../pages/footer.php"; ?>
+<?php include "../pages/footer.php"?>
