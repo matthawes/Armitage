@@ -373,4 +373,4 @@ function toggleDataSeries(e) {
 
   
 
-<?php include "../footer.php"?>
+<?php include "../pages/footer.php"?>
