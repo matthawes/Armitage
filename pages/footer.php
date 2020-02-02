@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
 
           <div class="col-lg-2 col-md-6 footer-info">
-          <img src="img/Armitage_logo.jpg" class="img-fluid" alt="Armitage Accounting" style="max-width: 150px;"/> </div>
+          <img src="../img/Armitage_logo.jpg" class="img-fluid" alt="Armitage Accounting" style="max-width: 150px;"/> </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
