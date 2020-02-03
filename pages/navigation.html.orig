@@ -2,7 +2,7 @@
 <html lang="en"><!-- InstanceBegin template="/Templates/index3.dwt" codeOutsideHTMLIsLocked="false" --><head>
   <meta charset="utf-8">
   <!-- InstanceBeginEditable name="doctitle" -->
-  <title>rmitage Accounting Alcohol Inventory</title>
+  <title>Armitage Accounting</title>
   <!-- InstanceEndEditable -->
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
    <!-- InstanceBeginEditable name="metas" -->
@@ -24,9 +24,8 @@
   <!-- Libraries CSS Files -->
   <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="../lib/animate/animate.min.css" rel="stylesheet">
-  <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="../css/ionicons.min.css" rel="stylesheet">
+ 
 
   <!-- Main Stylesheet File -->
   <link href="../css/style.css" rel="stylesheet">
@@ -42,7 +41,7 @@
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <div class="navbar-collapse collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
              <li class="nav-item">
                 <a class="nav-link" href="dashboard.php">Dashboard</a>
