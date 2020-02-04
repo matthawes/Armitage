@@ -24,9 +24,9 @@ if(!isset($_SESSION['user_id'])){
 	  
 	if ($_SERVER[REQUEST_METHOD]=="POST") {
 		
-		$selectValue = real_escape_string($connect, $_POST["idValue"]);
+		$selectValue = $_POST["idValue"];
 
-		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice WHERE invoice_id=".$selectValue." ORDER BY invoice_id ASC";
+		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice WHERE invoice_id=".real_escape_string($connect, $selectValue)." ORDER BY invoice_id ASC";
 
 		$invoice_result = mysqli_query($connect, $invoice_query);
 		
