@@ -9,7 +9,7 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <body>
 
-  
+  <script type="text/javascript">
 
   <main id="main">
 
