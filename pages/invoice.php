@@ -24,7 +24,7 @@ if(!isset($_SESSION['user_id'])){
 
 	?>
 
-	<table>
+	<table border="1">
 
 		<?php
 
