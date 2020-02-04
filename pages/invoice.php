@@ -7,7 +7,7 @@ if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
 ?>
- <script type="text/javascript">
+
 <body>
 
  
