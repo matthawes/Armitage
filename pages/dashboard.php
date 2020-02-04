@@ -1,4 +1,4 @@
-<?php include "navigation.php"; ?>
+<?php include "navigation.html"; ?>
 <?php session_start(); ?>
 
 <?php
@@ -373,4 +373,4 @@ function toggleDataSeries(e) {
 
   
 
-<?php include "../footer.php"?>
+<?php include "../pages/footer.php"?>
