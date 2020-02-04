@@ -15,6 +15,10 @@ if(!isset($_SESSION['user_id'])){
   
 
   <main id="main">
+	<form method="post" action="invoice.php">
+		Invoice ID: <input type="text" name="id"><br/>
+		<input type="submit" name="submit" value="View Invoice">
+	</form>
 
 	<?php
 
