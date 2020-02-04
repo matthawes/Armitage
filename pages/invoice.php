@@ -34,7 +34,7 @@ if(!isset($_SESSION['user_id'])){
 
 			while ($row = mysqli_fetch_array($invoice_result)){
 
-				echo "<tr><td>".$row["invoice_id"]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
+				echo "<tr><td>".$row["invoice_id"]."</td><td>".$row["invoice_number"]."</td><td>".$row["total_amount"]."</td></tr>";
 
 			}
 
