@@ -21,17 +21,14 @@ if(!isset($_SESSION['user_id'])){
 	</form>
 
 	<?php
+	  
+	if ($_SERVER[REQUEST_METHOD]=="POST") {
 
 		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice ORDER BY invoice_id ASC";
 
 		$invoice_result = mysqli_query($connect, $invoice_query);
-
-	?>
-
-	<table border="1">
-		<tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>
-
-		<?php
+		
+		echo "<table border='1'><tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>";
 
 			while ($row = mysqli_fetch_array($invoice_result)){
 
@@ -39,9 +36,9 @@ if(!isset($_SESSION['user_id'])){
 
 			}
 
-		?>
-
-	</table>
+		echo "</table>";
+	}
+	?>
 
 
 
