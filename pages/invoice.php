@@ -16,15 +16,17 @@ if(!isset($_SESSION['user_id'])){
 
   <main id="main">
 	<form method="post" action="invoice.php">
-		Invoice ID: <input type="text" name="id"><br/>
+		Invoice ID: <input type="text" name="idValue"> Try 1-10 here!<br/>
 		<input type="submit" name="submit" value="View Invoice">
 	</form>
 
 	<?php
 	  
 	if ($_SERVER[REQUEST_METHOD]=="POST") {
+		
+		$selectValue=$_POST["idValue"];
 
-		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice ORDER BY invoice_id ASC";
+		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice WHERE invoice_id=".$selectValue." ORDER BY invoice_id ASC";
 
 		$invoice_result = mysqli_query($connect, $invoice_query);
 		
