@@ -25,6 +25,7 @@ if(!isset($_SESSION['user_id'])){
 	?>
 
 	<table border="1">
+		<tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>
 
 		<?php
 
