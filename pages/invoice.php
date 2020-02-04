@@ -1,3 +1,4 @@
+<?php include "config.php"; ?>
 <?php session_start(); ?>
 
 <?php
@@ -14,6 +15,30 @@ if(!isset($_SESSION['user_id'])){
   
 
   <main id="main">
+
+	<?php
+
+		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice ORDER BY invoice_id ASC";
+
+		$invoice_result = mysqli_query($connect, $invoice_query);
+
+	?>
+
+	<table>
+
+		<?php
+
+			while ($row = mysqli_fetch_array($invoice_result)){
+
+				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
+
+			}
+
+		?>
+
+	</table>
+
+
 
     <!--==========================
       Frequently Asked Questions Section
