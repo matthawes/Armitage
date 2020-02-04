@@ -26,7 +26,7 @@ if(!isset($_SESSION['user_id'])){
 		
 		$selectValue = mysqli_real_escape_string($connect, $_POST["idValue"]);
 
-		$invoice_query = "SELECT invoice_id, invoice_number, total_amount FROM invoice WHERE invoice_id='".$selectValue."' ORDER BY invoice_id ASC";
+		$invoice_query = "SELECT * FROM invoice WHERE invoice_id='".$selectValue."' ORDER BY invoice_id ASC";
 
 		$invoice_result = mysqli_query($connect, $invoice_query);
 		
@@ -34,7 +34,7 @@ if(!isset($_SESSION['user_id'])){
 
 			while ($row = mysqli_fetch_array($invoice_result)){
 
-				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
+				echo "<tr><td>".$row["invoice_id"]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
 
 			}
 
