@@ -43,6 +43,7 @@
                         $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
                         $invoice_query = "SELECT * FROM invoice WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
                         $invoice_result = mysqli_query($connect, $invoice_query);
+                        $selectedInvoice = mysqli_fetch_array($invoice_result);
 
                         echo "<table border='1'><tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>";
                                 while ($row = mysqli_fetch_array($invoice_result)){
@@ -52,7 +53,7 @@
                 }
                 ?>
                 <?php
-                echo $row[1];
+                echo $selectedInvoice[1];
                     ?>
 
 <!-- Select Basic -->
