@@ -1,30 +1,115 @@
 <?php include "../config.php"; ?>
 <?php session_start(); ?>
-
-<?php
-
-if(!isset($_SESSION['user_id'])){
-    header("Location: ../index.php");
-}
-?>
+<?php if(!isset($_SESSION['user_id'])){header("Location: ../index.php");} ?>
 <?php include "navigation.html"; ?>
-
 
 <body>
 
-  
+    <main id="main">
+        
+        <form class="form-horizontal" method="post" action="invoice.php">
+            <fieldset>
+                <legend>Invoice</legend>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="invoiceNum">Invoice Number</label>
+                    <div class="col-md-4">
+                        <select id="invoiceNum" name="invoiceNum" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="openInvoice"></label>
+                    <div class="col-md-4">
+                        <input class="btn btn-primary" type="submit" name="submit" value="View Invoice">
+                    </div>
+                </div>
 
-  <main id="main">
-	<form method="post" action="invoice.php">
-		Invoice ID: <input type="text" name="idValue"> Try 1-10 here!<br/>
-		<input type="submit" name="submit" value="View Invoice">
-	</form>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="vendor">Vendor</label>
+  <div class="col-md-4">
+    <select id="vendor" name="vendor" class="form-control">
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="date">Date</label>  
+  <div class="col-md-4">
+  <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="address">Address</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="address" name="address"></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="amountDue">Amount Due</label>  
+  <div class="col-md-4">
+  <input id="amountDue" name="amountDue" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="terms">Terms</label>  
+  <div class="col-md-4">
+  <input id="terms" name="terms" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="dueDate">Due Date</label>  
+  <div class="col-md-4">
+  <input id="dueDate" name="dueDate" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="paymentMethod">Payment Method</label>  
+  <div class="col-md-4">
+  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="memo">Memo</label>  
+  <div class="col-md-5">
+  <input id="memo" name="memo" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+        
 
 	<?php
 	  
 	if ($_SERVER[REQUEST_METHOD]=="POST") {
 		
-		$selectValue = mysqli_real_escape_string($connect, $_POST["idValue"]);
+		$selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
 
 		$invoice_query = "SELECT * FROM invoice WHERE invoice_id='".$selectValue."' ORDER BY invoice_id ASC";
 
