@@ -20,6 +20,7 @@
                     <label class="col-md-4 control-label" for="invoiceNum">Invoice Number</label>
                     <div class="col-md-4">
                         <select id="invoiceNum" name="invoiceNum" class="form-control">
+                            <option value="">Select an invoice</option>
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
                                     echo "<option value='".$invoiceNum[0]."'";
