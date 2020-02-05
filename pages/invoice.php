@@ -11,16 +11,16 @@
             $invoice_query = "SELECT invoice.*, vendor.payment_method_id, vendor.vendor_name, vendor.address_1, term.term
                     FROM invoice 
                     LEFT JOIN vendor ON vendor.vendor_id = invoice.vendor_id 
-                    LEFT JOIN term ON term.term_id = invoice.term_id
-                        (SELECT payment_method.payment_method WHERE vendor.payment_method_id = payment_method.payment_method_id) 
-                    WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
+                    LEFT JOIN term ON term.term_id = invoice.term_id 
+                    WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC 
+                    (SELECT payment_method.payment_method WHERE vendor.payment_method_id = payment_method.payment_method_id)";
             $invoice_result = mysqli_query($connect, $invoice_query);
             $selectedInvoice = mysqli_fetch_array($invoice_result);
 }
 ?>
 
 <body>
-6
+7
     <main id="main">
         
         <form class="form-horizontal" method="post" action="invoice.php">
