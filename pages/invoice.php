@@ -8,7 +8,7 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER[REQUEST_METHOD]=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-            $invoice_query = "SELECT invoice.*, company.company_name 
+            $invoice_query = "SELECT invoice.*, company.company_name, company.address_1 
                     FROM invoice 
                     Inner Join company on company.company_id = invoice.company_id
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
@@ -61,7 +61,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="date">Date</label>  
   <div class="col-md-4">
-  <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+  <input id="date" name="date" type="text" placeholder="<?php echo $selectedInvoice[invoice_date]; ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -70,7 +70,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="address">Address</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="address" name="address"></textarea>
+    <textarea class="form-control" id="address" name="address"><?php echo $selectedInvoice[address_1]; ?></textarea>
   </div>
 </div>
 
@@ -78,7 +78,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="amountDue">Amount Due</label>  
   <div class="col-md-4">
-  <input id="amountDue" name="amountDue" type="text" placeholder="" class="form-control input-md">
+  <input id="amountDue" name="amountDue" type="text" placeholder="<?php echo $selectedInvoice[total_amount]; ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -96,7 +96,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="dueDate">Due Date</label>  
   <div class="col-md-4">
-  <input id="dueDate" name="dueDate" type="text" placeholder="" class="form-control input-md">
+  <input id="dueDate" name="dueDate" type="text" placeholder="<?php echo $selectedInvoice[due_date]; ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -114,7 +114,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="memo">Memo</label>  
   <div class="col-md-5">
-  <input id="memo" name="memo" type="text" placeholder="" class="form-control input-md">
+  <input id="memo" name="memo" type="text" placeholder="<?php echo $selectedInvoice[memo]; ?>" class="form-control input-md">
     
   </div>
 </div>
