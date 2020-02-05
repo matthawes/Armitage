@@ -20,7 +20,7 @@
 ?>
 
 <body>
-5
+6
     <main id="main">
         
         <form class="form-horizontal" method="post" action="invoice.php">
@@ -107,7 +107,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="paymentMethod">Payment Method</label>  
   <div class="col-md-4">
-  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="payment_method" class="form-control input-md">
+  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?php echo $selectedInvoice[payment_method]; ?>" class="form-control input-md">
     
   </div>
 </div>
