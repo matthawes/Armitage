@@ -8,7 +8,7 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER[REQUEST_METHOD]=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-            $invoice_query = "SELECT invoice.*, vendor.vendor_name, vendor.address_1, term.term
+            $invoice_query = "SELECT invoice.*, vendor.payment_method_id, vendor.vendor_name, vendor.address_1, term.term
                     FROM invoice 
                     LEFT JOIN vendor ON vendor.vendor_id = invoice.vendor_id 
                     LEFT JOIN payment_method ON vendor.payment_method_id = vendor.payment_method_id 
