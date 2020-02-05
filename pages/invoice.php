@@ -52,7 +52,7 @@
                 }
                 ?>
                 <?php
-                echo $invoice_result[1];
+                echo $row[1];
                     ?>
 
 <!-- Select Basic -->
