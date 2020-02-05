@@ -11,7 +11,7 @@
             $invoice_query = "SELECT invoice.*, vendor.vendor_name, vendor.address_1, term.term 
                     FROM invoice 
                     LEFT JOIN vendor ON vendor.vendor_id = invoice.vendor_id
-                    LEFT JOIN term ON term.term_id = invoice.term_id
+                    
                     
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
             $invoice_result = mysqli_query($connect, $invoice_query);
