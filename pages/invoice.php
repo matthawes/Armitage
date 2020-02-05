@@ -49,6 +49,7 @@
 
                 <?php
                 echo $selectedInvoice[invoice_number];
+                echo $selectedInvoice[company_name];
                     ?>
 
 <!-- Select Basic -->
