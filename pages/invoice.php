@@ -4,7 +4,7 @@
 <?php include "navigation.html"; ?>
 <?php
     $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-    $invoiceNum_query = "SELECT invoice_number FROM invoice ORDER BY invoice_number ASC";
+    $invoiceNum_query = "SELECT invoice_number FROM invoice WHERE invoice_number <> '' ORDER BY invoice_number ASC";
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
 ?>
 
@@ -22,7 +22,9 @@
                         <select id="invoiceNum" name="invoiceNum" class="form-control">
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
-                                    echo "<option value='".$invoiceNum[0]."'>".$invoiceNum[0]."</option>";
+                                    echo "<option value='".$invoiceNum[0]."'";
+                                    if ($selectValue == $invoiceNum[0]) {echo " selected ";}
+                                    echo ">".$invoiceNum[0]."</option>";
                                 }
                             ?>
                         </select>
@@ -119,7 +121,7 @@
 		
 		$selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
 
-		$invoice_query = "SELECT * FROM invoice WHERE invoice_id='".$selectValue."' ORDER BY invoice_id ASC";
+		$invoice_query = "SELECT * FROM invoice WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
 
 		$invoice_result = mysqli_query($connect, $invoice_query);
 		
