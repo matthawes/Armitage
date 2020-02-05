@@ -2,6 +2,12 @@
 <?php session_start(); ?>
 <?php if(!isset($_SESSION['user_id'])){header("Location: ../index.php");} ?>
 <?php include "navigation.html"; ?>
+<?php
+    $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
+    $invoiceNum_query = "SELECT invoice_number FROM invoice ORDER BY invoice_number ASC";
+    $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
+?>
+
 
 <body>
 
@@ -14,9 +20,11 @@
                     <label class="col-md-4 control-label" for="invoiceNum">Invoice Number</label>
                     <div class="col-md-4">
                         <select id="invoiceNum" name="invoiceNum" class="form-control">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <?php
+                                while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
+                                    echo "<option value='".$invoiceNum[0]."'>".$invoiceNum[0]."</option>";
+                                }
+                            ?>
                         </select>
                     </div>
                 </div>
