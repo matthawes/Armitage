@@ -8,7 +8,6 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
 ?>
 
-
 <body>
 
     <main id="main">
@@ -37,6 +36,24 @@
                         <input class="btn btn-primary" type="submit" name="submit" value="View Invoice">
                     </div>
                 </div>
+
+                <?php
+
+                if ($_SERVER[REQUEST_METHOD]=="POST") {
+                        $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
+                        $invoice_query = "SELECT * FROM invoice WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
+                        $invoice_result = mysqli_query($connect, $invoice_query);
+
+                        echo "<table border='1'><tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>";
+                                while ($row = mysqli_fetch_array($invoice_result)){
+                                        echo "<tr><td>".$row["invoice_id"]."</td><td>".$row["invoice_number"]."</td><td>".$row["total_amount"]."</td></tr>";
+                                }
+                        echo "</table>";
+                }
+                ?>
+                <?php
+                echo $invoice_result[1];
+                    ?>
 
 <!-- Select Basic -->
 <div class="form-group">
@@ -116,27 +133,7 @@
 
         
 
-	<?php
-	  
-	if ($_SERVER[REQUEST_METHOD]=="POST") {
-		
-		$selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
 
-		$invoice_query = "SELECT * FROM invoice WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
-
-		$invoice_result = mysqli_query($connect, $invoice_query);
-		
-		echo "<table border='1'><tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>";
-
-			while ($row = mysqli_fetch_array($invoice_result)){
-
-				echo "<tr><td>".$row["invoice_id"]."</td><td>".$row["invoice_number"]."</td><td>".$row["total_amount"]."</td></tr>";
-
-			}
-
-		echo "</table>";
-	}
-	?>
 
 
 
