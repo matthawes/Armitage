@@ -53,7 +53,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="vendor">Vendor</label>
   <div class="col-md-4">
-    <input id="vendor" name="vendor" type="text" placeholder="<?php echo $selectedInvoice[vendor_name]; ?>" class="form-control input-md">
+    <input id="vendor" name="vendor" type="text" placeholder="<?php echo $selectedInvoice[vendor_id]; ?>" class="form-control input-md">
   </div>
 </div>
 
