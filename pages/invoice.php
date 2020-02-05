@@ -8,9 +8,8 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER[REQUEST_METHOD]=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-            $invoice_query = "SELECT invoice.*, vendor.vendor_name, vendor.address_1
+            $invoice_query = "SELECT invoice.*
                     FROM invoice 
-                    LEFT JOIN vendor ON vendor.vendor_id = invoice.vendor_id
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
             $invoice_result = mysqli_query($connect, $invoice_query);
             $selectedInvoice = mysqli_fetch_array($invoice_result);
@@ -19,7 +18,7 @@
 
 <body>
 
-    <main id="main">
+    <main id="main">1
         
         <form class="form-horizontal" method="post" action="invoice.php">
             <fieldset>
