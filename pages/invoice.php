@@ -47,19 +47,13 @@
                 </div>
 
 
-                <?php
-                echo $selectedInvoice[invoice_number];
-                echo $selectedInvoice[company_name];
-                    ?>
+                
 
 <!-- Select Basic -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="vendor">Vendor</label>
   <div class="col-md-4">
-    <select id="vendor" name="vendor" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
-    </select>
+    <input id="vendor" name="vendor" type="text" placeholder="<?php echo $selectedInvoice[company_name]; ?>" class="form-control input-md">
   </div>
 </div>
 
