@@ -6,6 +6,12 @@
     $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
     $invoiceNum_query = "SELECT invoice_number FROM invoice WHERE invoice_number <> '' ORDER BY invoice_number ASC";
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
+    if ($_SERVER[REQUEST_METHOD]=="POST") {
+            $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
+            $invoice_query = "SELECT * FROM invoice WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
+            $invoice_result = mysqli_query($connect, $invoice_query);
+            $selectedInvoice = mysqli_fetch_array($invoice_result);
+}
 ?>
 
 <body>
@@ -37,23 +43,9 @@
                     </div>
                 </div>
 
-                <?php
 
-                if ($_SERVER[REQUEST_METHOD]=="POST") {
-                        $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-                        $invoice_query = "SELECT * FROM invoice WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
-                        $invoice_result = mysqli_query($connect, $invoice_query);
-                        $selectedInvoice = mysqli_fetch_array($invoice_result);
-
-                        echo "<table border='1'><tr><th>Invoice ID</th><th>Number</th><th>Amount</th></tr>";
-                                while ($row = mysqli_fetch_array($invoice_result)){
-                                        echo "<tr><td>".$row["invoice_id"]."</td><td>".$row["invoice_number"]."</td><td>".$row["total_amount"]."</td></tr>";
-                                }
-                        echo "</table>";
-                }
-                ?>
                 <?php
-                echo $selectedInvoice[1];
+                echo $selectedInvoice[invoice_number];
                     ?>
 
 <!-- Select Basic -->
