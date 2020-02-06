@@ -27,7 +27,7 @@
                     <fieldset>
                         <div class="section-header wow fadeInUp">
                             <legend class="section-title">INVOICE</legend>
-                            <span class="section-divider"></span>
+                            <hr class="wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.3s;">
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.2s">
                             <div class="col-2">
@@ -61,8 +61,8 @@
                                 <input class="btn btn-warning btn-md" type="submit" name="submit" value="View Invoice">
                             </div>
 			</div>        
-                        <span class="section-divider"></span>
-                        <div class="row wow fadeInUp" data-wow-delay="0.3s">
+                        <hr class="wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s;">
+                        <div class="row wow fadeInUp" data-wow-delay="0.4s">
                             <div class="col-4">
                                 <label class="control-label" for="memo">Address</label>
                                 <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
@@ -80,7 +80,7 @@
                                 <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="bg-yellow form-control">
                             </div>
                         </div>
-                        <span class="section-divider"></span>
+                        <hr class="wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s;">
                     </fieldset>
                 </form>
             </div>
