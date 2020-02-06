@@ -17,96 +17,75 @@
             $invoice_result = mysqli_query($connect, $invoice_query);
             $selectedInvoice = mysqli_fetch_array($invoice_result);
 }
-?>
-<!-- Really - look at the company more than vendor -->
+?><!-- Really - look at the company more than vendor for address and so on... -->
+
 <body>
-
     <main id="main">
-        
-    <section id="invoice">
-      <div class="container">
-<form method="post" action="invoice.php">
-            <fieldset>
-        <div class="section-header wow fadeInUp">
-          <legend class="section-title">INVOICE</legend>
-          <span class="section-divider"></span>
-        </div>
-          
-          
-  	    
-		  
-		<div class="row wow fadeInUp" data-wow-delay="0.2s">
-
-                    
-                    
-                    
-                    
-                    
-			<div class="col-2">
-                            <label class="control-label" for="vendor">Vendor</label>
-                            <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control">
-			</div>
-			
-			<div class="col-2">
+        <section id="invoice">
+            <div class="container">
+                <form method="post" action="invoice.php">
+                    <fieldset>
+                        <div class="section-header wow fadeInUp">
+                            <legend class="section-title">INVOICE</legend>
+                            <span class="section-divider"></span>
+                        </div>
+                        <div class="row wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="col-2">
+                                <label class="control-label" for="vendor">Vendor</label>
+                                <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control">
+                            </div>
+                            <div class="col-2">
 				<label class="control-label" for="date">Date</label>
                                 <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="bg-yellow form-control">
-			</div>
-			
-			<div class="col-2">
-  <label class="control-label" for="amountDue">Amount Due</label>  
-  
-  <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="bg-yellow form-control">
-			</div>
-                    <div class="col-2">
-                        
-                         <label class="control-label" for="terms">Terms</label>  
-
-  <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control"> 
-                        
-                    </div>
-						<div class="col-4">
+                            </div>
+                            <div class="col-2">
+                                <label class="control-label" for="amountDue">Amount Due</label>  
+                                <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="bg-yellow form-control">
+                            </div>
+                            <div class="col-2">
+                                <label class="control-label" for="terms">Terms</label>  
+                                <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control"> 
+                            </div>
+                            <div class="col-4">
 				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
                                 <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control col-6" style="display:inline;">
-                            <option value="">Select an invoice</option>
-                            <?php
-                                while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
-                                    echo "<option value='".$invoiceNum[0]."'";
-                                    if ($selectValue == $invoiceNum[0]) {echo " selected ";}
-                                    echo ">".$invoiceNum[0]."</option>";
-                                }
-                            ?>
-                        </select>
+                                    <option value="">Select an invoice</option>
+                                    <?php
+                                        while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
+                                            echo "<option value='".$invoiceNum[0]."'";
+                                            if ($selectValue == $invoiceNum[0]) {echo " selected ";}
+                                            echo ">".$invoiceNum[0]."</option>";
+                                        }
+                                    ?>
+                                </select>
                                 <input class="btn btn-warning btn-md" type="submit" name="submit" value="View Invoice">
-			</div>
-			
+                            </div>
 			</div>        
-
-                <div class="row wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-4"><label class="control-label" for="memo">Address</label>
-                        <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
-                    </div>
-
-                    <div class="col-2">  <label class="control-label" for="dueDate">Due Date</label>  
-  <input id="dueDate" name="dueDate" type="text" placeholder="<?= $selectedInvoice[due_date] ?? '' ?>" class="bg-yellow form-control"></div>
-                    <div class="col-2">  <label class="control-label" for="paymentMethod">Payment Method</label>  
-  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?= $selectedInvoice[payment_method] ?? '' ?>" class="bg-yellow form-control">
-    </div>                    <div class="col-4">
-                        <label class="control-label" for="memo">Memo</label> 
-                        <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="bg-yellow form-control">
-                    </div>
-                </div>         
-            
-
-          </fieldset>
-</form>
-        
-   </div>
-    </section>     
-        
-        
-        
-                  
-  </main>
-
+                        <span class="section-divider"></span>
+                        <div class="row wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="col-4">
+                                <label class="control-label" for="memo">Address</label>
+                                <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
+                            </div>
+                            <div class="col-2">
+                                <label class="control-label" for="dueDate">Due Date</label>
+                                <input id="dueDate" name="dueDate" type="text" placeholder="<?= $selectedInvoice[due_date] ?? '' ?>" class="bg-yellow form-control">
+                            </div>
+                            <div class="col-2">
+                                <label class="control-label" for="paymentMethod">Payment Method</label>
+                                <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?= $selectedInvoice[payment_method] ?? '' ?>" class="bg-yellow form-control">
+                            </div>
+                            <div class="col-4">
+                                <label class="control-label" for="memo">Memo</label>
+                                <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="bg-yellow form-control">
+                            </div>
+                        </div>
+                        <span class="section-divider"></span>
+                    </fieldset>
+                </form>
+            </div>
+        </section>     
+    </main>
 </body>
+
 <?php include "footer.php"; ?>
