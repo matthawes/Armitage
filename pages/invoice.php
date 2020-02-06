@@ -23,13 +23,22 @@
 
     <main id="main">
         
-        <form class="form-horizontal" method="post" action="invoice.php">
+    <section id="invoice">
+      <div class="container">
+<form method="post" action="invoice.php">
             <fieldset>
-                <legend>Invoice</legend>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="invoiceNum">Invoice Number</label>
-                    <div class="col-md-4">
-                        <select id="invoiceNum" name="invoiceNum" class="form-control">
+        <div class="section-header wow fadeInUp">
+          <legend class="section-title">INVOICE</legend>
+          <span class="section-divider"></span>
+        </div>
+          
+          
+  	    <h2 class="wow fadeInUp" data-wow-delay="0.2s">Bill to:</h2>
+		  
+		<div class="row wow fadeInUp" data-wow-delay="0.2s">
+						<div class="col-2">
+				<label class="text-center control-label" for="invoiceNum">Invoice #</label>
+				<select id="invoiceNum" name="invoiceNum" class="form-control">
                             <option value="">Select an invoice</option>
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
@@ -39,23 +48,36 @@
                                 }
                             ?>
                         </select>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="openInvoice"></label>
-                    <div class="col-md-4">
-                        <input class="btn btn-primary" type="submit" name="submit" value="View Invoice">
-                    </div>
-                </div>
+                                <input class="btn btn-primary" type="submit" name="submit" value="View Invoice">
+			</div>
+			<div class="col-6">
+				<textarea class="form-control bg-yellow" id="billToCo" rows="3">Kado No Mise&#013;&#010;33 N 1st Ave&#013;&#010;Minneapolis, MN 55401</textarea>
+			</div>
+			
+			<div class="col-2">
+				<h4 class="text-center">Date</h4>
+				<input class="form-control bg-yellow text-center" type="text" value="6/25/2019" id="billToDate">
+			</div>
+			
+			<div class="col-2">
+				<h4 class="text-center">Terms</h4>
+				<input class="form-control bg-yellow text-center" type="text" value="Net 15" id="billToTerms">
+			</div>
+			
 
+			
+			</div>        
 
-                
-
+            
+            
+            
+            
+       
 <!-- Select Basic -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="vendor">Vendor</label>
   <div class="col-md-4">
-    <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? 'z' ?>" class="form-control input-md">
+    <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="form-control input-md">
   </div>
 </div>
 
@@ -119,10 +141,41 @@
   <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="form-control input-md">
     
   </div>
-</div>
-
-</fieldset>
+</div>     
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </fieldset>
 </form>
+        
+   </div>
+    </section>     
+        
+        
+        
+        
+        
+        
+        
+
+
+
+                
+
+
+
 
         
 
@@ -133,38 +186,9 @@
     <!--==========================
       Frequently Asked Questions Section
     ============================-->
-    <section id="services">
-      <div class="container">
 
-        <div class="section-header wow fadeInUp">
-          <h3 class="section-title">INVOICE</h3>
-          <span class="section-divider"></span>
-        </div>
 		  
-	    <h2 class="wow fadeInUp" data-wow-delay="0.2s">Bill to:</h2>
-		  
-		<div class="row wow fadeInUp" data-wow-delay="0.2s">
-			
-			<div class="col-6">
-				<textarea class="form-control bg-yellow" id="billToCo" rows="3">Kado No Mise&#013;&#010;33 N 1st Ave&#013;&#010;Minneapolis, MN 55401</textarea>
-			</div>
-			
-			<div class="col-2">
-				<h4 class="text-center">Date</h4>
-				<input class="form-control bg-yellow text-center" type="text" value="6/25/2019" id="billToDate">
-			</div>
-			
-			<div class="col-2">
-				<h4 class="text-center">Terms</h4>
-				<input class="form-control bg-yellow text-center" type="text" value="Net 15" id="billToTerms">
-			</div>
-			
-			<div class="col-2">
-				<h4 class="text-center">Invoice #</h4>
-				<input class="form-control bg-yellow text-center" type="text" value="2580" id="billToInvoiceNo">
-			</div>
-			
-			</div>
+
 		  <hr class="wow fadeInRight" data-wow-delay="0.3s">	
 			<div class="row wow fadeInUp" data-wow-delay="0.4s">
 			
@@ -201,8 +225,7 @@
 			</div>
 
 		  </div>
-</div>
-    </section><!-- #faq -->
+<!-- #faq -->
 
   </main>
 
