@@ -38,7 +38,7 @@
 		<div class="row wow fadeInUp" data-wow-delay="0.2s">
 						<div class="col-4">
 				<label class="text-center control-label" for="invoiceNum">Invoice #</label>
-				<select id="invoiceNum" name="invoiceNum" class="form-control bg-yellow">
+				<select id="invoiceNum" name="invoiceNum" class="form-control bg-yellow form-control-sm">
                             <option value="">Select an invoice</option>
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
@@ -55,13 +55,14 @@
                     
                     
                     
-			<div class="col-4">
-				<textarea class="form-control bg-yellow" id="billToCo" rows="3">Kado No Mise&#013;&#010;33 N 1st Ave&#013;&#010;Minneapolis, MN 55401</textarea>
+			<div class="col-2">
+                            <label class="col-md-4 control-label" for="vendor">Vendor</label>
+                            <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="form-control input-md">
 			</div>
 			
 			<div class="col-2">
-				<h4 class="text-center">Date</h4>
-				<input class="form-control bg-yellow text-center" type="text" value="6/25/2019" id="billToDate">
+				<label class="col-md-4 control-label" for="date">Date</label>
+                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="form-control input-md">
 			</div>
 			
 			<div class="col-2">
@@ -80,17 +81,17 @@
        
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="vendor">Vendor</label>
+  
   <div class="col-md-4">
-    <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="form-control input-md">
+    
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="date">Date</label>  
+    
   <div class="col-md-4">
-  <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="form-control input-md">
+  
     
   </div>
 </div>
