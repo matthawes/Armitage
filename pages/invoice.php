@@ -8,7 +8,7 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER[REQUEST_METHOD]=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-            $invoice_query = "SELECT invoice.*, vendor.vendor_name, vendor.address_1, term.term, payment_method.payment_method
+            $invoice_query = "SELECT invoice.*, vendor.vendor_name, vendor.address_1, vendor.address_2, vendor.city, vendor.state, vendor.zip, term.term, payment_method.payment_method
                     FROM invoice 
                     LEFT JOIN vendor ON vendor.vendor_id = invoice.vendor_id 
                     LEFT JOIN payment_method ON payment_method.payment_method_id = vendor.payment_method_id 
@@ -18,7 +18,7 @@
             $selectedInvoice = mysqli_fetch_array($invoice_result);
 }
 ?>
-
+<!-- Really - look at the company more than vendor -->
 <body>
 
     <main id="main">
@@ -83,28 +83,24 @@
 
                 <div class="row wow fadeInUp" data-wow-delay="0.2s">
                     <div class="col-4">
-                        <textarea class="form-control" id="address" name="address">
-                                <?= $selectedInvoice[address_1].'&#013;&#010;' ?? '' ?>
-                                <?= $selectedInvoice[address_2].'&#013;&#010;' ?? '' ?>
-                                <?= $selectedInvoice[city].'&#013;' ?? '' ?>
-                                <?= $selectedInvoice[state].'&#013;' ?? '' ?>
+                        <textarea class="form-control bg-yellow" rows="4" id="address" name="address">
+                                <?= $selectedInvoice[address_1].'&#010;' ?? '' ?>
+                                <?= $selectedInvoice[address_2].'&#010;' ?? '' ?>
+                                <?= $selectedInvoice[city].' ' ?? '' ?>
+                                <?= $selectedInvoice[state].', ' ?? '' ?>
                                 <?= $selectedInvoice[zip] ?? '' ?>
                         </textarea>
                     </div>
+                    <div class="col-4">
+                        <label class="col-md-4 control-label" for="memo">Memo</label> 
+                        <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="form-control input-md">
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-2"></div>
                 </div>         
             
             
             
-
-
-
-<!-- Textarea -->
-<div class="form-group">
-  
-  <div class="col-md-4">                     
-    
-  </div>
-</div>
 
 
 
@@ -130,9 +126,9 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="memo">Memo</label>  
+   
   <div class="col-md-5">
-  <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="form-control input-md">
+  
     
   </div>
 </div>     
