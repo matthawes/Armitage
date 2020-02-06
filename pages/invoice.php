@@ -36,20 +36,7 @@
   	    
 		  
 		<div class="row wow fadeInUp" data-wow-delay="0.2s">
-						<div class="col-4">
-				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
-                                <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control col-6" style="display:inline;">
-                            <option value="">Select an invoice</option>
-                            <?php
-                                while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
-                                    echo "<option value='".$invoiceNum[0]."'";
-                                    if ($selectValue == $invoiceNum[0]) {echo " selected ";}
-                                    echo ">".$invoiceNum[0]."</option>";
-                                }
-                            ?>
-                        </select>
-                                <input class="btn btn-warning btn-md" type="submit" name="submit" value="View Invoice">
-			</div>
+
                     
                     
                     
@@ -77,11 +64,34 @@
   <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control"> 
                         
                     </div>
-
+						<div class="col-4">
+				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
+                                <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control col-6" style="display:inline;">
+                            <option value="">Select an invoice</option>
+                            <?php
+                                while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
+                                    echo "<option value='".$invoiceNum[0]."'";
+                                    if ($selectValue == $invoiceNum[0]) {echo " selected ";}
+                                    echo ">".$invoiceNum[0]."</option>";
+                                }
+                            ?>
+                        </select>
+                                <input class="btn btn-warning btn-md" type="submit" name="submit" value="View Invoice">
+			</div>
 			
 			</div>        
 
-            
+                <div class="row wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-4">
+                        <textarea class="form-control" id="address" name="address">
+                                <?= $selectedInvoice[address_1].'&#013;&#010;' ?? '' ?>
+                                <?= $selectedInvoice[address_2].'&#013;&#010;' ?? '' ?>
+                                <?= $selectedInvoice[city].'&#013;' ?? '' ?>
+                                <?= $selectedInvoice[state].'&#013;' ?? '' ?>
+                                <?= $selectedInvoice[zip] ?? '' ?>
+                        </textarea>
+                    </div>
+                </div>         
             
             
             
@@ -90,9 +100,9 @@
 
 <!-- Textarea -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="address">Address</label>
+  
   <div class="col-md-4">                     
-    <textarea class="form-control" id="address" name="address"><?= $selectedInvoice[address_1] ?? '' ?></textarea>
+    
   </div>
 </div>
 
