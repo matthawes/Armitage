@@ -37,7 +37,7 @@
 		  
 		<div class="row wow fadeInUp" data-wow-delay="0.2s">
 						<div class="col-4">
-				<label class="control-label" for="invoiceNum">Invoice #</label>
+				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
 				<select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control-sm">
                             <option value="">Select an invoice</option>
                             <?php
@@ -57,24 +57,24 @@
                     
 			<div class="col-2">
                             <label class="control-label" for="vendor">Vendor</label>
-                            <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control-sm">
+                            <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control">
 			</div>
 			
 			<div class="col-2">
 				<label class="control-label" for="date">Date</label>
-                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="bg-yellow form-control-sm">
+                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="bg-yellow form-control">
 			</div>
 			
 			<div class="col-2">
   <label class="control-label" for="amountDue">Amount Due</label>  
   
-  <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="bg-yellow form-control-sm">
+  <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="bg-yellow form-control">
 			</div>
                     <div class="col-2">
                         
                          <label class="control-label" for="terms">Terms</label>  
 
-  <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control-sm"> 
+  <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control"> 
                         
                     </div>
 
