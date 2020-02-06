@@ -38,7 +38,7 @@
 		<div class="row wow fadeInUp" data-wow-delay="0.2s">
 						<div class="col-4">
 				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
-				<select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control-sm">
+                                <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control col-6" style="display:inline;">
                             <option value="">Select an invoice</option>
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
@@ -48,7 +48,7 @@
                                 }
                             ?>
                         </select>
-                                <input class="btn btn-warning btn-sm" type="submit" name="submit" value="View Invoice">
+                                <input class="btn btn-warning btn-md" type="submit" name="submit" value="View Invoice">
 			</div>
                     
                     
