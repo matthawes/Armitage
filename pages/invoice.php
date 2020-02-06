@@ -81,72 +81,22 @@
 			
 			</div>        
 
-                <div class="row wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="col-4">
-                        <textarea class="form-control bg-yellow" rows="4" id="address" name="address">
-                                <?= $selectedInvoice[address_1].'&#010;' ?? '' ?>
-                                <?= $selectedInvoice[address_2].'&#010;' ?? '' ?>
-                                <?= $selectedInvoice[city].' ' ?? '' ?>
-                                <?= $selectedInvoice[state].', ' ?? '' ?>
-                                <?= $selectedInvoice[zip] ?? '' ?>
-                        </textarea>
+                <div class="row wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-4"><label class="col-md-4 control-label" for="memo">Address</label>
+                        <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[address_1].'&#010;' ?? '' ?><?= $selectedInvoice[address_2].'&#010;' ?? '' ?><?= $selectedInvoice[city].' ' ?? '' ?><?= $selectedInvoice[state].', ' ?? '' ?><?= $selectedInvoice[zip] ?? '' ?></textarea>
                     </div>
-                    <div class="col-4">
+
+                    <div class="col-2">  <label class="col-md-4 control-label" for="dueDate">Due Date</label>  
+  <input id="dueDate" name="dueDate" type="text" placeholder="<?= $selectedInvoice[due_date] ?? '' ?>" class="form-control input-md"></div>
+                    <div class="col-2">  <label class="col-md-4 control-label" for="paymentMethod">Payment Method</label>  
+  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?= $selectedInvoice[payment_method] ?? '' ?>" class="form-control input-md">
+    </div>                    <div class="col-4">
                         <label class="col-md-4 control-label" for="memo">Memo</label> 
                         <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="form-control input-md">
                     </div>
-                    <div class="col-2"></div>
-                    <div class="col-2"></div>
                 </div>         
             
-            
-            
 
-
-
-
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="dueDate">Due Date</label>  
-  <div class="col-md-4">
-  <input id="dueDate" name="dueDate" type="text" placeholder="<?= $selectedInvoice[due_date] ?? '' ?>" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="paymentMethod">Payment Method</label>  
-  <div class="col-md-4">
-  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?= $selectedInvoice[payment_method] ?? '' ?>" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-   
-  <div class="col-md-5">
-  
-    
-  </div>
-</div>     
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
           </fieldset>
 </form>
         
@@ -155,30 +105,6 @@
         
         
         
-        
-        
-        
-        
-
-
-
-                
-
-
-
-
-        
-
-
-
-
-
- 
-
-		  
-
-
-                  
                   
   </main>
 
