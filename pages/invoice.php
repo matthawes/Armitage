@@ -55,7 +55,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="vendor">Vendor</label>
   <div class="col-md-4">
-    <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?>" class="form-control input-md">
+    <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? 'z' ?>" class="form-control input-md">
   </div>
 </div>
 
@@ -63,7 +63,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="date">Date</label>  
   <div class="col-md-4">
-  <input id="date" name="date" type="text" placeholder="<?php echo $selectedInvoice[invoice_date]; ?>" class="form-control input-md">
+  <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -72,7 +72,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="address">Address</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="address" name="address"><?php echo $selectedInvoice[address_1]; ?></textarea>
+    <textarea class="form-control" id="address" name="address"><?= $selectedInvoice[address_1] ?? '' ?></textarea>
   </div>
 </div>
 
@@ -80,7 +80,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="amountDue">Amount Due</label>  
   <div class="col-md-4">
-  <input id="amountDue" name="amountDue" type="text" placeholder="<?php echo $selectedInvoice[total_amount]; ?>" class="form-control input-md">
+  <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -89,7 +89,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="terms">Terms</label>  
   <div class="col-md-4">
-  <input id="terms" name="terms" type="text" placeholder="<?php echo $selectedInvoice[term]; ?>" class="form-control input-md">
+  <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -98,7 +98,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="dueDate">Due Date</label>  
   <div class="col-md-4">
-  <input id="dueDate" name="dueDate" type="text" placeholder="<?php echo $selectedInvoice[due_date]; ?>" class="form-control input-md">
+  <input id="dueDate" name="dueDate" type="text" placeholder="<?= $selectedInvoice[due_date] ?? '' ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -107,7 +107,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="paymentMethod">Payment Method</label>  
   <div class="col-md-4">
-  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?php echo $selectedInvoice[payment_method]; ?>" class="form-control input-md">
+  <input id="paymentMethod" name="paymentMethod" type="text" placeholder="<?= $selectedInvoice[payment_method] ?? '' ?>" class="form-control input-md">
     
   </div>
 </div>
@@ -116,7 +116,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="memo">Memo</label>  
   <div class="col-md-5">
-  <input id="memo" name="memo" type="text" placeholder="<?php echo $selectedInvoice[memo]; ?>" class="form-control input-md">
+  <input id="memo" name="memo" type="text" placeholder="<?= $selectedInvoice[memo] ?? '' ?>" class="form-control input-md">
     
   </div>
 </div>
