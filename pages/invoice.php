@@ -33,12 +33,12 @@
         </div>
           
           
-  	    <h2 class="wow fadeInUp" data-wow-delay="0.2s">Bill to:</h2>
+  	    
 		  
 		<div class="row wow fadeInUp" data-wow-delay="0.2s">
-						<div class="col-2">
+						<div class="col-4">
 				<label class="text-center control-label" for="invoiceNum">Invoice #</label>
-				<select id="invoiceNum" name="invoiceNum" class="form-control">
+				<select id="invoiceNum" name="invoiceNum" class="form-control bg-yellow">
                             <option value="">Select an invoice</option>
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
@@ -48,9 +48,14 @@
                                 }
                             ?>
                         </select>
-                                <input class="btn btn-primary" type="submit" name="submit" value="View Invoice">
+                                <input class="btn btn-warning btn-sm" type="submit" name="submit" value="View Invoice">
 			</div>
-			<div class="col-6">
+                    
+                    
+                    
+                    
+                    
+			<div class="col-4">
 				<textarea class="form-control bg-yellow" id="billToCo" rows="3">Kado No Mise&#013;&#010;33 N 1st Ave&#013;&#010;Minneapolis, MN 55401</textarea>
 			</div>
 			
@@ -183,50 +188,13 @@
 
 
 
-    <!--==========================
-      Frequently Asked Questions Section
-    ============================-->
+ 
 
 		  
 
-		  <hr class="wow fadeInRight" data-wow-delay="0.3s">	
-			<div class="row wow fadeInUp" data-wow-delay="0.4s">
-			
-			
-			<div class="col-3">
-				<h4 class="text-center">Item</h4>
-				<textarea class="form-control bg-yellow" id="billToItem" rows="6">Monthly Accounting</textarea>
-		    </div>
-			
-		  <div class="col-5">
-				<h4 class="text-center">Description</h4>
-				<textarea class="form-control bg-yellow" id="billToDesc" rows="6">All-inclusive accounting services</textarea>
-		    </div>
-			
-		  <div class="col-2">
-				<h4 class="text-center">Price Each</h4>
-				<textarea class="form-control bg-yellow" id="billToPrice" rows="6">&nbsp;</textarea>
-		    </div>
-			
-		  <div class="col-2">
-				<h4 class="text-center">Amount</h4>
-				<textarea class="form-control bg-yellow" id="billToAmount" rows="6">&nbsp;</textarea>
-		    </div>
-			
-		  </div>
-		  <hr class="wow fadeInRight" data-wow-delay="0.5s">
-		   <div class="row justify-content-end wow fadeInUp" data-wow-delay="0.6s">
-			<div class="col-2">
-			  <h4 class="text-left">Total</h4>
-			</div>
 
-		  <div class="col-2">
-				<input class="form-control text-center" type="text" value="&nbsp;" id="billToTotal">
-			</div>
-
-		  </div>
-<!-- #faq -->
-
+                  
+                  
   </main>
 
 </body>
