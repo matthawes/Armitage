@@ -37,8 +37,8 @@
 		  
 		<div class="row wow fadeInUp" data-wow-delay="0.2s">
 						<div class="col-4">
-				<label class="text-center control-label" for="invoiceNum">Invoice #</label>
-				<select id="invoiceNum" name="invoiceNum" class="form-control bg-yellow form-control-sm">
+				<label class="control-label" for="invoiceNum">Invoice #</label>
+				<select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control-sm">
                             <option value="">Select an invoice</option>
                             <?php
                                 while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
@@ -56,20 +56,27 @@
                     
                     
 			<div class="col-2">
-                            <label class="col-md-4 control-label" for="vendor">Vendor</label>
-                            <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="form-control input-md">
+                            <label class="control-label" for="vendor">Vendor</label>
+                            <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control-sm">
 			</div>
 			
 			<div class="col-2">
-				<label class="col-md-4 control-label" for="date">Date</label>
-                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="form-control input-md">
+				<label class="control-label" for="date">Date</label>
+                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="bg-yellow form-control-sm">
 			</div>
 			
 			<div class="col-2">
-				<h4 class="text-center">Terms</h4>
-				<input class="form-control bg-yellow text-center" type="text" value="Net 15" id="billToTerms">
+  <label class="control-label" for="amountDue">Amount Due</label>  
+  
+  <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="bg-yellow form-control-sm">
 			</div>
-			
+                    <div class="col-2">
+                        
+                         <label class="control-label" for="terms">Terms</label>  
+
+  <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control-sm"> 
+                        
+                    </div>
 
 			
 			</div>        
@@ -78,23 +85,8 @@
             
             
             
-       
-<!-- Select Basic -->
-<div class="form-group">
-  
-  <div class="col-md-4">
-    
-  </div>
-</div>
 
-<!-- Text input-->
-<div class="form-group">
-    
-  <div class="col-md-4">
-  
-    
-  </div>
-</div>
+
 
 <!-- Textarea -->
 <div class="form-group">
@@ -104,23 +96,9 @@
   </div>
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="amountDue">Amount Due</label>  
-  <div class="col-md-4">
-  <input id="amountDue" name="amountDue" type="text" placeholder="<?= $selectedInvoice[total_amount] ?? '' ?>" class="form-control input-md">
-    
-  </div>
-</div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="terms">Terms</label>  
-  <div class="col-md-4">
-  <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="form-control input-md">
-    
-  </div>
-</div>
+
+
 
 <!-- Text input-->
 <div class="form-group">
