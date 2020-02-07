@@ -93,16 +93,18 @@
                         <hr class="wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s;">
                     </fieldset>
                 </form>
+                <div class="row wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-12">
+                        <table border="1">
+                            <?php
+                                while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
+                                    echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
+                                }
+                            ?>
+                        </table>
+                    </div>
+                </div>
             </div>
-            
-            <table border="1">
-                <?php
-                    while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
-                        echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
-                    }
-                ?>
-            </table>
-            
         </section>     
     </main>
 
