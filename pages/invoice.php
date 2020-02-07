@@ -22,7 +22,7 @@
 
 <body>
     <main id="main">
-        <section id="invoice services">
+        <section id="services">
             <div class="container">
                 <div class="section-header wow fadeInUp" style="visibility: visible;">
                     <h3 class="section-title">INVOICE</h3>
@@ -34,13 +34,9 @@
                             <hr class="wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.3s;">
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="col-2">
-                                <label class="control-label" for="vendor">Vendor</label>
-                                <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control">
-                            </div>
-                            <div class="col-2">
-				<label class="control-label" for="date">Date</label>
-                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="bg-yellow form-control">
+                            <div class="col-4">
+                                <label class="control-label" for="memo">Bill To</label>
+                                <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[company_name] ?? '' ?>&#010;<?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="amountDue">Amount Due</label>  
@@ -67,9 +63,13 @@
 			</div>        
                         <hr class="wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s;">
                         <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="col-4">
-                                <label class="control-label" for="memo">Bill To</label>
-                                <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[company_name] ?? '' ?>&#010;<?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
+                            <div class="col-2">
+                                <label class="control-label" for="vendor">Vendor</label>
+                                <input id="vendor" name="vendor" type="text" placeholder="<?= $selectedInvoice[vendor_name] ?? '' ?>" class="bg-yellow form-control">
+                            </div>
+                            <div class="col-2">
+				<label class="control-label" for="date">Date</label>
+                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice[invoice_date] ?? '' ?>" class="bg-yellow form-control">
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="dueDate">Due Date</label>
