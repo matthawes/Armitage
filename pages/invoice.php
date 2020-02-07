@@ -75,11 +75,11 @@
                             </div>
                             <div class="col-2">
 				<label class="control-label" for="date">Date</label>
-                                <input id="date" name="date" type="text" placeholder="<?= $selectedInvoice['invoice_date'] ?? '' ?>" class="bg-yellow form-control">
+                                <input id="date" name="date" type="text" placeholder="<?= date_format($selectedInvoice['invoice_date'],"m/d/Y") ?? '' ?>" class="bg-yellow form-control">
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="dueDate">Due Date</label>
-                                <input id="dueDate" name="dueDate" type="text" placeholder="<?= $selectedInvoice['due_date'] ?? '' ?>" class="bg-yellow form-control">
+                                <input id="dueDate" name="dueDate" type="text" placeholder="<?= date_format($selectedInvoice['due_date'],"m/d/Y") ?? '' ?>" class="bg-yellow form-control">
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="paymentMethod">Payment Method</label>
