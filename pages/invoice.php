@@ -25,20 +25,8 @@
                     LEFT JOIN food_item_cost ON food_item_cost.food_item_cost_id = invoice_line.food_item_cost_id
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_line_id ASC";
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
-            
-            while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
-                echo $selectedInvoiceLines['invoice_number'].$selectedInvoiceLines['invoice_line_id'].$selectedInvoiceLines['type'].$selectedInvoiceLines['amount'];
-            }
     }
 ?>
-
-
-    
-
-    
-    
-    
-    
     <main id="main">
         <section id="services">
             <div class="container">
@@ -106,6 +94,15 @@
                     </fieldset>
                 </form>
             </div>
+            
+            <table border="1">
+                <?php
+                    while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
+                        echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
+                    }
+                ?>
+            </table>
+            
         </section>     
     </main>
 
