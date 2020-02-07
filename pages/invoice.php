@@ -23,18 +23,17 @@
                     FROM invoice
                     INNER JOIN invoice_line ON invoice_line.invoice_id = invoice.invoice_id
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
-            $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
-}
+                    $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
+            
+            while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
+                echo $selectedInvoiceLines[0].$selectedInvoiceLines[1].$selectedInvoiceLines[2].$selectedInvoiceLines[3];
+            }
+    }
 ?>
 
-<body>
-    
-                <?php
-                    while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
-                    echo $selectedInvoiceLines[0].$selectedInvoiceLines[1].$selectedInvoiceLines[2].$selectedInvoiceLines[3];
 
-                    }
-                ?>
+    
+
     
     
     
@@ -108,6 +107,5 @@
             </div>
         </section>     
     </main>
-</body>
 
 <?php include "footer.php"; ?>
