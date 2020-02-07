@@ -8,6 +8,7 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER[REQUEST_METHOD]=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
+
             $invoice_query = "SELECT invoice.*, vendor.vendor_name, company.company_name, company.address_1, company.address_2, company.city, company.state, company.zip, term.term, payment_method.payment_method
                     FROM invoice
                     LEFT JOIN company ON company.company_id = invoice.company_id
@@ -17,10 +18,27 @@
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
             $invoice_result = mysqli_query($connect, $invoice_query);
             $selectedInvoice = mysqli_fetch_array($invoice_result);
+
+            $invoice_lines_query = "SELECT invoice.invoice_id, invoice.invoice_number, invoice_line.*
+                    FROM invoice
+                    INNER JOIN invoice_line ON invoice_line.invoice_id = invoice.invoice_id
+                    WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
+            $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
 }
 ?>
 
 <body>
+    
+                <?php
+                    while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
+                    echo $selectedInvoiceLines[0].$selectedInvoiceLines[1].$selectedInvoiceLines[2].$selectedInvoiceLines[3];
+
+                    }
+                ?>
+    
+    
+    
+    
     <main id="main">
         <section id="services">
             <div class="container">
