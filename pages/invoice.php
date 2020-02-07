@@ -8,8 +8,9 @@
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER[REQUEST_METHOD]=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-            $invoice_query = "SELECT invoice.*, vendor.vendor_name, vendor.address_1, vendor.address_2, vendor.city, vendor.state, vendor.zip, term.term, payment_method.payment_method
-                    FROM invoice 
+            $invoice_query = "SELECT invoice.*, vendor.vendor_name, company.company_name, company.address_1, company.address_2, company.city, company.state, company.zip, term.term, payment_method.payment_method
+                    FROM invoice
+                    LEFT JOIN company ON company.company_id = invoice.company_id
                     LEFT JOIN vendor ON vendor.vendor_id = invoice.vendor_id 
                     LEFT JOIN payment_method ON payment_method.payment_method_id = vendor.payment_method_id 
                     LEFT JOIN term ON term.term_id = invoice.term_id 
@@ -17,16 +18,19 @@
             $invoice_result = mysqli_query($connect, $invoice_query);
             $selectedInvoice = mysqli_fetch_array($invoice_result);
 }
-?><!-- Really - look at the company more than vendor for address and so on... -->
+?>
 
 <body>
     <main id="main">
-        <section id="invoice">
+        <section id="invoice services">
             <div class="container">
+                <div class="section-header wow fadeInUp" style="visibility: visible;">
+                    <h3 class="section-title">INVOICE</h3>
+                    <span class="section-divider"></span>
+                </div>
                 <form method="post" action="invoice.php">
                     <fieldset>
                         <div class="section-header wow fadeInUp">
-                            <legend class="section-title">INVOICE</legend>
                             <hr class="wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.3s;">
                         </div>
                         <div class="row wow fadeInUp" data-wow-delay="0.2s">
@@ -64,8 +68,8 @@
                         <hr class="wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s;">
                         <div class="row wow fadeInUp" data-wow-delay="0.4s">
                             <div class="col-4">
-                                <label class="control-label" for="memo">Address</label>
-                                <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
+                                <label class="control-label" for="memo">Bill To</label>
+                                <textarea class="form-control bg-yellow" rows="4" id="address" name="address"><?= $selectedInvoice[company_name] ?? '' ?>&#010;<?= $selectedInvoice[address_1] ?? '' ?>&#010;<?= $selectedInvoice[address_2] ?? '' ?>&#010;<?= $selectedInvoice[city] ?? '' ?> <?= $selectedInvoice[state] ?? '' ?> <?= $selectedInvoice[zip] ?? '' ?></textarea>
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="dueDate">Due Date</label>
