@@ -95,10 +95,19 @@
                 </form>
                 <div class="row wow fadeInUp" data-wow-delay="0.6s">
                     <div class="col-12">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-left table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
+                            <thead class="thead-warning">
+                                <tr>
+                                    <td>Invoice Number</td>
+                                    <td>Invoice Line ID</td>
+                                    <td>Type</td>
+                                    <td>Amount</td>
+                                </tr>
                             <?php
-                                while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
-                                    echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
+                                if ($_SERVER['REQUEST_METHOD']=="POST") {
+                                    while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
+                                        echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
+                                    }
                                 }
                             ?>
                         </table>
