@@ -22,7 +22,7 @@
             $invoice_lines_query = "SELECT invoice.invoice_id, invoice.invoice_number, invoice_line.*
                     FROM invoice
                     INNER JOIN invoice_line ON invoice_line.invoice_id = invoice.invoice_id
-                    WHERE invoice_number='".$selectValue."' ORDER BY invoice_id ASC";
+                    WHERE invoice_number='".$selectValue."' ORDER BY invoice_line_id ASC";
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
             
             while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="terms">Terms</label>  
-                                <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice[term] ?? '' ?>" class="bg-yellow form-control"> 
+                                <input id="terms" name="terms" type="text" placeholder="<?= $selectedInvoice['term'] ?? '' ?>" class="bg-yellow form-control"> 
                             </div>
                             <div class="col-4">
 				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
