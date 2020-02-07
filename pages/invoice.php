@@ -98,10 +98,10 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-left table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
                             <thead class="thead-warning">
                                 <tr>
-                                    <td>Invoice Number</td>
-                                    <td>Invoice Line ID</td>
-                                    <td>Type</td>
-                                    <td>Amount</td>
+                                    <th>Invoice Number</th>
+                                    <th>Invoice Line ID</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
                                 </tr>
                             <?php
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
