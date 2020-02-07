@@ -95,7 +95,7 @@
                 </form>
                 <div class="row wow fadeInUp" data-wow-delay="0.6s">
                     <div class="col-12">
-                        <table border="1">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
                             <?php
                                 while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
                                     echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
