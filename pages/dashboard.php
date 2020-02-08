@@ -1,4 +1,4 @@
-<?php include "navigation.php"; ?>
+<?php include "navigation.html"; ?>
 <?php session_start(); ?>
 
 <?php
