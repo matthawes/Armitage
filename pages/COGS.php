@@ -1,5 +1,3 @@
-<?php include "navigation.html"; ?>
-
 <?php session_start(); ?>
 
 
@@ -8,7 +6,7 @@
 
     header("Location: ../index.php");
 	} ?>
-
+<?php include "navigation.html"; ?>
 <body>
 
   <main id="main">
@@ -44,8 +42,8 @@
       </div>
 
 	<div class="row">
-          	<div class="col-6 text-left">		
-             	 <table width="100%" table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
+          	<div class="col-6 text-center">		
+             	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	 <tbody>
 				 		<tr>
                             <td width="30%" class="border-all text-center">Target Food Costs %</td>
@@ -53,6 +51,10 @@
 							<td width="25%" class="border-all text-center">Projected Food Costs %</td>
                             <td width="25%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
+					</tbody>
+			<div class="col-8">
+				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
+				 		<tbody>
 						<tr>	
                             <td width="30%" class="border-all text-center">Target Alcohol Costs %</td>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
