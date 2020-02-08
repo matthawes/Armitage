@@ -21,6 +21,7 @@ if(!isset($_SESSION['user_id'])){
         </header>
           <div class="row">
           	<div class="col-4 text-center">
+				<li class="fa fa-arrow-circle-left"></li> December 24, 2019 <li class="fa fa-arrow-circle-right"></li>
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
