@@ -4,31 +4,14 @@
 
 
 
-<?php
-
-
-
-if(!isset($_SESSION['user_id'])){
+<?php if(!isset($_SESSION['user_id'])){
 
     header("Location: ../index.php");
-
-}
-
-?>
-
-
+	} ?>
 
 <body>
 
-
-
- 
-
-
-
   <main id="main">
-
-
 
     <!--==========================
 
@@ -39,8 +22,6 @@ if(!isset($_SESSION['user_id'])){
     <section id="services">
 
       <div class="container">
-
-
 
         <div class="section-header wow fadeInUp" style="visibility: visible;">
 
@@ -64,27 +45,28 @@ if(!isset($_SESSION['user_id'])){
 
 	<div class="row">
           	<div class="col-6 text-center">		
-              <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
-				 <tbody>
+             	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
+				 	 <tbody>
 				 		<tr>
-                            <td width="50%" class="border-all text-center">Target Food Costs %</td>
-                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+                            <td width="25%" class="border-all text-center">Target Food Costs %</td>
+                            <td width="25%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-                             <td width="50%" class="border-all text-center">Target Alcohol Costs %</td>
-                             <td width="50%" class="border-all">&nbsp;</td>
+                             <td width="25%" class="border-all text-center">Target Alcohol Costs %</td>
+                             <td width="25%" class="border-all">&nbsp;</td>
 							 </tr>
-                    </tbody>
+                   	</tbody>
                 </div> 
-		<div class="col-6 text-center">
+			<div class="col-6 text-center">
+				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
                     <tbody
                         <tr>
-                            <td width="50%" class="border-all text-center">Projected Food Costs %</td>
-                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+                            <td width="25%" class="border-all text-center">Projected Food Costs %</td>
+                            <td width="25%" class="bg-yellow border-all">&nbsp;</td>
 			</tr>
 			<tr>
-                             <td width="50%" class="border-all text-center">Projected Alcohol Costs %</td>
-                             <td width="50%" class="border-all">&nbsp;</td>
+                             <td width="25%" class="border-all text-center">Projected Alcohol Costs %</td>
+                             <td width="25%" class="border-all">&nbsp;</td>
 			</tr>
                     </tbody>
 
