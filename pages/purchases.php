@@ -21,62 +21,62 @@ if(!isset($_SESSION['user_id'])){
         </header>
           <div class="row">
           	<div class="col-4">
-				<table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
-				    <tbody>
-					   <tr>
-						  <td width="50%" class="border-all text-center">Target Advertising%</td>
-						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-						<tr>
-						  <td width="50%" class="border-all text-center">Target Cleaning Supplies%</td>
-						  <td width="50%" class="border-all">&nbsp;</td>
-						</tr>
-						<tr>
-						  <td width="50%" class="border-all text-center">Taget Linen%</td>
-						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
-						  <td width="50%" class="border-all text-center">Target Office Supplies%</td>
-						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
-						  <td width="50%" class="border-all text-center">Target Repairs and Maintenance%</td>
-						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
-						  <td width="50%" class="border-all text-center">Target Restraunt Supplies%</td>
-						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>  
+			<table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+				<tbody>
+					<tr>
+					  <td width="50%" class="border-all text-center">Target Advertising%</td>
+					  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+					</tr>
+					<tr>
+					  <td width="50%" class="border-all text-center">Target Cleaning Supplies%</td>
+					  <td width="50%" class="border-all">&nbsp;</td>
+					</tr>
+					<tr>
+					  <td width="50%" class="border-all text-center">Taget Linen%</td>
+					  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+					</tr>
+                        		<tr>
+					  <td width="50%" class="border-all text-center">Target Office Supplies%</td>
+					  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+					</tr>
+                        		<tr>
+					  <td width="50%" class="border-all text-center">Target Repairs and Maintenance%</td>
+					  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+					</tr>
+                        		<tr>
+					  <td width="50%" class="border-all text-center">Target Restraunt Supplies%</td>
+					  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+					</tr>  
 				    </tbody>
-				</table>
-		  	</div>
+			</table>
+		  </div>
             <div class="col-8">
 				<table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				    <tbody>
-					   <tr>
-						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
-						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-						<tr>
+					<tr>
+						<td width="50%" class="border-all text-center">Projected Food Budget</td>
+						<td width="50%" class="bg-yellow border-all">&nbsp;</td>
+					</tr>
+					<tr>
 						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
-						</tr>
-						<tr>
+					</tr>
+					<tr>
 						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
+					</tr>
+                        		<tr>
 						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
+					</tr>
+                        		<tr>
 						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
+					</tr>
+                        		<tr>
 						  <td width="50%" class="border-all text-center">Projected Alcohol Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>  
+					</tr>  
 				    </tbody>
 				</table>
 		  	</div>
