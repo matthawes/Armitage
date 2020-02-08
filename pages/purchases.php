@@ -21,102 +21,67 @@ if(!isset($_SESSION['user_id'])){
         </header>
           <div class="row">
           	<div class="col-4 text-center">
-				<li class="fa fa-arrow-circle-left"></li> December 24, 2019 <li class="fa fa-arrow-circle-right"></li>
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
-						  <td width="50%" class="border-all text-center">SALES</td>
+						  <td width="50%" class="border-all text-center">Target Advertising%</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td colspan="2">&nbsp;</td>
-					    </tr>
-						<tr>
-						  <td width="50%" class="border-all text-center">COGS</td>
+						  <td width="50%" class="border-all text-center">Target Cleaning Supplies%</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td colspan="2">&nbsp;</td>
-					    </tr>
-						<tr>
-						  <td width="50%" class="border-all text-center">BEGINNING INV (OVERRIDE)</td>
+						  <td width="50%" class="border-all text-center">Target Linen%</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
+                        <tr>
+						  <td width="50%" class="border-all text-center">Target Office Supplies%</td>
+						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+						</tr>
+						<tr>
+						  <td width="50%" class="border-all text-center">Target Repairs and Maintenance%</td>
+						  <td width="50%" class="border-all">&nbsp;</td>
+						</tr>
+						<tr>
+						  <td width="50%" class="border-all text-center">Target Restaurant Supplies%</td>
+						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+						</tr> 
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="col-8">
-				  <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered table-sm">
-					  <thead class="text-sm text-center thead-dark">
+			  <div class="row">
+          	<div class="col-8 text-center">
+				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+					  <tbody>
 						<tr>
-						  <th></th>
-						  <th></th>
-						  <th>Beg.</th>
-						  <th>Purch.</th>
-						  <th>End</th>
-						  <th>Change</th>
-						  <th>%</th>
-					    </tr>
-					</thead>  
-						<tbody>  
-						<tr>
-						  <td class="text-bold">L</td>
-						  <td class="text-bold">Liquor</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right"></td>
+						  <td width="50%" class="border-all text-center">Target Advertising%</td>
+                            
+						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td class="text-bold">BB</td>
-						  <td class="text-bold">Beer Bottle</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right"></td>
+						  <td width="50%" class="border-all text-center">Target Cleaning Supplies%</td>
+						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td class="text-bold">BT</td>
-						  <td class="text-bold">Beer Tap</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right"></td>
+						  <td width="50%" class="border-all text-center">Target Linen%</td>
+						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+						</tr>
+                        <tr>
+						  <td width="50%" class="border-all text-center">Target Office Supplies%</td>
+						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td class="text-bold">WG</td>
-						  <td class="text-bold">Wine Glass</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right"></td>
+						  <td width="50%" class="border-all text-center">Target Repairs and Maintenance%</td>
+						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td class="text-bold">WB</td>
-						  <td class="text-bold">Wine Bottle</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right"></td>
-						</tr>
-						<tr class="border-0">
-						  <td>&nbsp;</td>
-						  <td>&nbsp;</td>
-						  <td class="text-right">&nbsp;</td>
-						  <td class="text-right">&nbsp;</td>
-						  <td class="text-right">$0.00</td>
-						  <td class="text-right">&nbsp;</td>
-						  <td class="text-right">&nbsp;</td>
-						</tr>
+						  <td width="50%" class="border-all text-center">Target Restaurant Supplies%</td>
+						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+						</tr> 
 					  </tbody>
-				</table>
-
-		     </div>
+					</table>
+		  	</div>
 		  </div>
           <div class="row">
           <div class="col-12">
