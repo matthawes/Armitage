@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="en"><!-- InstanceBegin template="/Templates/index3.dwt" codeOutsideHTMLIsLocked="false" --><head>
+<!doctype html>
+<html lang="en">
+  <!-- InstanceBegin template="/Templates/index2dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
   <meta charset="utf-8">
   <!-- InstanceBeginEditable name="doctitle" -->
-  <title>Armitage Accounting</title>
+  <title>Armitage Accounting Dashboard</title>
   <!-- InstanceEndEditable -->
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
    <!-- InstanceBeginEditable name="metas" -->
-	<meta content="Armitage Accounting Alcohol Inventory" name="keywords">
-    <meta content="Armitage Accounting alcohol inventory for client restaurant financials." name="description">
-	<!-- InstanceEndEditable -->
+	<meta content="Armitage Accounting" name="keywords">
+    <meta content="Armitage Accounting client restaurant financials." name="description">
 
   <!-- Favicons -->
   <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png">
@@ -24,8 +25,9 @@
   <!-- Libraries CSS Files -->
   <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="../lib/animate/animate.min.css" rel="stylesheet">
-  <link href="../css/ionicons.min.css" rel="stylesheet">
- 
+  <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="../css/style.css" rel="stylesheet">
@@ -33,41 +35,64 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 </head>
-      <!--==========================
+<body>
+
+  <!--==========================
     Header
   ============================-->
       <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-       <a class="navbar-brand" href="https://www.armitageaccounting.com/"><img src="../img/Armitage_logo.jpg" width="36" height="30" alt="Armitage Accounting"/></a>
+       <a class="navbar-brand" href="https://www.armitageaccounting.com/"><img src="../img/Armitage_logo.jpg" width="36" height="30" alt="Armitage Accounting"></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button>
-       <div class="navbar-collapse collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-             <li class="nav-item">
-                <a class="nav-link" href="dashboard.php">Dashboard</a>
-             </li>
-             <li class="nav-item"><a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</a></li>
-             <li class="nav-item menu-active">
-                <a class="nav-link text-bold" href="notes.php">Notes</a>
-             </li>
-			  <li class="nav-item"><a class="nav-link" href="invoice.php">Invoice</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="#">Schedule</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="#">Employees</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link" href="daily_cash.php">Daily Cash</a>
-             </li>
-              <li class="nav-item">
-                <a class="nav-link" href="alcohol.php">Alcohol</a>
-             </li>
-			  <li class="nav-item">
-                <a class="nav-link" href="../logout.php">Log Out</a>
-             </li>
-          </ul>
+       <!-- InstanceBeginEditable name="navMine" -->
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         <ul class="navbar-nav ml-auto">
+           <li class="nav-item"> <a class="nav-link text-bold" href="../pages/dashboard.php">Dashboard</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="../pages/notes.php">Notes</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="../pages/daily_cash.php">Cash</a> </li>
+           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Costs </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">COGS</a> <a class="dropdown-item" href="#">Purchases</a> <a class="dropdown-item" href="../pages/invoice.php">Invoice</a> </div>
+           </li>
+           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> People </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Schedule</a> <a class="dropdown-item" href="#">Employees</a>
+               <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="#">Job Codes</a> </div>
+           </li>
+           <li class="nav-item"> <a class="nav-link" href="#">Food</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="../pages/alcohol.php">Alcohol</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="#">Log Out</a> </li>
+         </ul>
        </div>
-    </nav>
-<!-- InstanceBeginEditable name="EditRegion3" -->
+       <!-- InstanceEndEditable --></nav>
+<!-- InstanceBeginEditable name="EditRegion3" -->  
+
+  <a href="#" class="back-to-top" style="display: none;"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/superfish/hoverIntent.js"></script>
+  <script src="../lib/superfish/superfish.min.js"></script>
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/waypoints/waypoints.min.js"></script>
+  <script src="../lib/counterup/counterup.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="../lib/lightbox/js/lightbox.min.js"></script>
+  <script src="../lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="../contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="../js/main.js"></script>
+
+
+<!-- InstanceEnd -->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><span style="position: absolute; left: 0px; top: -20000px; padding: 0px; margin: 0px; border: none; white-space: pre; line-height: normal; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 15px; font-weight: normal; display: none;">Mpgyi</span>
+</body>
+</html>
