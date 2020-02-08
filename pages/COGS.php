@@ -44,30 +44,19 @@
       </div>
 
 	<div class="row">
-          	<div class="col-4 text-left">		
-             	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
+          	<div class="col-6 text-left">		
+             	 <table width="100%" table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	 <tbody>
 				 		<tr>
-                            <td width="25%" class="border-all text-center">Target Food Costs %</td>
-                            <td width="25%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-						<tr>
-                             <td width="25%" class="border-all text-center">Target Alcohol Costs %</td>
-                             <td width="25%" class="border-all">&nbsp;</td>
-							 </tr>
-                   	</tbody>
-                </div> 
-			<div class="col-4 text-right">
-				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
-                    <tbody
-                        <tr>
+                            <td width="30%" class="border-all text-center">Target Food Costs %</td>
+                            <td width="22%" class="bg-yellow border-all">&nbsp;</td>
+                             <td width="75%" class="border-all text-center">Target Alcohol Costs %</td>
+                             <td width="25%" class="bg-yellow border-all">&nbsp;</td>
                             <td width="25%" class="border-all text-center">Projected Food Costs %</td>
                             <td width="25%" class="bg-yellow border-all">&nbsp;</td>
-			</tr>
-			<tr>
                              <td width="25%" class="border-all text-center">Projected Alcohol Costs %</td>
                              <td width="25%" class="border-all">&nbsp;</td>
-			</tr>
+						</tr>
                     </tbody>
 
     </section><!-- #faq -->
