@@ -47,9 +47,10 @@
 				 	 <tbody>
 				 		<tr>
                             <td width="30%" class="border-all text-center">Target Food Costs %</td>
-                            <td width="22%" class="bg-yellow border-all">&nbsp;</td>
-							<td width="25%" class="border-all text-center">Projected Food Costs %</td>
-                            <td width="25%" class="bg-yellow border-all">&nbsp;</td>
+                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+							<td width="10%"></td>
+							<td width="30%" class="border-all text-center">Projected Food Costs %</td>
+                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 					</tbody>
 			<div class="col-8">
@@ -58,6 +59,7 @@
 						<tr>	
                             <td width="30%" class="border-all text-center">Target Alcohol Costs %</td>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+							<td width="10%"></td>
                             <td width="30%" class="border-all text-center">Projected Alcohol Costs %</td>
                             <td width="20%" class="border-all">&nbsp;</td>
 						</tr>
