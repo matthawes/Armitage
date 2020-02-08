@@ -44,7 +44,7 @@
       </div>
 
 	<div class="row">
-          	<div class="col-6 text-center">		
+          	<div class="col-4 text-left">		
              	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	 <tbody>
 				 		<tr>
@@ -57,7 +57,7 @@
 							 </tr>
                    	</tbody>
                 </div> 
-			<div class="col-6 text-center">
+			<div class="col-4 text-right">
 				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
                     <tbody
                         <tr>
