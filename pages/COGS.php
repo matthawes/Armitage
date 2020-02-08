@@ -64,15 +64,16 @@ if(!isset($_SESSION['user_id'])){
 
 	<div class="row">
           	<div class="col-6 text-center">		
-                    <tbody>
-			<tr>
+              <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
+				 <tbody>
+				 		<tr>
                             <td width="50%" class="border-all text-center">Target Food Costs %</td>
                             <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-			</tr>
-			<tr>
+						</tr>
+						<tr>
                              <td width="50%" class="border-all text-center">Target Alcohol Costs %</td>
                              <td width="50%" class="border-all">&nbsp;</td>
-			</tr>
+							 </tr>
                     </tbody>
                 </div> 
 		<div class="col-6 text-center">
