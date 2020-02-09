@@ -2,7 +2,7 @@
     Footer
   ============================-->
   <footer id="footer" >
-    <div class="bottom">
+    <div class="footer-top">
       <div class="container">
         <div class="row justify-content-center">
 
