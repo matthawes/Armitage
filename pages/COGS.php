@@ -41,12 +41,12 @@
              	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 					<tbody>	
 						<tr>
-                            <th width="30%" class="border-all text-center">Target Food Costs %</th>
-                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+                            <th width="60%" class="border-all text-center">Target Food Costs %</th>
+                            <td width="40%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-							<th width="30%" float="left" class="border-all text-center">Projected Food Costs %</th>
-                            <td width="20%" class="border-all">&nbsp;</td>
+							<th width="60%" float="left" class="border-all text-center">Projected Food Costs %</th>
+                            <td width="40%" class="border-all">&nbsp;</td>
 						</tr>
 					</tbody>
 				</table>
@@ -58,12 +58,12 @@
 				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	<tbody>
 						<tr>	
-                            <th width="30%" class="border-all text-center">Target Alcohol Costs %</th>
-                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+                            <th width="60%" class="border-all text-center">Target Alcohol Costs %</th>
+                            <td width="40%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-                            <th width="30%" class="border-all text-center">Projected Alcohol Costs %</th>
-                            <td width="20%" class="border-all">&nbsp;</td>
+                            <th width="60%" class="border-all text-center">Projected Alcohol Costs %</th>
+                            <td width="40%" class="border-all">&nbsp;</td>
 						</tr>
                     </tbody>
 				</table>
@@ -76,20 +76,20 @@
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Food</th>
 					</tr>
 					<tr>
-						 <th width="30%" class="border-all text-center">Current Food Cost %</th>
-						 <td width="20%" class="border-all">&nbsp;</td>
+						 <th width="60%" class="border-all text-center">Current Food Cost %</th>
+						 <td width="40%" class="border-all">&nbsp;</td>
 					 </tr>
 					 <tr>
-					 	 <th width="30%" class="border-all text-left">Adjusted Budget</th>
-						 <td width="20%" class="border-all">&nbsp;</td>
+					 	 <th width="60%" class="border-all text-left">Adjusted Budget</th>
+						 <td width="40%" class="border-all">&nbsp;</td>
 					 </tr>
 					 <tr>
-					 	 <th width="30%" class="border-all text-left">Remaining Budget</th>
-						 <td width="20" class="border-all"></td>
+					 	 <th width="60%" class="border-all text-left">Remaining Budget</th>
+						 <td width="40" class="border-all"></td>
 					 </tr>
 					 <tr>
-					 	 <th width="30%" class="border-all text-left">Purchases</th>
-						 <td width="20%" class="border-all"></td>
+					 	 <th width="60%" class="border-all text-left">Purchases</th>
+						 <td width="40%" class="border-all"></td>
 					 </tr>
 				</table>
 		 </div>
@@ -99,20 +99,20 @@
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
 					 </tr>
 					 <tr>
-						 <th width="30%" class="border-all text-center">Current Alcohol Cost %</th>
-						 <td width="20%" class="border-all">&nbsp;</td>
+						 <th width="60%" class="border-all text-center">Current Alcohol Cost %</th>
+						 <td width="40%" class="border-all">&nbsp;</td>
 					 </tr>
 					 <tr>
-					 	 <th width="30%" class="border-all text-left">Adjusted Budget</th>
-						 <td width="20%" class="border-all">&nbsp;</td>
+					 	 <th width="60%" class="border-all text-left">Adjusted Budget</th>
+						 <td width="40%" class="border-all">&nbsp;</td>
 					 </tr>
 					 <tr>
-					 	 <th width="30%" class="border-all text-left">Remaining Budget</th>
-						 <td width="20" class="border-all"></td>
+					 	 <th width="60%" class="border-all text-left">Remaining Budget</th>
+						 <td width="40" class="border-all"></td>
 					 </tr>
 					 <tr>
-					 	 <th width="30%" class="border-all text-left">Purchases</th>
-						 <td width="20%" class="border-all"></td>
+					 	 <th width="60%" class="border-all text-left">Purchases</th>
+						 <td width="40%" class="border-all"></td>
 					 </tr>				 
 				</table>
 		 </div>
