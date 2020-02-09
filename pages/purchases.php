@@ -5,7 +5,7 @@
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
-?><?php include "navigation.php"; ?>
+?><?php include "navigation.html"; ?>
 
 <body>
 
@@ -72,11 +72,11 @@ if(!isset($_SESSION['user_id'])){
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">TProjected Food Budget</td>
+						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Projected Alcohol</td>
+						  <td width="50%" class="border-all text-center">Projected Alcohol Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr> 
 					  </tbody>
