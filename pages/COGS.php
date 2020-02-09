@@ -51,7 +51,7 @@
 						</tr>
 						<tr>
 							<th width="30%" float="left" class="border-all text-center">Projected Food Costs %</th>
-                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+                            <td width="20%" class="border-all">&nbsp;</td>
 						</tr>
 					</tbody>
 				</table>
@@ -73,7 +73,21 @@
                     </tbody>
 				</table>
 			</div>
-		</div>			
+		</div>	
+	<div class=""row">
+		 <div style="float:left; width:50%" class="col-4 text-center">
+		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+			  		 <tr>
+					 	 <th width="100%" class="border-all text-center">Food</th>
+					</tr>
+					<tr>
+						 <td width="30%" class="border-all text-center">Current Food Cost</td>
+						 <td width="20%" class="border-all text-center">&nbsp;</td>
+					 </tr>
+					 
+			  </table>
+		 </div>
+	</div>		
 
     </section><!-- #faq -->
 
