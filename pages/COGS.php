@@ -96,11 +96,14 @@
 					 	 <th width="30%" class="border-all text-left">Purchases</th>
 						 <td width="20%" class="border-all"></td>
 					 </tr>
-					 <tr>
-					 	 <thead>Date</thead>
-						 <thead>Vendor</thead>
-						 <thead>Amount</thead>
-					 </tr>
+					 <thead>
+					 	<tr>
+					 	 	<th>Date</th>
+						 	<th>Vendor</th>
+						 	<th>Amount</th>
+					 	</tr>
+					 </thead>
+					 
 					 
 			  </table>
 		 </div>
