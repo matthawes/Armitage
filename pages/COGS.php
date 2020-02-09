@@ -132,9 +132,9 @@
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
 								 <tr>
-								 	 <td><input type="text" size="20%" /></td>
-								 	 <td><input type="text" size="60%" /></td>
-								 	 <td><input type="text" size="20%" /></td>
+								 	 <td><input type="text" size="20" /></td>
+								 	 <td><input type="text" size="60" /></td>
+								 	 <td><input type="text" size="20" /></td>
 								 </tr>
 							</tbody>	 
 					 </table>
@@ -149,9 +149,9 @@
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	  <td><input type="text" size="20%" /></td>
-								 	  <td><input type="text" size="60%" /></td>
-								 	  <td><input type="text" size="20%" /></td>
+								 	  <td><input type="text" size="20" /></td>
+								 	  <td><input type="text" size="60" /></td>
+								 	  <td><input type="text" size="20" /></td>
 								 </tr>
 					 		</tbody>
 			  		 </table>
