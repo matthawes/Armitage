@@ -116,7 +116,7 @@
 					 </tr>
 				</table>
 		 </div>
-		 <span class="section-divider"></span>
+		
 		 <div style="float: left; class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <thead>
