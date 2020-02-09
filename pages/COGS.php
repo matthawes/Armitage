@@ -37,7 +37,7 @@
       </div>
 	  <div class="container-fluid"></div>
 	  	   <div class="row">
-          		<div style="float: left; width: 50%; border-spacing: 10%" class="col-6 text-center">	
+          		<div style="float: left; border-spacing: 10%" class="col-6 text-center">	
              	 	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
 					 		<tbody>	
 									<tr>
@@ -51,7 +51,7 @@
 							</tbody>
 					</table>
 				</div>
-				<div style="float: right; width: 50%; border-spacing: 10%" class="col-6 text-center">
+				<div style="float: right; border-spacing: 10%" class="col-6 text-center">
 					<table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
 				 		   <tbody>
 						   		  <tr>	
