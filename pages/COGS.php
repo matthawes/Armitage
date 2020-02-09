@@ -34,6 +34,8 @@
 		 		   </div>
 		</div>
       </div>
+	</section>
+	<select class="faq">
 	  <div class="container" style="padding-top:5%">
 	  	   <div class="row">
           		<div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom:2%" class="col-6 text-center">	
@@ -71,7 +73,7 @@
 		 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">
 			  			   <tbody>
 						   		  <tr>
-					 	 		  	  <th width="100%" class="border-all bg-yellow text-center">Food</th>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Food</th>
 								  </tr>
 								  <tr>
 						 		  	  <th width="80%" class="border-all text-center">Current Food Cost %</th>
@@ -96,7 +98,7 @@
 		 	   		<table border="1" cellspacing="0" cellpadding="0" class="table">
 			  		 	   <tbody>
 					 	   		  <tr>
-					 	 		  	  <th width="100%" class="border-all bg-yellow text-center">Alcohol</th>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
 					 			  </tr>
 					 			  <tr>
 						 		  	  <th width="80%" class="border-all text-center">Current Alcohol Cost %</th>
@@ -119,6 +121,7 @@
 		 		</div>
 		 	</div> 
 		</div>
+		</select>	
     </section>
   </main>
 
