@@ -24,27 +24,27 @@ if(!isset($_SESSION['user_id'])){
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Advertising%</td>
+						  <td width="50%" class="border-all text-left">Target Advertising%</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Cleaning Supplies%</td>
+						  <td width="50%" class="border-all text-left">Target Cleaning Supplies%</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Linen%</td>
+						  <td width="50%" class="border-all text-left">Target Linen%</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
                         <tr>
-						  <td width="50%" class="border-all text-center">Target Office Supplies%</td>
+						  <td width="50%" class="border-all text-left">Target Office Supplies%</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Repairs and Maintenance%</td>
+						  <td width="50%" class="border-all text-left">Target Repairs and Maintenance%</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Restaurant Supplies%</td>
+						  <td width="50%" class="border-all text-left">Target Restaurant Supplies%</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr> 
 					  </tbody>
