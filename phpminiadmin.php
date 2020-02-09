@@ -11,14 +11,22 @@
 
 $ACCESS_PWD=''; #!!!IMPORTANT!!! this is script access password, SET IT if you want to protect you DB from public access
 
+    $conn = getenv("MYSQLCONNSTR_localdb"); 
+    $conarr2 = explode(";",$conn); 
+    $conarr = array();
+    foreach($conarr2 as $key=>$value){
+        $k = substr($value,0,strpos($value,'='));
+        $conarr[$k] = substr($value,strpos($value,'=')+1);
+    }
+
 #DEFAULT db connection settings
 # --- WARNING! --- if you set defaults - it's recommended to set $ACCESS_PWD to protect your db!
 $DBDEF=array(
-'user'=>"azure",#required
-'pwd'=>"6#vWHD_$ )", #required
-'db'=>"localdb",  #optional, default DB
-'host'=>"127.0.0.1",#optional
-'port'=>"50209",#optional
+'user'=>$conarr['User Id'],#required
+'pwd'=>$conarr['Password'], #required
+'db'=>$conarr['Database'],  #optional, default DB
+'host'=>$conarr['Data Source'],#optional
+'port'=>"",#optional
 'chset'=>"utf8",#optional, default charset
 );
 $IS_COUNT=false; #set to true if you want to see Total records when pagination occurs (SLOWS down all select queries!)
