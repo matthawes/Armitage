@@ -149,8 +149,8 @@
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	 <td</td>
-								 	 <td</td>
+								 	 <td></td>
+								 	 <td></td>
 								 	 <td></td>
 								 </tr>
 					 		</tbody>
