@@ -35,7 +35,7 @@
 		 		   </div>
 		</div>
       </div>
-	  <div class="container" style="padding-top:5%">
+	  <div class="container" style="padding-top: 5%">
 	  	   <div class="row">
           		<div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">	
              	 	 <table border="1" cellspacing="0" cellpadding="0" class="table">	
@@ -65,7 +65,9 @@
                    			</tbody>
 					</table>
 				</div>		
-			</div>	
+			</div>
+		</div>	
+		<div class="container">
 			<div class="row">
 		 		 <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
 		 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">
@@ -112,7 +114,8 @@
 					 			  </tr>	
 					 		</tbody> 			 
 					</table>
-		 		</div> 
+		 		</div>
+		 	</div> 
 		</div>
     </section>
   </main>
