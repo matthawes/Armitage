@@ -50,7 +50,7 @@
 					</tbody>
 				</table>
 				</div>
-			</div>
+			
 						
 					
 					
@@ -68,7 +68,7 @@
                     </tbody>
 				</table>
 				</div>
-			</div>
+			
 		</div>	
 
     </section>
