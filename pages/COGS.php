@@ -6,7 +6,7 @@
 
     header("Location: ../index.php");
 	} ?>
-<?php include "navigation.html"; ?>
+<?php include "../pages/navigation.html"; ?>
 <body>
 
   <main id="main">
