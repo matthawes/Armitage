@@ -17,8 +17,8 @@ $DBDEF=array(
 'user'=>"azure",#required
 'pwd'=>"6#vWHD_$ )", #required
 'db'=>"localdb",  #optional, default DB
-'host'=>"localhost",#optional
-'port'=>"50193",#optional
+'host'=>"127.0.0.1",#optional
+'port'=>"50209",#optional
 'chset'=>"utf8",#optional, default charset
 );
 $IS_COUNT=false; #set to true if you want to see Total records when pagination occurs (SLOWS down all select queries!)
