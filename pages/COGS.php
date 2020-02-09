@@ -22,7 +22,7 @@
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
           	  <span class="section-divider"></span>
-         	  		<div class="input-container">
+         	  		<div class="input-container" class="text-center">
 					<div id="dateDownOne" onClick="decreaseDateByOne()">
 					<b>Previous</b>
 		 			</div>			
