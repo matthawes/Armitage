@@ -54,7 +54,7 @@
 						
 					
 					
-			<div style="float: right; width="50%" class="col-6 text-center">
+			<div style="float: right; class="col-6 text-center">
 				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	<tbody>
 						<tr>	
@@ -117,7 +117,7 @@
 				</table>
 		 </div>
 		 <span class="section-divider"></span>
-		 <div style="float: left; width:"50%" class="col-6 text-center">
+		 <div style="float: left; class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <thead>
 					 		<th class="border-all text-left">Date</th>
@@ -126,7 +126,7 @@
 					 </thead>
 			  </table>
 		 </div>
-		 <div style="float: right; width:"50%" class="col-6 text-center">
+		 <div style="float: right; class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <thead>
 					 		<th class="border-all text-left">Date</th>
