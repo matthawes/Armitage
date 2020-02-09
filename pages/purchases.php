@@ -57,6 +57,10 @@ if(!isset($_SESSION['user_id'])){
                             <td width="75%" class="border-all text-left">Current Food Cost%</td>
                             <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
+                        <tr>
+                            <td width="75%" class="border-all text-left">Current Alcohol Cost%</td>
+                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+						</tr>
 						<tr>
 						  <td width="75%" class="border-all text-left">Adjusted Budget</td>
 						  <td width="25%" class="border-all">&nbsp;</td>
