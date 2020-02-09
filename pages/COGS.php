@@ -78,23 +78,28 @@
 		 <div style="float: left; width:"50%" class="col-4 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		<tr>
-					 	 <th colspan="3" class="border-all bg-yellow text-center">Food</th>
+					 	 <th colspan="2" class="border-all bg-yellow text-center">Food</th>
 					</tr>
 					<tr>
-						 <th colspan="2" class="border-all text-center">Current Food Cost</th>
-						 <td class="border-all">&nbsp;</td>
+						 <th width="30%" class="border-all text-center">Current Food Cost</th>
+						 <td width="20%" class="border-all">&nbsp;</td>
 					 </tr>
 					 <tr>
-					 	 <th colspan="2" class="border-all text-left">Adjusted Budget</th>
-						 <td class="border-all">&nbsp;</td>
+					 	 <th width="30%" class="border-all text-left">Adjusted Budget</th>
+						 <td width="20%" class="border-all">&nbsp;</td>
 					 </tr>
 					 <tr>
-					 	 <th colspan="2" class="border-all text-left">Remaining Budget</th>
-						 <td class="border-all"></td>
+					 	 <th width="30%" class="border-all text-left">Remaining Budget</th>
+						 <td width="20" class="border-all"></td>
 					 </tr>
 					 <tr>
-					 	 <th colspan="2" class="border-all text-left">Purchases</th>
-						 <td class="border-all"></td>
+					 	 <th width="30%" class="border-all text-left">Purchases</th>
+						 <td width="20%" class="border-all"></td>
+					 </tr>
+					 <tr>
+					 	 <thead>Date</thead>
+						 <thead>Vendor</thead>
+						 <thead>Amount</thead>
 					 </tr>
 					 
 			  </table>
