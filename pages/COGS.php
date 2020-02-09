@@ -119,8 +119,30 @@
 					 		</tbody> 			 
 					</table>
 		 		</div>
-		 	</div> 
-		</div>
+			</div>
+			<div class="row">	
+		 	    <div style="float: left; class="col-6 text-center">
+				    <table border="1" cellspacing="0" cellpadding="0" class="table">
+						   <tbody>
+			 	   		  		 <tr>
+					 			 	 <th class="border-all text-left">Date</th>
+									 <th class="border-all text-left">Vendor</th>
+									 <th class="border-all text-left">Amount</th>
+					 			 </tr>
+							</tbody>	 
+					</table>
+			    </div>   
+		 		<div style="float: right; class="col-6 text-center">
+		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+			  		 		<thead>
+					 			   <th class="border-all text-left">Date</th>
+								   <th class="border-all text-left">Vendor</th>
+								   <th class="border-all text-left">Amount</th>
+					 		</thead>
+			  		 </table>
+		 		</div>
+			</div>		
+		 </div> 
     </section>
   </main>
 
