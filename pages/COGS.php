@@ -75,13 +75,13 @@
 			</div>
 		</div>	
 	<div class=""row">
-		 <div style="float: left; width:50%" class="col-4 text-center">
+		 <div style="float: left; width:"50%" class="col-4 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
-			  		 <tr>
+			  		<tr>
 					 	 <th width="100%" class="border-all bg-yellow text-center">Food</th>
 					</tr>
 					<tr>
-						 <td width="30%" class="border-all text-center">Current Food Cost</td>
+						 <th width="30%" class="border-all text-center">Current Food Cost</th>
 						 <td width="20%" class="border-all">&nbsp;</td>
 					 </tr>
 					 
