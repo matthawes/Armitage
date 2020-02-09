@@ -18,27 +18,22 @@
     ============================-->
 
     <section id="services">
-
       <div class="container">
-
         <div class="section-header wow fadeInUp" style="visibility: visible;">
-
           <h3 class="section-title">COGS</h3>
-
-          <span class="section-divider"></span>
-                        <div class="input-container">
+          	  <span class="section-divider"></span>
+         <div class="input-container">
 			<div id="dateDownOne" onClick="decreaseDateByOne()">
-			<b>Previous</b>
-			</div>			
+				<b>Previous</b>
+		 </div>			
 			<form id="dateForm">
 				<input type="date" class="tallInput" id="date" onblur="clearPage()">
 			</form>
-			<div id="dateUpOne" onClick="increaseDateByOne()">
+		 <div id="dateUpOne" onClick="increaseDateByOne()">
 			<b>Next</b>
-			</div>
-			</div>
-        </div>
-
+		 </div>
+		</div>
+       </div>
       </div>
 
 	  <div class="row">
@@ -98,7 +93,7 @@
 					 </tr>
 				</table>
 		 </div>
-		 <div style="float: right; width:"50%" class="col-4 text-center">
+		 <div style="float: right; width:"50%" class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <tr>
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
@@ -121,6 +116,7 @@
 					 </tr>
 				</table>
 		 </div>
+		 <span class="section-divider"></span>
 		 <div style="float: left; width:"50%" class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <thead>
