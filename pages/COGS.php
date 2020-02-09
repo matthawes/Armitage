@@ -37,8 +37,8 @@
       </div>
 
 	  <div class="row">
-          	<div style="float: left; class="col-6 text-center" >		
-             	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
+          	<div style="float: left; class="col-sm text-center" >		
+             	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm table-md table-lg">	
 					<tbody>	
 						<tr>
                             <th width="30%" class="border-all text-center">Target Food Costs %</th>
@@ -54,7 +54,7 @@
 						
 					
 					
-			<div style="float: right; class="col-6 text-center">
+			<div style="float: right; class="col-sm text-center">
 				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	<tbody>
 						<tr>	
@@ -70,7 +70,7 @@
 			</div>
 		</div>	
 	<div class=""row">
-		 <div style="float: left; class="col-6 text-center">
+		 <div style="float: left; class="col-lg-6 col-md-12 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		<tr>
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Food</th>
