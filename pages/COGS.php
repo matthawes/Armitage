@@ -132,9 +132,9 @@
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
 								 <tr>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
+								 	 <td><input type="text" name="txt_Date" /></td>
+								 	 <td><input type="text" name="txt_Vendor" /></td>
+								 	 <td><input type="text" name="txt_Amount" /></td>
 								 </tr>
 							</tbody>	 
 					 </table>
@@ -149,9 +149,9 @@
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	 <td></td>
-								 	 <td></td>
-								 	 <td></td>
+								 	 <td><input type="text" name="txt_Date" /></td>
+								 	 <td><input type="text" name="txt_Vendor" /></td>
+								 	 <td><input type="text" name="txt_Amount" /></td>
 								 </tr>
 					 		</tbody>
 			  		 </table>
