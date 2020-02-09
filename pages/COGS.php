@@ -146,7 +146,7 @@
 
 
   </main>
-
+<?php include "footer.php"; ?>
 
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -185,7 +185,7 @@
 
   <script src="../contactform/contactform.js"></script>
 
-
+</body>
 
   <!-- Template Main Javascript File -->
 
@@ -193,9 +193,9 @@
 
 
 
-</body>
 
-<?php include "footer.php"; ?>
+
+
 
 
 
