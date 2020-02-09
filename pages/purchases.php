@@ -55,28 +55,28 @@ if(!isset($_SESSION['user_id'])){
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Advertising%</td>
+						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
                             
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Cleaning Supplies%</td>
+						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Linen%</td>
+						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
                         <tr>
-						  <td width="50%" class="border-all text-center">Target Office Supplies%</td>
+						  <td width="50%" class="border-all text-center">Projected Food Budget</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Repairs and Maintenance%</td>
+						  <td width="50%" class="border-all text-center">TProjected Food Budget</td>
 						  <td width="50%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="50%" class="border-all text-center">Target Restaurant Supplies%</td>
+						  <td width="50%" class="border-all text-center">Projected Alcohol</td>
 						  <td width="50%" class="bg-yellow border-all">&nbsp;</td>
 						</tr> 
 					  </tbody>
@@ -89,12 +89,13 @@ if(!isset($_SESSION['user_id'])){
 			 <form>
 				  <div class="form-group w-50">
 					<select class="form-control" id="exampleFormControlSelect1">
-					  <option selected="selected">Select...</option>
-					  <option value="WALK-IN COOLER">WALK-IN COOLER</option>
-					  <option value="WINE ROOM">WINE ROOM</option>
-					  <option value="LIQUOR CAGE">LIQUOR CAGE</option>
-					  <option value="BEHIND BAR">BEHIND BAR</option>
-					  <option value="BOTTLE COOLER">BOTTLE COOLER</option>
+					   <option selected="selected">Select...</option>
+					   <option value="Advertising">Advertising</option>
+					   <option value="Cleaning Supplies">Cleaning Supplies</option>
+					   <option value="Linen">Linen</option>
+					   <option value="Office Supplies">Office Supplies</option>
+					   <option value="Repair and Maintenance">Repair and Maintenance</option>
+                       <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>
 				  </div>
 			</form>
@@ -104,161 +105,62 @@ if(!isset($_SESSION['user_id'])){
 			     <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			       <thead class="thead-dark">
 			         <tr class="text-sm text-center">
-			           <th width="4%">Cat</th>
-			           <th width="16%">Item</th>
-			           <th width="8%">Vendor</th>
-			           <th width="8%">Unit</th>
-			           <th width="8%">Cost</th>
-			           <th width="8%">Beg.</th>
-			           <th width="8%">Purch.</th>
-			           <th width="8%">End</th>
-			           <th width="8%">Beg.</th>
-			           <th width="8%">Purch.</th>
-			           <th width="8%">End</th>
-			           <th width="8%">Change</th>
-		              </tr>
+			           <th width="16%">Date</th>
+			           <th width="16%">Vendor</th>
+			           <th width="16%">Amount</th>
+			         </tr>
 		            </thead>
 			       <tbody>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td class="bg-yellow">&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-		              </tr>
+			         </tr>
 		            </tbody>
 		         </table></th>
 			   </tr>
