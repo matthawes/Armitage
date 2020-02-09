@@ -123,7 +123,7 @@
 		</div>
 		<div class="container">
 			 <div class="row">	
-		 	     <div style="float: left;" class="col-6 text-center">
+		 	     <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
 				     <table border="1" cellspacing="0" cellpadding="0" class="table">
 						   <tbody>
 			 	   		  		 <tr>
@@ -132,15 +132,15 @@
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
 								 <tr>
-								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtDate" /></td>
-								 	 <td width="60%" class="border-all text-left"><input type="text" id="txtVendor" /></td>
-								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtAmount" /></td><br />
+								 	 <td width="20%" class="border-all text-left"></td>
+								 	 <td width="60%" class="border-all text-left"></td>
+								 	 <td width="20%" class="border-all text-left"></td>
 									 <button id="Submit" class="btn btn-warning">add</button>
 								 </tr>
 							</tbody>	 
 					 </table>
 			     </div>   
-		 		 <div style="float: right;" class="col-6 text-center">
+		 		 <div style="float: right; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
 				 
 		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table">
 			  		 		<tbody>
@@ -150,9 +150,9 @@
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtDate" /></td>
-								 	 <td width="60%" class="border-all text-left"><input type="text" id="txtVendor" /></td>
-								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtAmount" /></td><br />
+								 	 <td width="20%" class="border-all text-left"></td>
+								 	 <td width="60%" class="border-all text-left"></td>
+								 	 <td width="20%" class="border-all text-left"></td>
 									 <button id="Submit" class="btn btn-warning">add</button>
 								 </tr>
 					 		</tbody>
