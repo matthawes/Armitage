@@ -42,7 +42,7 @@
       </div>
 
 	<div class="row">
-          	<div style="float: left; width="50%"  class="col-8 text-center" >		
+          	<div style="float: left; width="50%"  class="col-4 text-center" >		
              	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 					<tbody>	
 						<tr>
@@ -59,7 +59,7 @@
 						
 					
 					
-			<div style="float: right; width="50%" class="col-8 text-center">
+			<div style="float: right; width="50%" class="col-4 text-center">
 				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 				 	<tbody>
 						<tr>	
