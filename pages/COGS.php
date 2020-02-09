@@ -132,27 +132,28 @@
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
 								 <tr>
-								 	 <td><input type="text" id="txtDate" /></td>
-								 	 <td><input type="text" id="txtVendor" /></td>
-								 	 <td><input type="text" id="txtAmount" /></td><br />
-									 <td id="btnAd" class="button-add" onclick="insertRow();">add</td>
+								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtDate" /></td>
+								 	 <td width="60%" class="border-all text-left"><input type="text" id="txtVendor" /></td>
+								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtAmount" /></td><br />
+									 <button id="Submit" class="btn btn-warning">add</button>
 								 </tr>
 							</tbody>	 
 					 </table>
 			     </div>   
 		 		 <div style="float: right; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+				 
 		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table">
 			  		 		<tbody>
 								  <tr>
-					 			   	  <th width="20%" class="border-all text-left">Date</th>
-								   	  <th width="60%" class="border-all text-left">Vendor</th>
-								   	  <th width="20%" class="border-all text-left">Amount</th>
+					 			   	  <th width="20%" class="border-all bg-yellow text-center">Date</th>
+								   	  <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
+								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	 <td><input type="text" id="txtDate" /></td>
-								 	 <td><input type="text" id="txtVendor" /></td>
-								 	 <td><input type="text" id="txtAmount" /></td><br />
-									 <td id="btnAd" class="button-add" onclick="insertRow();">add</td>
+								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtDate" /></td>
+								 	 <td width="60%" class="border-all text-left"><input type="text" id="txtVendor" /></td>
+								 	 <td width="20%" class="border-all text-left"><input type="text" id="txtAmount" /></td><br />
+									 <button id="Submit" class="btn btn-warning">add</button>
 								 </tr>
 					 		</tbody>
 			  		 </table>
