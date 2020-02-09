@@ -42,13 +42,14 @@
       </div>
 
 	<div class="row">
-          	<div style="float: left; width="40%"  class="col-8 text-center" >		
+          	<div style="float: left; width="50%"  class="col-8 text-center" >		
              	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
 					<tbody>	
 						<tr>
                             <th width="30%" class="border-all text-center">Target Food Costs %</th>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
-							<br />
+						</tr>
+						<tr>
 							<th width="30%" float="left" class="border-all text-center">Projected Food Costs %</th>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
@@ -64,7 +65,8 @@
 						<tr>	
                             <th width="30%" class="border-all text-center">Target Alcohol Costs %</th>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
-							<br />
+						</tr>
+						<tr>
                             <th width="30%" class="border-all text-center">Projected Alcohol Costs %</th>
                             <td width="20%" class="border-all">&nbsp;</td>
 						</tr>
