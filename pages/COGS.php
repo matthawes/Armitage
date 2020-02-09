@@ -132,10 +132,9 @@
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
 								 <tr>
-								 	 <td width="20%" class="border-all text-left"></td>
-								 	 <td width="60%" class="border-all text-left"></td>
-								 	 <td width="20%" class="border-all text-left"></td>
-									 <button id="Submit" class="btn btn-warning">add</button>
+								 	 <td></td>
+								 	 <td></td>
+								 	 <td></td>
 								 </tr>
 							</tbody>	 
 					 </table>
@@ -150,10 +149,9 @@
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	 <td width="20%" class="border-all text-left"></td>
-								 	 <td width="60%" class="border-all text-left"></td>
-								 	 <td width="20%" class="border-all text-left"></td>
-									 <button id="Submit" class="btn btn-warning">add</button>
+								 	 <td</td>
+								 	 <td</td>
+								 	 <td></td>
 								 </tr>
 					 		</tbody>
 			  		 </table>
