@@ -14,11 +14,11 @@ $ACCESS_PWD=''; #!!!IMPORTANT!!! this is script access password, SET IT if you w
 #DEFAULT db connection settings
 # --- WARNING! --- if you set defaults - it's recommended to set $ACCESS_PWD to protect your db!
 $DBDEF=array(
-'user'=>"",#required
-'pwd'=>"", #required
-'db'=>"",  #optional, default DB
-'host'=>"",#optional
-'port'=>"",#optional
+'user'=>"azure",#required
+'pwd'=>"6#vWHD_$ )", #required
+'db'=>"localdb",  #optional, default DB
+'host'=>"localhost",#optional
+'port'=>"50193",#optional
 'chset'=>"utf8",#optional, default charset
 );
 $IS_COUNT=false; #set to true if you want to see Total records when pagination occurs (SLOWS down all select queries!)
