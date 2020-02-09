@@ -125,9 +125,9 @@
 				     <table border="1" cellspacing="0" cellpadding="0" class="table">
 						   <tbody>
 			 	   		  		 <tr>
-					 			 	 <th class="border-all text-left">Date</th>
-									 <th class="border-all text-left">Vendor</th>
-									 <th class="border-all text-left">Amount</th>
+					 			 	 <th width="20%" class="border-all text-left">Date</th>
+									 <th width="60%" class="border-all text-left">Vendor</th>
+									 <th width="20%" class="border-all text-left">Amount</th>
 					 			 </tr>
 							</tbody>	 
 					 </table>
@@ -135,9 +135,9 @@
 		 		 <div style="float: right; class="col-6 text-center">
 		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table">
 			  		 		<tbody>
-					 			   <th class="border-all text-left">Date</th>
-								   <th class="border-all text-left">Vendor</th>
-								   <th class="border-all text-left">Amount</th>
+					 			   <th width="20%" class="border-all text-left">Date</th>
+								   <th width="60%" class="border-all text-left">Vendor</th>
+								   <th width="20%" class="border-all text-left">Amount</th>
 					 		</tbody>
 			  		 </table>
 		 		</div>
