@@ -42,28 +42,36 @@
       </div>
 
 	<div class="row">
-          	<div class="col-6 text-center">		
+          	<div style="float: left; width="40%" padding-left="10%" class="col-8 text-center" >		
              	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
-				 	 <tbody>
-				 		<tr>
-                            <td width="30%" class="border-all text-center">Target Food Costs %</td>
+					<tbody>	
+						<tr>
+                            <th width="30%" float="left" class="border-all text-center">Target Food Costs %</th>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
-							<td width="10%"></td>
-							<td width="30%" class="border-all text-center">Projected Food Costs %</td>
+							<br></br>
+							<th width="30%" float="left" class="border-all text-center">Projected Food Costs %</th>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 					</tbody>
-			<div class="col-8">
+				</table>
+			</div>
+						
+					
+					
+			<div style="float: right; width="50%" class="col-8 text-center">
 				 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">	
-				 		<tbody>
+				 	<tbody>
 						<tr>	
-                            <td width="30%" class="border-all text-center">Target Alcohol Costs %</td>
+                            <th width="30%" class="border-all text-center">Target Alcohol Costs %</th>
                             <td width="20%" class="bg-yellow border-all">&nbsp;</td>
-							<td width="10%"></td>
-                            <td width="30%" class="border-all text-center">Projected Alcohol Costs %</td>
+							<br></br>
+                            <th width="30%" class="border-all text-center">Projected Alcohol Costs %</th>
                             <td width="20%" class="border-all">&nbsp;</td>
 						</tr>
                     </tbody>
+				</table>
+			</div>
+		</div>			
 
     </section><!-- #faq -->
 
