@@ -155,6 +155,7 @@
 								 </tr>
 					 		</tbody>
 			  		 </table>
+					 <a href="#" title="" class="add">Add</a>
 		 		</div>
 			</div>		
 		 </div> 
