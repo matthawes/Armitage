@@ -165,5 +165,5 @@
 
 </-- Footer -->
 
-<?php include "footer.php"?>
+<?php include "../pages/footer.php"?>
 	
