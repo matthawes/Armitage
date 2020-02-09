@@ -70,7 +70,7 @@
 			</div>
 		</div>	
 	<div class=""row">
-		 <div style="float: left; width:"50%" class="col-6 text-center">
+		 <div style="float: left;  class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		<tr>
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Food</th>
@@ -93,7 +93,7 @@
 					 </tr>
 				</table>
 		 </div>
-		 <div style="float: right; width:"50%" class="col-6 text-center">
+		 <div style="float: right; class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <tr>
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
