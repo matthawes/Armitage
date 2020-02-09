@@ -41,12 +41,12 @@
              	 	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
 					 		<tbody>	
 									<tr>
-                            			<th width="60%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="40%" class="bg-yellow border-all">&nbsp;</td>
+                            			<th class="border-all text-center">Target Food Costs %</th>
+                           				<td class="bg-yellow border-all">&nbsp;</td>
 									</tr>
 									<tr>
-										<th width="60%" float="left" class="border-all text-center">Projected Food Costs %</th>
-                            			<td width="40%" class="border-all">&nbsp;</td>
+										<th float="left" class="border-all text-center">Projected Food Costs %</th>
+                            			<td class="border-all">&nbsp;</td>
 									</tr>
 							</tbody>
 					</table>
@@ -55,12 +55,12 @@
 					<table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
 				 		   <tbody>
 						   		  <tr>	
-                            	  	  <th width="60%" class="border-all text-center">Target Alcohol Costs %</th>
-                           			  <td width="40%" class="bg-yellow border-all">&nbsp;</td>
+                            	  	  <th class="border-all text-center">Target Alcohol Costs %</th>
+                           			  <td class="bg-yellow border-all">&nbsp;</td>
 								  </tr>
 								  <tr>
-                            	  	  <th width="60%" class="border-all text-center">Projected Alcohol Costs %</th>
-                            		  <td width="40%" class="border-all">&nbsp;</td>
+                            	  	  <th class="border-all text-center">Projected Alcohol Costs %</th>
+                            		  <td class="border-all">&nbsp;</td>
 								  </tr>
                    			</tbody>
 					</table>
