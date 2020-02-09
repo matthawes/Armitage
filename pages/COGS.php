@@ -35,7 +35,7 @@
 		 		   </div>
 		</div>
       </div>
-	  <div class="container" style="padding-top: 5%">
+	  <div class="container" style="padding-top:5%">
 	  	   <div class="row">
           		<div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">	
              	 	 <table border="1" cellspacing="0" cellpadding="0" class="table">	
@@ -71,8 +71,10 @@
 			<div class="row">
 		 		 <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
 		 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">
-			  			    <thead class="bg-yellow text-center">Food</thead>
-						   <tbody>
+			  			   <tbody>
+						   		  <tr>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Food</th>
+								  </tr>
 								  <tr>
 						 		  	  <th width="80%" class="border-all text-center">Current Food Cost %</th>
 						 			  <td width="20%" class="border-all">&nbsp;</td>
@@ -94,8 +96,10 @@
 		 	    </div>
 		 	   	<div style="float: right; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
 		 	   		<table border="1" cellspacing="0" cellpadding="0" class="table">
-			  		 	   <thead class="bg-yellow text-center">Alcohol</thead>
-						   <tbody>
+			  		 	   <tbody>
+					 	   		  <tr>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
+					 			  </tr>
 					 			  <tr>
 						 		  	  <th width="80%" class="border-all text-center">Current Alcohol Cost %</th>
 						 			  <td width="20%" class="border-all">&nbsp;</td>
