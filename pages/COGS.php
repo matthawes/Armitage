@@ -38,7 +38,7 @@
 	  <div class="container-fluid"></div>
 	  	   <div class="row">
           		<div style="float: left; border-spacing: 10%" class="col-6 text-center">	
-             	 	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
+             	 	 <table border="1" cellspacing="0" cellpadding="0" class="table">	
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
@@ -52,7 +52,7 @@
 					</table>
 				</div>
 				<div style="float: right; border-spacing: 10%" class="col-6 text-center">
-					<table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
+					<table border="1" cellspacing="0" cellpadding="0" class="table">	
 				 		   <tbody>
 						   		  <tr>	
                             	  	  <th width="80%" class="border-all text-center">Target Alcohol Costs %</th>
