@@ -20,7 +20,7 @@ if(!isset($_SESSION['user_id'])){
           <h3>Purchases</h3>
         </header>
           <div class="row">
-          	<div class="col-4 text-center">
+          	<div class="col-4">
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
@@ -50,8 +50,7 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="row">
-          	<div class="col-12 text-center">
+			   	<div class="col-8">
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
