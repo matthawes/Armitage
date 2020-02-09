@@ -113,19 +113,28 @@
 					 <tr>
 					 	 <th width="30%" class="border-all text-left">Purchases</th>
 						 <td width="20%" class="border-all"></td>
-					 </tr>
+					 </tr>				 
 				</table>
 		 </div>
-		
+	</div> 
+	<div class="row">	
 		 <div style="float: left; class="col-6 text-center">
-		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
-			  		 <thead>
+		 	  <div class="row">
+			  	   <div class="col text-left">
+				    <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+			 	   		 <tr>
 					 		<th class="border-all text-left">Date</th>
 							<th class="border-all text-left">Vendor</th>
 							<th class="border-all text-left">Amount</th>
-					 </thead>
-			  </table>
+					 	</tr>
+					</table>
+			  	   </div>
+			  </div>
+		 	  
+		 	 
+			  		 
 		 </div>
+	
 		 <div style="float: right; class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <thead>
