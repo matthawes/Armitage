@@ -22,7 +22,7 @@
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
           	  <span class="section-divider"></span>
-         	  		<div class="input-container" class="text-center">
+         	  		<div class="input-container">
 					<div id="dateDownOne" onClick="decreaseDateByOne()">
 					<b>Previous</b>
 		 			</div>			
@@ -37,7 +37,7 @@
       </div>
 	  <div class="container-fluid"></div>
 	  	   <div class="row">
-          		<div style="float: left; width: 50%; class="col-6 text-center" >	
+          		<div style="float: left; width: 50%; border-spacing: 10%" class="col-6 text-center">	
              	 	 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
 					 		<tbody>	
 									<tr>
@@ -51,7 +51,7 @@
 							</tbody>
 					</table>
 				</div>
-				<div style="float: right; width: 50%; class="col-6 text-center">
+				<div style="float: right; width: 50%; border-spacing: 10%" class="col-6 text-center">
 					<table border="1" cellspacing="0" cellpadding="0" class="table table-responsive">	
 				 		   <tbody>
 						   		  <tr>	
