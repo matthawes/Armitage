@@ -134,7 +134,7 @@
 								 <tr>
 								 	 <td><input type="text" id="txtDate" /></td>
 								 	 <td><input type="text" id="txtVendor" /></td>
-								 	 <td><input type="text" id="txtAmount" /></td>
+								 	 <td><input type="text" id="txtAmount" /></td><br />
 									 <td id="btnAd" class="button-add" onclick="insertRow();">add</td>
 								 </tr>
 							</tbody>	 
@@ -151,7 +151,7 @@
 								  <tr>
 								 	 <td><input type="text" id="txtDate" /></td>
 								 	 <td><input type="text" id="txtVendor" /></td>
-								 	 <td><input type="text" id="txtAmount" /></td>
+								 	 <td><input type="text" id="txtAmount" /></td><br />
 									 <td id="btnAd" class="button-add" onclick="insertRow();">add</td>
 								 </tr>
 					 		</tbody>
