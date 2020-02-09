@@ -17,7 +17,7 @@
 
     ============================-->
 
-    <section>
+    <section id="services">
       <div class="container">
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
@@ -34,7 +34,7 @@
 		 		   </div>
 		</div>
       </div>
-	  <div class="container" style="padding-top:5%">
+	  <span class="section-divider"></span>
 	  	   <div class="row">
           		<div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom:2%" class="col-6 text-center">	
              	 	 <table border="1" cellspacing="0" cellpadding="0" class="table">	
