@@ -51,7 +51,7 @@ if(!isset($_SESSION['user_id'])){
 					</table>
 		  	</div>
 			  <div class="row">
-          	<div class="col-4 text-center">
+          	<div class="col-12 text-center">
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
