@@ -17,7 +17,7 @@
 
     ============================-->
 
-    <section id="services">
+    <section>
       <div class="container">
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
