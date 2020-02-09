@@ -69,7 +69,7 @@
 		</div>
 		<div class=""row">
 		 <div style="float: left; padding: 5%" class="col-6 text-center">
-		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+		 	  <table border="1" cellspacing="0" cellpadding="0" class="table">
 			  		<tr>
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Food</th>
 					</tr>
@@ -92,7 +92,7 @@
 				</table>
 		 </div>
 		 <div style="float: right; padding: 5%" class="col-6 text-center">
-		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+		 	  <table border="1" cellspacing="0" cellpadding="0" class="table">
 			  		 <tr>
 					 	 <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
 					 </tr>
