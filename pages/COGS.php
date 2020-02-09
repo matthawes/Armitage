@@ -117,12 +117,12 @@
 						 			  <td width="20%" class="border-all"></td>
 					 			  </tr>	
 					 		</tbody> 			 
-					</table>
-		 		</div>
-			</div>
-			<div class="row">	
-		 	    <div style="float: left; class="col-6 text-center">
-				    <table border="1" cellspacing="0" cellpadding="0" class="table">
+					 </table>
+		 		 </div>
+			 </div>
+			 <div class="row">	
+		 	     <div style="float: left; class="col-6 text-center">
+				     <table border="1" cellspacing="0" cellpadding="0" class="table">
 						   <tbody>
 			 	   		  		 <tr>
 					 			 	 <th class="border-all text-left">Date</th>
@@ -130,15 +130,15 @@
 									 <th class="border-all text-left">Amount</th>
 					 			 </tr>
 							</tbody>	 
-					</table>
-			    </div>   
-		 		<div style="float: right; class="col-6 text-center">
-		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
-			  		 		<thead>
+					 </table>
+			     </div>   
+		 		 <div style="float: right; class="col-6 text-center">
+		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table">
+			  		 		<tbody>
 					 			   <th class="border-all text-left">Date</th>
 								   <th class="border-all text-left">Vendor</th>
 								   <th class="border-all text-left">Amount</th>
-					 		</thead>
+					 		</tbody>
 			  		 </table>
 		 		</div>
 			</div>		
