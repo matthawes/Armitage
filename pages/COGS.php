@@ -33,7 +33,6 @@
 				   <b>Next</b>
 		 		   </div>
 		</div>
-       </div>
       </div>
 	  <div class="container-fluid"></div>
 	  	   <div class="row">
@@ -66,7 +65,6 @@
 					</table>
 				</div>		
 			</div>	
-		</div>
 		<div class=""row">
 		 <div style="float: left; padding: 5%" class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table">
@@ -114,8 +112,8 @@
 					 </tr>				 
 				</table>
 		 </div>
-	</div> 
-
+		 </div> 
+	</div>
     </section>
 
 
