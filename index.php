@@ -118,8 +118,8 @@ echo $message;
 <?php
     $invoice_query = "SELECT * FROM invoice";
 	$invoice_result = mysqli_query($connect, $invoice_query);
-	while ($row = mysqli_fetch_array($invoice_result){
-		echo $row[invoice_number]."<br/>";
+	while ($invoice_row = mysqli_fetch_array($invoice_result){
+		echo $invoice_row[invoice_number]."<br/>";
 	}
 ?>
 <?php include "pages/footer.php"; ?>
