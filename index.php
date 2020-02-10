@@ -117,8 +117,9 @@ echo $message;
 </script>
 <?php
     $invoice_query = "SELECT * FROM invoice";
-	while ($invoice_result = mysqli_query($connect, $invoice_query)){
-		echo $invoice_result[invoice_number]."<br/>";
+	$invoice_result = mysqli_query($connect, $invoice_query);
+	while ($row = mysqli_fetch_array($invoice_result){
+		echo $row[invoice_number]."<br/>";
 	}
 ?>
 <?php include "pages/footer.php"; ?>
