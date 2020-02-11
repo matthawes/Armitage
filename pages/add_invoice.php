@@ -115,7 +115,7 @@
                                                 <option value="">Select Food Item Cost Type</option>
                                                 <?php
                                                     while ($food_item_cost1 = mysqli_fetch_array($food_item_cost_result)){
-                                                        echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
+                                                        echo "<option value='".$food_item_cost1[0]."'>".$food_item_cost1[1]."</option>";
                                                     }
                                                 ?>
                                             </select>
@@ -130,7 +130,7 @@
                                                 <option value="">Select Food Item Cost Type</option>
                                                 <?php
                                                     while ($food_item_cost2 = mysqli_fetch_array($food_item_cost_result)){
-                                                        echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
+                                                        echo "<option value='".$food_item_cost2[0]."'>".$food_item_cost2[1]."</option>";
                                                     }
                                                 ?>
                                             </select>
@@ -145,7 +145,7 @@
                                                 <option value="">Select Food Item Cost Type</option>
                                                 <?php
                                                     while ($food_item_cost3 = mysqli_fetch_array($food_item_cost_result)){
-                                                        echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
+                                                        echo "<option value='".$food_item_cost3[0]."'>".$food_item_cost3[1]."</option>";
                                                     }
                                                 ?>
                                             </select>
