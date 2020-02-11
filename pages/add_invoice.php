@@ -8,6 +8,12 @@
 
     $terms_query = "SELECT term_id, term FROM term";
     $terms_result = mysqli_query($connect, $terms_query);
+
+    $vendors_query = "SELECT term_id, term FROM term";
+    $vendors_result = mysqli_query($connect, $vendors_query);
+    
+    $payment_method_query = "SELECT term_id, term FROM term";
+    $payment_method_result = mysqli_query($connect, $payment_method_query);
 ?>
     <main id="main">
         <section id="services">
@@ -57,7 +63,14 @@
                         <div class="row wow fadeInUp" data-wow-delay="0.4s">
                             <div class="col-2">
                                 <label class="control-label" for="vendor">Vendor</label>
-                                <input id="vendor" name="vendor" type="text" placeholder="" class="bg-yellow form-control">
+                                <select id="vendor" name="vendor" class="bg-yellow form-control">
+                                    <option value="">Select Vendor</option>
+                                    <?php
+                                        while ($vendors = mysqli_fetch_array($vendors_result)){
+                                            echo "<option value='".$vendors[0]."'>".$vendors[1]."</option>";
+                                        }
+                                    ?>
+                                </select>
                             </div>
                             <div class="col-2">
 				<label class="control-label" for="date">Date</label>
@@ -69,7 +82,14 @@
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="paymentMethod">Payment Method</label>
-                                <input id="paymentMethod" name="paymentMethod" type="text" placeholder="" class="bg-yellow form-control">
+                                <select id="paymentMethod" name="paymentMethod" class="bg-yellow form-control">
+                                    <option value="">Select Payment Method</option>
+                                    <?php
+                                        while ($payment_method = mysqli_fetch_array($payment_method_result)){
+                                            echo "<option value='".$payment_method[0]."'>".$payment_method[1]."</option>";
+                                        }
+                                    ?>
+                                </select>
                             </div>
                             <div class="col-4">
                                 <label class="control-label" for="memo">Memo</label>
