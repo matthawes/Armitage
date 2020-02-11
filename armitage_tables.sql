@@ -252,6 +252,7 @@ CREATE TABLE `food_item_cost` (
 CREATE TABLE `invoice` (
   `invoice_id` int(11) NOT NULL AUTO_INCREMENT,
   `company_id` int(11) DEFAULT NULL,
+  `vendor_id` int(11) DEFAULT NULL,
   `invoice_number` varchar(50) DEFAULT NULL,
   `invoice_date` datetime DEFAULT NULL,
   `total_amount` decimal(10,2) DEFAULT NULL,
@@ -261,7 +262,9 @@ CREATE TABLE `invoice` (
   PRIMARY KEY (`invoice_id`),
   KEY `term_fk2_idx` (`term_id`),
   KEY `company_fk10_idx` (`company_id`),
+  KEY `vendor_fk10_idx` (`vendor_id`),
   CONSTRAINT `company_fk10` FOREIGN KEY (`company_id`) REFERENCES `company` (`company_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `vendor_fk10` FOREIGN KEY (`vendor_id`) REFERENCES `vendor` (`vendor_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `term_fk2` FOREIGN KEY (`term_id`) REFERENCES `term` (`term_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
