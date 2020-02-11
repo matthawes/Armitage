@@ -30,7 +30,6 @@
                             <div class="col-4">
 				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
                                 <input id="invoiceNum" name="invoiceNum" type="text" placeholder="" class="bg-yellow form-control">
-                                <input class="btn btn-warning btn-md" type="submit" name="submit" value="View Invoice">
                             </div>
 			</div>        
                         <hr class="wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s;">
