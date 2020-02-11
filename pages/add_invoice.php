@@ -9,10 +9,10 @@
     $terms_query = "SELECT term_id, term FROM term";
     $terms_result = mysqli_query($connect, $terms_query);
 
-    $vendors_query = "SELECT term_id, term FROM term";
+    $vendors_query = "SELECT term_id, term FROM vendor";
     $vendors_result = mysqli_query($connect, $vendors_query);
     
-    $payment_method_query = "SELECT term_id, term FROM term";
+    $payment_method_query = "SELECT term_id, term FROM payment_method";
     $payment_method_result = mysqli_query($connect, $payment_method_query);
 ?>
     <main id="main">
