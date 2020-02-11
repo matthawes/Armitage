@@ -21,8 +21,8 @@
                         <div class="row wow fadeInUp" data-wow-delay="0.2s">
                             <div class="col-4">
                                 <label class="control-label" for="memo">Bill To</label>
-                                <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control col-6" style="display:inline;">
-                                    <option value="">Select an invoice</option>
+                                <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control">
+                                    <option value="">Select Company</option>
                                     <?php
                                         while ($company_names = mysqli_fetch_array($company_name_result)){
                                             echo "<option value='".$company_names[0]."'>".$company_names[1]."</option>";
