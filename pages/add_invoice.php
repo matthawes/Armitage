@@ -2,11 +2,15 @@
 <?php session_start(); ?>
 <?php if(!isset($_SESSION['user_id'])){header("Location: ../index.php");} ?>
 <?php include "navigation.html"; ?>
+<?php
+            $company_name_query = "SELECT company_id, company_name FROM company";
+            $company_name_result = mysqli_query($connect, $company_name_query);
+?>
     <main id="main">
         <section id="services">
             <div class="container">
                 <div class="section-header wow fadeInUp" style="visibility: visible;">
-                    <h3 class="section-title">INVOICE</h3>
+                    <h3 class="section-title">NEW INVOICE</h3>
                     <span class="section-divider"></span>
                 </div>
                 <form method="post" action="invoice.php">
@@ -17,7 +21,14 @@
                         <div class="row wow fadeInUp" data-wow-delay="0.2s">
                             <div class="col-4">
                                 <label class="control-label" for="memo">Bill To</label>
-                                <textarea class="form-control bg-yellow" rows="4" id="address" name="address"></textarea>
+                                <select id="invoiceNum" name="invoiceNum" class="bg-yellow form-control col-6" style="display:inline;">
+                                    <option value="">Select an invoice</option>
+                                    <?php
+                                        while ($company_names = mysqli_fetch_array($company_name_result)){
+                                            echo "<option value='".$company_names[0]."'>".$company_names[1]."</option>";
+                                        }
+                                    ?>
+                                </select>
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="amountDue">Amount Due</label>  
