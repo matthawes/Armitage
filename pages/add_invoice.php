@@ -26,7 +26,7 @@
                     <h3 class="section-title">NEW INVOICE</h3>
                     <span class="section-divider"></span>
                 </div>
-                <form method="post" action="invoice.php">
+                <form method="post" action="add_invoice.php">
                     <fieldset>
                         <div class="section-header wow fadeInUp">
                             <hr class="wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.3s;">
@@ -101,64 +101,65 @@
                             </div>
                         </div>
                         <hr class="wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s;">
+                        <div class="row wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="col-12">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-left table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
+                                    <thead class="thead-warning">
+                                        <tr>
+                                            <th>Food Item Cost Type</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="foodItemCost1" name="foodItemCost1" class="bg-yellow form-control">
+                                                <option value="">Select Food Item Cost Type</option>
+                                                <?php
+                                                    while ($food_item_cost1 = mysqli_fetch_array($food_item_cost_result)){
+                                                        echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input id="amount1" name="amount1" type="text" placeholder="" class="bg-yellow form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="foodItemCost2" name="foodItemCost2" class="bg-yellow form-control">
+                                                <option value="">Select Food Item Cost Type</option>
+                                                <?php
+                                                    while ($food_item_cost2 = mysqli_fetch_array($food_item_cost_result)){
+                                                        echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input id="amount2" name="amount2" type="text" placeholder="" class="bg-yellow form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select id="foodItemCost3" name="foodItemCost3" class="bg-yellow form-control">
+                                                <option value="">Select Food Item Cost Type</option>
+                                                <?php
+                                                    while ($food_item_cost3 = mysqli_fetch_array($food_item_cost_result)){
+                                                        echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
+                                                    }
+                                                ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input id="amount3" name="amount3" type="text" placeholder="" class="bg-yellow form-control">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <input class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
                     </fieldset>
                 </form>
-                <div class="row wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="col-12">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-left table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-                            <thead class="thead-warning">
-                                <tr>
-                                    <th>Food Item Cost Type</th>
-                                    <th>Amount</th>
-                                </tr>
-                            <tr>
-                                <td>
-                                    <select id="foodItemCost1" name="foodItemCost1" class="bg-yellow form-control">
-                                        <option value="">Select Food Item Cost Type</option>
-                                        <?php
-                                            while ($food_item_cost1 = mysqli_fetch_array($food_item_cost_result)){
-                                                echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
-                                            }
-                                        ?>
-                                    </select>
-                                </td>
-                                <td>
-                                    <input id="amount1" name="amount1" type="text" placeholder="" class="bg-yellow form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select id="foodItemCost2" name="foodItemCost2" class="bg-yellow form-control">
-                                        <option value="">Select Food Item Cost Type</option>
-                                        <?php
-                                            while ($food_item_cost2 = mysqli_fetch_array($food_item_cost_result)){
-                                                echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
-                                            }
-                                        ?>
-                                    </select>
-                                </td>
-                                <td>
-                                    <input id="amount2" name="amount2" type="text" placeholder="" class="bg-yellow form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <select id="foodItemCost3" name="foodItemCost3" class="bg-yellow form-control">
-                                        <option value="">Select Food Item Cost Type</option>
-                                        <?php
-                                            while ($food_item_cost3 = mysqli_fetch_array($food_item_cost_result)){
-                                                echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
-                                            }
-                                        ?>
-                                    </select>
-                                </td>
-                                <td>
-                                    <input id="amount3" name="amount3" type="text" placeholder="" class="bg-yellow form-control">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
             </div>
         </section>     
     </main>
