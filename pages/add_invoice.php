@@ -116,7 +116,7 @@
                                     <select id="foodItemCost1" name="foodItemCost1" class="bg-yellow form-control">
                                         <option value="">Select Food Item Cost Type</option>
                                         <?php
-                                            while ($food_item_cost = mysqli_fetch_array($food_item_cost_result)){
+                                            while ($food_item_cost1 = mysqli_fetch_array($food_item_cost_result)){
                                                 echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
                                             }
                                         ?>
@@ -131,7 +131,7 @@
                                     <select id="foodItemCost2" name="foodItemCost2" class="bg-yellow form-control">
                                         <option value="">Select Food Item Cost Type</option>
                                         <?php
-                                            while ($food_item_cost = mysqli_fetch_array($food_item_cost_result)){
+                                            while ($food_item_cost2 = mysqli_fetch_array($food_item_cost_result)){
                                                 echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
                                             }
                                         ?>
@@ -146,7 +146,7 @@
                                     <select id="foodItemCost3" name="foodItemCost3" class="bg-yellow form-control">
                                         <option value="">Select Food Item Cost Type</option>
                                         <?php
-                                            while ($food_item_cost = mysqli_fetch_array($food_item_cost_result)){
+                                            while ($food_item_cost3 = mysqli_fetch_array($food_item_cost_result)){
                                                 echo "<option value='".$food_item_cost[0]."'>".$food_item_cost[1]."</option>";
                                             }
                                         ?>
