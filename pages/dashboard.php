@@ -14,7 +14,7 @@ if(!isset($_SESSION['user_id'])){
 
 
 	
-	<script type="text/javascript">
+<script type="text/javascript">
 window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
@@ -370,7 +370,7 @@ function toggleDataSeries(e) {
     </section><!-- #faq -->
 
   </main>
-
+</body>
   
 
 <?php include "../pages/footer.php"?>
