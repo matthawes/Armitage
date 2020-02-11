@@ -15,9 +15,7 @@
     $payment_method_query = "SELECT payment_method_id, payment_method FROM payment_method";
     $payment_method_result = mysqli_query($connect, $payment_method_query);
 
-    $food_item_cost_query = "SELECT food_item_cost_id, type FROM food_item_cost";
-    $food_item_cost_result = mysqli_query($connect, $food_item_cost_query);    
-
+    $food_item_cost_query = "SELECT food_item_cost_id, type FROM food_item_cost";   
     ?>
     <main id="main">
         <section id="services">
@@ -114,7 +112,7 @@
                                             <select id="foodItemCost1" name="foodItemCost1" class="bg-yellow form-control">
                                                 <option value="">Select Food Item Cost Type</option>
                                                 <?php
-                                                    while ($food_item_cost1 = mysqli_fetch_array($food_item_cost_result)){
+                                                    while ($food_item_cost1 = mysqli_fetch_array(mysqli_query($connect, $food_item_cost_query))){
                                                         echo "<option value='".$food_item_cost1[0]."'>".$food_item_cost1[1]."</option>";
                                                     }
                                                 ?>
@@ -129,7 +127,7 @@
                                             <select id="foodItemCost2" name="foodItemCost2" class="bg-yellow form-control">
                                                 <option value="">Select Food Item Cost Type</option>
                                                 <?php
-                                                    while ($food_item_cost2 = mysqli_fetch_array($food_item_cost_result)){
+                                                    while ($food_item_cost2 = mysqli_fetch_array(mysqli_query($connect, $food_item_cost_query))){
                                                         echo "<option value='".$food_item_cost2[0]."'>".$food_item_cost2[1]."</option>";
                                                     }
                                                 ?>
@@ -144,7 +142,7 @@
                                             <select id="foodItemCost3" name="foodItemCost3" class="bg-yellow form-control">
                                                 <option value="">Select Food Item Cost Type</option>
                                                 <?php
-                                                    while ($food_item_cost3 = mysqli_fetch_array($food_item_cost_result)){
+                                                    while ($food_item_cost3 = mysqli_fetch_array(mysqli_query($connect, $food_item_cost_query))){
                                                         echo "<option value='".$food_item_cost3[0]."'>".$food_item_cost3[1]."</option>";
                                                     }
                                                 ?>
