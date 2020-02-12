@@ -141,11 +141,6 @@
 								   	  <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
-								  <tr>
-								 	  <td><input type="text" size="5" /></td>
-								 	  <td><input type="text" size="20" /></td>
-								 	  <td><input type="text" size="5" /></td>
-								 </tr>
 					 		</tbody>
 			  		 </table>
 		 		</div>
