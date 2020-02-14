@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-
+<?php include "../config.php"; ?
 <?php include "../pages/navigation.html"; ?>
 
 <?php if(!isset($_SESSION['user_id'])){
