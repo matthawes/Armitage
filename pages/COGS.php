@@ -1,12 +1,12 @@
 <?php session_start(); ?>
-
-
+<?php include "../config.php"; ?>
+<?php include "../pages/navigation.html"; ?>
 
 <?php if(!isset($_SESSION['user_id'])){
 
     header("Location: ../index.php");
 	} ?>
-<?php include "../pages/navigation.html"; ?>
+
 
 <body>
 
@@ -155,10 +155,20 @@
 								 </tr>
 					 		</tbody>
 			  		 </table>
+										</tr>
 		 		</div>
 			</div>		
 		 </div> 
-    </section>
+    </section>	
+	<script>
+	<?php
+	$invoice_query="SELECT 
+		<table border="1">
+			<tr>
+				<th>Date</th>
+				<th>Vendor</th>
+				<th>Amount</th>
+	</script>
   </main>
 
 
