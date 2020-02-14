@@ -6,8 +6,10 @@
 
     header("Location: ../index.php");
 	} ?>
-<?php $target_query = "SELECT company.target_food_cost_percentage, company.target_alcohol_cost_percentage";
+<?php 
+$target_query = "SELECT company.target_food_cost_percentage, company.target_alcohol_cost_percentage";
 	  				$target_result = mysqli_query($connect, $target_query);
+?>
 
   <main id="main">
 
