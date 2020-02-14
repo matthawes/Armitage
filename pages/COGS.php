@@ -23,10 +23,16 @@
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
           	  <span class="section-divider"></span>
-         	  		<div class="input-container">		
+         	  		<div class="input-container">
+					<div id="dateDownOne" onClick="decreaseDateByOne()">
+					<b>Previous</b>
+		 			</div>			
 			<form id="dateForm">
 				<input type="date" class="tallInput" id="date" onblur="clearPage()">
 			</form>
+		 		   <div id="dateUpOne" onClick="increaseDateByOne()">
+				   <b>Next</b>
+		 		   </div>
 		</div>
       </div>
 	  <div class="container" style="padding-top:5%">
@@ -137,8 +143,10 @@
 								   	  <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
+
 					 		</tbody>
 			  		 </table>
+										</tr>
 		 		</div>
 			</div>		
 		 </div> 
