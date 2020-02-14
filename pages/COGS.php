@@ -1,15 +1,18 @@
 <?php session_start(); ?>
-<?php include "../config.php"; ?
+<?php include "../config.php"; ?>
 <?php include "../pages/navigation.html"; ?>
 
 <?php if(!isset($_SESSION['user_id'])){
 
     header("Location: ../index.php");
 	} ?>
+
 <?php 
 $target_query = "SELECT company.target_food_cost_percentage, company.target_alcohol_cost_percentage";
 	  				$target_result = mysqli_query($connect, $target_query);
 ?>
+
+
 
   <main id="main">
 
@@ -37,7 +40,7 @@ $target_query = "SELECT company.target_food_cost_percentage, company.target_alco
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" placeholder="<? $targeet_result['target_food_cost_percentage'] ?>"; class="bg-yellow border-all"></td>
+                           				<td width="20%" placeholder="<? $targeet_result['target_food_cost_percentage'] ?? '' ?>"; class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
