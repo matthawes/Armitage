@@ -6,7 +6,7 @@
 
     header("Location: ../index.php");
 	} ?>
-
+	
   <main id="main">
 
     <!--==========================
