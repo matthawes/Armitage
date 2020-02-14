@@ -6,7 +6,7 @@
 
     header("Location: ../index.php");
 	} ?>
-	
+
   <main id="main">
 
     <!--==========================
@@ -33,7 +33,7 @@
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" class="bg-yellow border-all">&nbsp;</td>
+                           				<td width="20%" class="bg-yellow border-all"><?= $SELECT company.target_food_cost_percentage ?></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
