@@ -8,6 +8,8 @@
 	} ?>
 
 
+<body>
+
   <main id="main">
 
     <!--==========================
@@ -21,16 +23,10 @@
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
           	  <span class="section-divider"></span>
-         	  		<div class="input-container">
-					<div id="dateDownOne" onClick="decreaseDateByOne()">
-					<b>Previous</b>
-		 			</div>			
+         	  		<div class="input-container">		
 			<form id="dateForm">
 				<input type="date" class="tallInput" id="date" onblur="clearPage()">
 			</form>
-		 		   <div id="dateUpOne" onClick="increaseDateByOne()">
-				   <b>Next</b>
-		 		   </div>
 		</div>
       </div>
 	  <div class="container" style="padding-top:5%">
@@ -143,7 +139,6 @@
 								  </tr>
 					 		</tbody>
 			  		 </table>
-										</tr>
 		 		</div>
 			</div>		
 		 </div> 
@@ -158,6 +153,47 @@
 				<th>Amount</th>
 	</script>
   </main>
+
+
+
+  <!-- JavaScript Libraries -->
+
+  <script src="../lib/jquery/jquery.min.js"></script>
+
+  <script src="../lib/jquery/jquery-migrate.min.js"></script>
+
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../lib/easing/easing.min.js"></script>
+
+  <script src="../lib/superfish/hoverIntent.js"></script>
+
+  <script src="../lib/superfish/superfish.min.js"></script>
+
+  <script src="../lib/wow/wow.min.js"></script>
+
+  <script src="../lib/waypoints/waypoints.min.js"></script>
+
+  <script src="../lib/counterup/counterup.min.js"></script>
+
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+
+  <script src="../lib/lightbox/js/lightbox.min.js"></script>
+
+  <script src="../lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+
+  <script src="../contactform/contactform.js"></script>
+
+
+
+  <!-- Template Main Javascript File -->
+
+  <script src="../js/main.js"></script>
+</body>
 
 <?php include "footer.php"; ?>
 
