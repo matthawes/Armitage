@@ -7,7 +7,7 @@
     header("Location: ../index.php");
 	} ?>
 <?php 
-	$foodNum = $connect;
+	$foodSelect = mysqli_food_string($connect);
 	$target_query = "SELECT target_food_cost_percentage FROM company";
 	$target_result = mysqli_query($connect, $target_query); ?>
 
