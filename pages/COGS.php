@@ -7,9 +7,9 @@
     header("Location: ../index.php");
 	} ?>
 <?php 
-	$connect;
 	$target_query = "SELECT target_food_cost_percentage FROM company";
-	$target_result = mysqli_query($connect, $target_query); ?>
+	$target_result = mysqli_query($connect, $target_query); 
+?>
 
   <main id="main">
 
@@ -37,7 +37,7 @@
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" placeholder="<? $target_result['target_food_cost_percentage'] ?>"; class="bg-yellow border-all"></td>
+                           				<td width="20%" placeholder="<?= $target_result ?>"; class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
