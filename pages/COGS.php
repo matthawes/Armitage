@@ -7,7 +7,6 @@
     header("Location: ../index.php");
 	} ?>
 <?php
-	$food_connect = $connect;
 	$food_query = mysqli_query("SELECT * FROM company", $connect);
 	while ($row1 = mysqli_fetch_array($food_query));
 	
