@@ -10,7 +10,7 @@
 	$db = mysqli_select_db("company", $connect);
 	$food_query = mysqli_query("SELECT * FROM target_food_cost_percentage", $connect);
 	while ($row1 = mysqli_fetch_array($food_query));
-	
+?>
 
   <main id="main">
 
