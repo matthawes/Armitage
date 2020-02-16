@@ -6,7 +6,10 @@
 
     header("Location: ../index.php");
 	} ?>
-
+<?php
+	$food_connect = $connect;
+	$food_query = "SELECT target_food_cost_perentage FROM company";
+	$food_results = mysqli_query($connect, $food_query);
 
   <main id="main">
 
@@ -34,7 +37,7 @@
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" ; class="bg-yellow border-all"></td>
+                           				<td width="20%"; placeholder="echo $food_results"; class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
