@@ -8,8 +8,13 @@
 	} ?>
 
 <?php 
-$target_query = "SELECT company.target_food_cost_percentage, company.target_alcohol_cost_percentage";
-	  				$target_result = mysqli_query($connect, $target_query);
+
+            $invoice_query = "SELECT cost_of_goods.*, company.target_food_cost_percentage, company.target_alcohol_cost_percentage
+                    FROM cost_of_goods
+                    LEFT JOIN company ON company.company_id = cost_of_goods.company_id
+            $invoice_result = mysqli_query($connect, $invoice_query);
+            $selectedCOG = mysqli_fetch_array($invoice_result);
+
 ?>
 
 
@@ -40,7 +45,7 @@ $target_query = "SELECT company.target_food_cost_percentage, company.target_alco
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" placeholder="<? $target_result['target_food_cost_percentage'] ?? '' ?>"; class="bg-yellow border-all"></td>
+                           				<td width="20%" placeholder="<?= $selectedCOG['target_food_cost_percentage'] ?? '' ?>"; class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
