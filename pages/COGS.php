@@ -135,9 +135,9 @@
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
 								 <tr>
-								 	 <td width="20%" class="border-all"></td>
-									 <td width="60%" class="border-all"></td>
-									 <td width="20%" class="border-all"></td>
+								 	 <td width="20%" class="border-all">&nbsp;</td>
+									 <td width="60%" class="border-all">&nbsp;</td>
+									 <td width="20%" class="border-all">&nbsp;</td>
 								 </tr>
 							</tbody>	 
 					 </table>
@@ -152,9 +152,9 @@
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
 								  <tr>
-								 	 <td width="20%" class="border-all"></td>
-									 <td width="60%" class="border-all"></td>
-									 <td width="20%" class="border-all"></td>
+								 	 <td width="20%" class="border-all">&nbsp;</td>
+									 <td width="60%" class="border-all">&nbsp;</td>
+									 <td width="20%" class="border-all">&nbsp;</td>
 								 </tr>
 					 		</tbody>
 			  		 </table>
