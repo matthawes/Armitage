@@ -134,6 +134,11 @@
 									 <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
+								 <tr>
+								 	 <td width="20%" class="border-all"></td>
+									 <td width="60%" class="border-all"></td>
+									 <td width="20%" class="border-all"></td>
+								 </tr>
 							</tbody>	 
 					 </table>
 			     </div>   
@@ -146,6 +151,11 @@
 								   	  <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
 								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
+								  <tr>
+								 	 <td width="20%" class="border-all"></td>
+									 <td width="60%" class="border-all"></td>
+									 <td width="20%" class="border-all"></td>
+								 </tr>
 					 		</tbody>
 			  		 </table>
 		 		</div>
