@@ -13,7 +13,7 @@
     		$cogDate_result = mysqli_query($connect, $cogdate_query);
 			if ($_SERVER['REQUEST_METHOD']=="POST") {
 			   $selectValue = mysqli_string($connect, $_POST["cogDate"]);
-               $cogDate_query = "SELECT cost_of_goods.*, oost_of_goods.entry_date, cost_of_goods.vendor_id, cost_of_goods.amount,company.target_food_cost_percentage, company.target_alcohol_cost_percentage
+               $cogDate_query = "SELECT cost_of_goods.*, cost_of_goods.entry_date, cost_of_goods.vendor_id, cost_of_goods.amount,company.target_food_cost_percentage, company.target_alcohol_cost_percentage
                     FROM cost_of_goods
                     LEFT JOIN company ON company.company_id = cost_of_goods.company_id
 					WHERE entry_date='".$selectValue."'";
