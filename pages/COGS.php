@@ -37,8 +37,9 @@
 				  <label>
 				  Enter the desired date:<br>
 				  <input type="date" name="cogDate">
-				  </label><br>
-				  <p><button>Submit</button></p>
+				  </label>
+				<br>
+				<p><button>Submit</button></p>
 			</form>
 		</div>
       </div>
