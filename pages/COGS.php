@@ -37,8 +37,7 @@
 				  <label style="float: left;">
 				  Enter the desired date:
 				  <input type="date" name="cogDate" required pattern="\d{4}-\d{2}-\d{2}">
-				  
-				  <p><button>Submit</button></p>
+				  <p><button style="float; left;">Submit</button></p>
 				</label>
 			</form>
 		</div>
