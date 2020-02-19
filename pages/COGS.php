@@ -8,8 +8,8 @@
 	} ?>
 
 <?php 
-	  		$selectValue = mysqli_real_escape_string($connect, $_POST["cogDate"]);
-    		$cogdate_query = "SELECT entry_date FROM cost_of_goods;
+	  		$selectValue = mysqli_string($connect, $_POST["cogDate"]);
+    		$cogdate_query = "SELECT entry_date FROM cost_of_goods";
     		$cogDate_result = mysqli_query($connect, $invoiceNum_query);
             $invoice_query = "SELECT cost_of_goods.*, company.target_food_cost_percentage, company.target_alcohol_cost_percentage
                     FROM cost_of_goods
