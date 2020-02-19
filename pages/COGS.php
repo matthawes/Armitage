@@ -8,7 +8,7 @@
 	} ?>
 
 <?php 
-	  		$selectValue = mysqli_string($connect, $_POST["cogDate"]);
+	  		/*$selectValue = mysqli_string($connect, $_POST["cogDate"]);*/
     		$cogdate_query = "SELECT entry_date FROM cost_of_goods";
     		$cogDate_result = mysqli_query($connect, $cogDate_query);
 			if ($_SERVER['REQUEST_METHOD']=="POST") {
