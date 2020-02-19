@@ -8,12 +8,20 @@
 	} ?>
 
 <?php 
-	  		
-            $invoice_query = "SELECT cost_of_goods.*, company.target_food_cost_percentage, company.target_alcohol_cost_percentage
+	  		$selectValue = mysqli_string($connect, $_POST["cogDate"]);
+    		$cogdate_query = "SELECT entry_date FROM cost_of_goods";
+    		$cogDate_result = mysqli_query($connect, $cogDate_query);
+			if ($_SERVER['REQUEST_METHOD']=="POST") {
+			   $selectValue = mysqli_string($connect, $_POST["cogDate"]);
+               $cogDate_query = "SELECT cost_of_goods.*, oost_of_goods.entry_date, cost_of_goods.vendor_id, cost_of_goods.amount,company.target_food_cost_percentage, company.target_alcohol_cost_percentage
                     FROM cost_of_goods
-                    LEFT JOIN company ON company.company_id = cost_of_goods.company_id";
-            $invoice_result = mysqli_query($connect, $invoice_query);
-            $selectedCOG = mysqli_fetch_array($invoice_result);
+                    LEFT JOIN company ON company.company_id = cost_of_goods.company_id
+					WHERE entry_date='".$selectValue."'";
+               $cogDate_result = mysqli_query($connect, $cogDate_query);
+           	   $selectedCOG = mysqli_fetch_array($cogDate_result);
+			   }
+			   
+			   
 
 ?>
 
@@ -49,7 +57,7 @@
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" placeholder= "<?= $selectedCOG['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
+                           				<td width="20%" placeholder= "<?= $selectValue['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
@@ -131,35 +139,46 @@
 		<div class="container">
 			 <div class="row">	
 		 	     <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
-				     <table border="1" cellspacing="0" cellpadding="0" class="table">
+				     <table width="50%" float: left; border="1" cellspacing="0" cellpadding="0" class="table">
 						   <tbody>
 			 	   		  		 <tr>
 					 			 	 <th width="20%" class="border-all bg-yellow text-center">Date</th>
 									 <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
 									 <th width="20%" class="border-all bg-yellow text-center">Amount</th>
 					 			 </tr>
-								 <tr>
-								 	 <td width="20%" class="border-all">&nbsp;</td>
-									 <td width="60%" class="border-all">&nbsp;</td>
-									 <td width="20%" class="border-all">&nbsp;</td>
-								 </tr>
+								 <?php
+                                if ($_SERVER['REQUEST_METHOD']=="POST") {
+                                    while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
+                                        echo "<tr>
+										<td class="border-all">".$selectedInvoiceLines['entry_date']."</td>
+										<td class="border-all">".$selectedInvoiceLines['vendor_id']."</td>
+										<td class="border-all">".$selectedInvoiceLines['amount']."</td></tr>";
+                                    }
+                                }
+                            ?>
 							</tbody>	 
 					 </table>
 			     </div>   
 		 		 <div style="float: right; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
 				 
-		 	  		 <table border="1" cellspacing="0" cellpadding="0" class="table">
+		 	  		 <table width="50%" float: right; border="1" cellspacing="0" cellpadding="0" class="table">
 			  		 		<tbody>
 								  <tr>
-					 			   	  <th width="20%" class="border-all bg-yellow text-center">Date</th>
-								   	  <th width="60%" class="border-all bg-yellow text-center">Vendor</th>
-								   	  <th width="20%" class="border-all bg-yellow text-center">Amount</th>
+					 			   	  <th class="border-all bg-yellow text-center">Date</th>
+								   	  <th class="border-all bg-yellow text-center">Vendor</th>
+								   	  <th class="border-all bg-yellow text-center">Amount</th>
 								  </tr>
-								  <tr>
-								 	 <td width="20%" class="border-all">&nbsp;</td>
-									 <td width="60%" class="border-all">&nbsp;</td>
-									 <td width="20%" class="border-all">&nbsp;</td>
-								 </tr>
+								  <?php
+                                if ($_SERVER['REQUEST_METHOD']=="POST") {
+                                    while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
+                                        echo "<tr>
+										<td class="border-all">".$selectedInvoiceLines['entry_date']."</td>
+										<td class="border-all">".$selectedInvoiceLines['vendor_id']."</td>
+										<td class="border-all">".$selectedInvoiceLines['amount']."</td></tr>";
+                                    }
+                                }
+                            ?>
+								  
 					 		</tbody>
 			  		 </table>
 		 		</div>
