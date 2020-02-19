@@ -9,7 +9,7 @@
 
 <?php 
 	  		$selectValue = mysqli_string($connect, $_POST["cogDate"]);
-    		$cogdate_query = "SELECT entry_date FROM cost_of_goods WHERE entry_date <> ''";
+    		$cogdate_query = "SELECT entry_date FROM cost_of_goods WHERE entry_date <> '' ORDER BY entry_date ASC";
     		$cogDate_result = mysqli_query($connect, $cogDate_query);
 			if ($_SERVER['REQUEST_METHOD']=="POST") {
 			   $selectValue = mysqli_string($connect, $_POST["cogDate"]);
