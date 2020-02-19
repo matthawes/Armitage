@@ -33,12 +33,12 @@
           <h3 class="section-title">COGS</h3>
           	  <span class="section-divider"></span>
          	  		<div class="input-container">			
-			<form id="dateForm">
+			<form id="dateForm" style="left:">
 				  <label style="float: left;">
 				  Enter the desired date:
-				  <input type="date" name="cogDate" required pattern="\d{4}-\d{2}-\d{2}">
+				  <input type="date" name="cogDate"">
 				  </label>
-				  <p><button>Submit</button></p>
+				  <button>Submit</button>
 			</form>
 		</div>
       </div>
