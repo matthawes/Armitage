@@ -57,7 +57,7 @@
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" placeholder= "<?= $selectValue['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
+                           				<td width="20%" placeholder= "<?= $selectedCOG['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
@@ -150,9 +150,9 @@
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
                                     while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
                                         echo "<tr>
-						<td class='border-all'>".$selectedInvoiceLines['entry_date']."</td>
-						<td class='border-all'>".$selectedInvoiceLines['vendor_id']."</td>
-						<td class='border-all'>".$selectedInvoiceLines['amount']."</td></tr>";
+						<td class='border-all'>".$selectedCOG['entry_date']."</td>
+						<td class='border-all'>".$selectedCOG['vendor_id']."</td>
+						<td class='border-all'>".$selectedCOG['amount']."</td></tr>";
                                     }
                                 }
                             ?>
@@ -172,9 +172,9 @@
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
                                     while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
                                         echo "<tr>
-						<td class='border-all'>".$selectedInvoiceLines['entry_date']."</td>
-						<td class='border-all'>".$selectedInvoiceLines['vendor_id']."</td>
-						<td class='border-all'>".$selectedInvoiceLines['amount']."</td></tr>";
+						<td class='border-all'>".$selectedCOG['entry_date']."</td>
+						<td class='border-all'>".$selectedCOG['vendor_id']."</td>
+						<td class='border-all'>".$selectedCOG['amount']."</td></tr>";
                                     }
                                 }
                             ?>
