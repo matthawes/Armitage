@@ -34,7 +34,11 @@
           	  <span class="section-divider"></span>
          	  		<div class="input-container">			
 			<form id="dateForm">
-				<input type="date" class="tallInput" id="date" onblur="clearPage()">
+				  <label>
+				  Enter the desired date:
+				  <input type="date" name="cogDate">
+				  </label>
+				  <p><button>Submit</button></p>
 			</form>
 		</div>
       </div>
