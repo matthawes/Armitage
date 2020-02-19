@@ -34,7 +34,7 @@
           	  <span class="section-divider"></span>
          	  		<div class="input-container">			
 			<form id="dateForm">
-				  <label>
+				  <label style="float: left;">
 				  Enter the desired date:
 				  <input type="date" name="cogDate" required pattern="\d{4}-\d{2}-\d{2}">
 				  </label>
