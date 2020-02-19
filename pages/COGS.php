@@ -35,9 +35,9 @@
          	  		<div class="input-container">			
 			<form id="dateForm">
 				  <label>
-				  Enter the desired date:
+				  Enter the desired date:<br>
 				  <input type="date" name="cogDate">
-				  </label>
+				  </label><br>
 				  <p><button>Submit</button></p>
 			</form>
 		</div>
