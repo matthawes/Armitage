@@ -172,9 +172,9 @@
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
                                     while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
                                         echo "<tr>
-										<td class="border-all">".$selectedInvoiceLines['entry_date']."</td>
-										<td class="border-all">".$selectedInvoiceLines['vendor_id']."</td>
-										<td class="border-all">".$selectedInvoiceLines['amount']."</td></tr>";
+						<td class='border-all'>".$selectedInvoiceLines['entry_date']."</td>
+						<td class='border-all'>".$selectedInvoiceLines['vendor_id']."</td>
+						<td class='border-all'>".$selectedInvoiceLines['amount']."</td></tr>";
                                     }
                                 }
                             ?>
