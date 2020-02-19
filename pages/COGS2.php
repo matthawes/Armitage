@@ -42,10 +42,18 @@
           	  <span class="section-divider"></span>
          	  		<div class="input-container">			
 			<form id="dateForm" style="left:">
-				  <label style="float: left;">
+				  <label style="float: left;"> </label>
+				<select id="cogDate" name="cogDate">
 				  Enter the desired date:
 				  <input type="date" name="cogDate"">
-				  </label>
+				<?php
+                                        while ($cogDate = mysqli_fetch_array($invoiceNum_result)){
+                                            echo "<option value='".$cogDate[0]."'";
+                                            if ($selectValue == $cogDate[0]) {echo " selected ";}
+                                            echo ">".$cogDate[0]."</option>";
+                                        }
+                                    ?>
+				</select>
 				  <input class="btn btn-warning btn-md" type="submit" name="submit">
 			</form>
 		</div>
