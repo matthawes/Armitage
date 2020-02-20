@@ -21,7 +21,9 @@
            	   $selectedCOG = mysqli_fetch_array($cogDate_result);
 			   }
 			   
-			   
+	$costPercent_query = "SELECT company_id FROM cost_of_goods
+		LEFT JOIN company_id ON cost_of_goods.company_id = company.company_id";
+	$costPercent_result = mysqli_query($connect, $costPercent_query;
 
 ?>
 
