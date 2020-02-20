@@ -7,8 +7,8 @@ if(!isset($_SESSION['user_id'])){
 }
 ?>
 // A click on a week number cell in the weeks column of the start datepicker
-/* <?php 
-$("td.ui-datepicker-week-col").live("click", function()
+<?php 
+/* $("td.ui-datepicker-week-col").live("click", function()
 {
     // Simulate a click on the first day of the week
     $(this).next().click();
@@ -18,8 +18,8 @@ $("td.ui-datepicker-week-col").live("click", function()
     var toDate = fromDate;
     toDate.setDate(fromDate.getDate() + 6);
     $("#inputEndDate").datepicker("setDate", toDate);
-});
-?> */
+}); */
+?> 
 <div class="input-container">			
 
 			<form id="dateForm">
