@@ -1,3 +1,10 @@
+<?php include "navigation.html"; ?>
+<?php session_start(); ?>
+<?php
+if(!isset($_SESSION['user_id'])){ 
+    header("Location: ../index.php");
+}
+?>
 // A click on a week number cell in the weeks column of the start datepicker
 $("td.ui-datepicker-week-col").live("click", function()
 {
