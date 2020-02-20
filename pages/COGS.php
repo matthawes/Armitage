@@ -40,7 +40,7 @@
         <div class="section-header wow fadeInUp" style="visibility: visible;">
           <h3 class="section-title">COGS</h3>
           	  <span class="section-divider"></span>
-         	  		<div class="input-container">			
+         	  <div class="input-container">			
 			<label class="control-label" for="cogDate">COG Date</label><br/>
                                 <select id="cogDate" name="cogDate" class="bg-yellow form-control col-6" style="display:inline;">
                                     <option value="">Select a Date</option>
@@ -53,7 +53,6 @@
                                     ?>
 				</select>
 				  <input class="btn btn-warning btn-md" type="submit" name="submit">
-			</div>
 		</div>
       </div>
 	  <div class="container" style="padding-top:5%">
