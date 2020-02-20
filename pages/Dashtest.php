@@ -17,3 +17,20 @@ $("td.ui-datepicker-week-col").live("click", function()
     toDate.setDate(fromDate.getDate() + 6);
     $("#inputEndDate").datepicker("setDate", toDate);
 });
+<div class="input-container">			
+
+			<form id="dateForm">
+
+				  <label>
+
+				  Select desired date:
+
+				  <input type="date" name="Date"">
+
+				  </label>
+
+				  <input class="btn btn-warning btn-md" type="submit" name="submit">
+
+			</form>
+
+		</div>
