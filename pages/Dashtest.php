@@ -11,7 +11,7 @@ if(!isset($_SESSION['user_id'])){
 }
 ?>
 <?php 
-$mydate=getdate(date_ISO8601("U")); 
+$mydate=getdate(date("U")); 
 
 ?>
 
