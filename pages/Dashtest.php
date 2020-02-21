@@ -311,10 +311,10 @@ function toggleDataSeries(e) {
 
               <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
 
-              <th scope="col"><? 
+              <th scope="col"><?php 
 		      $date = strtotime(time());
 		      $date = strtotime("+7 day"' $date);
-		      echo date('m/d', $date); />
+		      echo date('m/d', $date); ?>
                 </th>
 
               <th scope="col" class="dashDate">12/26</th>
