@@ -10,11 +10,7 @@ if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
 ?>
-<?php 
-   $date = strtotime(time());
-   $date = strtotime("+7 day"', $date);
-   $dateItem = echo date('m/d', $date);
-?>
+
 
 <script type="text/javascript">
 
@@ -310,7 +306,7 @@ function toggleDataSeries(e) {
 
               <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
 
-              <th scope="col" placeholder= "<?= $dateType"; ?> >
+              <th scope="col" class="dashDate">$today
                 </th>
 
               <th scope="col" class="dashDate">12/26</th>
