@@ -20,7 +20,36 @@ if(!isset($_SESSION['user_id'])){
     $("#inputEndDate").datepicker("setDate", toDate);
 }); */
 ?> 
-<div class="input-container">			
+<body>
+
+
+
+
+
+  <main id="main">
+
+
+
+    <!--==========================
+
+      Frequently Asked Questions Section
+
+    ============================-->
+
+    <section id="faq">
+
+      <div class="container">
+
+
+
+        <div class="section-header wow fadeInUp">
+
+          <h3 class="section-title">Dashboard</h3>
+
+          <span class="section-divider"></span>
+
+        </div>
+	<div class="input-container">			
 
 			<form id="dateForm">
 
@@ -37,3 +66,5 @@ if(!isset($_SESSION['user_id'])){
 			</form>
 
 		</div>
+	</main>										   
+ </section>
