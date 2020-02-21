@@ -311,10 +311,10 @@ function toggleDataSeries(e) {
 
               <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
 
-              <th scope="col"><?php 
+              <th scope="col" placeholder="<? 
                 for ($iDay = 6; $iDay >= 0; $iDay-- ){
                   $aDays[7 - $iDay] = date('m/d', time() - $iDay * 86400);
-                } ?>
+                } ?>">
                 </th>
 
               <th scope="col" class="dashDate">12/26</th>
