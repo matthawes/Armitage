@@ -307,7 +307,7 @@ function toggleDataSeries(e) {
               <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
 
               <th scope="col" placeholder="<?php $mydate=getdate(date_ISO8601("U")); 
-		      echo "$mydate[month]/$mydate[mday]"; 
+		      echo "$mydate[month]/$mydate[mday]""; 
 		      ?>"></th>
 
               <th scope="col" class="dashDate">12/26</th>
