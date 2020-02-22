@@ -93,6 +93,7 @@ if(!isset($_SESSION['user_id'])){
                     </select>
 				  </div>
 			</form>
+              <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>             
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
 			   <tr class="text-sm text-center">
@@ -161,9 +162,7 @@ if(!isset($_SESSION['user_id'])){
 			 </thead>
 		    </table>
           </div>
-			<a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
-		  
-        
+			<a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>        
         </div>
       </div>
     </section>
