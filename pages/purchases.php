@@ -98,7 +98,7 @@ if(!isset($_SESSION['user_id'])){
 			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
-			   <tr class="text-sm text-center">
+			   <tr class="text-center">
 			     <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			       <thead class="thead-dark">
 			         <tr class="text-center">
