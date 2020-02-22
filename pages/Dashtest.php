@@ -34,4 +34,4 @@ echo date('m-d-Y: D',strtotime("$i day"))."<br>";
 
 
 
-<?php include "../pages/footer.php"?>
+
