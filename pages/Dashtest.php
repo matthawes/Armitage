@@ -19,8 +19,11 @@ if(!isset($_SESSION['user_id'])){
   <main id="main">
 
 <?php
-  $date = new DateTime('7 days ago');
-echo $date->format('Y-m-d');
+ for($i=0; $i<=15; $i++){
+
+echo date('m-d-Y: D',strtotime("$i day"))."<br>";
+
+}
 ?>
 
   </main>
