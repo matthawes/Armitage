@@ -19,7 +19,7 @@ if(!isset($_SESSION['user_id'])){
   <main id="main">
 
 <?php
- for($i=0; $i<=15; $i++){
+ for($i=0; $i<=7; $i++){
 
 echo date('m-d-Y: D',strtotime("$i day"))."<br>";
 
