@@ -21,7 +21,7 @@ if(!isset($_SESSION['user_id'])){
 <?php
  for($i=0; $i<6; $i++){
 
-echo date('m-d-Y: D',strtotime("-$i day"))."<br>";
+echo date('m-d-Y: D',strtotime("$i -day"))."<br>";
 
 }
 ?>
