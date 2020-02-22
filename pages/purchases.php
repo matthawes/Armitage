@@ -50,8 +50,7 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="col-4">
-                <li class="fa fa-arrow-circle-left"></li> December 24, 2019 <li class="fa fa-arrow-circle-right"></li>
+			  <div class="col-4">               
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
@@ -79,7 +78,8 @@ if(!isset($_SESSION['user_id'])){
 		  	</div>
 		  </div>
           <div class="row">
-          <div class="col-12">                  
+          <div class="col-12">
+               <li class="fa fa-arrow-circle-left"></li> December 24, 2019 <li class="fa fa-arrow-circle-right"></li>
 			  <hr>
 			 <form>
                  <div class="form-group w-50">                   
