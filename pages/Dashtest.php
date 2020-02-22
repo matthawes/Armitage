@@ -18,15 +18,8 @@ if(!isset($_SESSION['user_id'])){
 
   <main id="main">
 
-<select>
-<?php
-for ($i = 0; $i < 4; $i++) {
-    echo '<option value="' . date("Y-m-d", strtotime("this sunday - $i week")) . '">' . date("M j", strtotime("this sunday - $i week")) . " - " . date("M j", strtotime("this saturday - $i week")) .'</option>';
-}
-?>
-</select>
 
-   
+  date('Y-m-d', strtotime('-7 days')) 
 
 
 
