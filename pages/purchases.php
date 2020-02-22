@@ -162,8 +162,7 @@ if(!isset($_SESSION['user_id'])){
 			 </thead>
 		    </table>
           </div>
-			<a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>        
-        </div>
+		</div>
       </div>
     </section>
     <!-- #about -->
