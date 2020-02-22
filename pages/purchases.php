@@ -78,11 +78,10 @@ if(!isset($_SESSION['user_id'])){
 		  	</div>
 		  </div>
           <div class="row">
-          <div class="col-12">
-                          <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+          <div class="col-12">                  
 			  <hr>
 			 <form>
-				  <div class="form-group w-50">                   
+                 <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
 					   <option selected="selected">Select...</option>
 					   <option value="Advertising">Advertising</option>
@@ -93,6 +92,7 @@ if(!isset($_SESSION['user_id'])){
                        <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>                                
 				  </div>
+                        <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
 			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
