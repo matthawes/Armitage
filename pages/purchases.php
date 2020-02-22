@@ -20,7 +20,7 @@ if(!isset($_SESSION['user_id'])){
           <h3>Purchases</h3>
         </header>
           <div class="row">
-          	<div class="col-4">
+          	<div class="col-4">                
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
@@ -51,6 +51,7 @@ if(!isset($_SESSION['user_id'])){
 					</table>
 		  	</div>
 			  <div class="col-4">
+                <li class="fa fa-arrow-circle-left"></li> December 24, 2019 <li class="fa fa-arrow-circle-right"></li>
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
