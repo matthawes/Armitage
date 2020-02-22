@@ -78,11 +78,11 @@ if(!isset($_SESSION['user_id'])){
 		  	</div>
 		  </div>
           <div class="row">
-          <div class="col-12">
+          <div class="col-12">                  
 			  <hr>
 			 <form>
-				  <div class="form-group w-50">
-					<select class="form-control" id="exampleFormControlSelect1">
+                 <div class="form-group w-50">                   
+					<select class="form-control" id="exampleFormControlSelect1">                
 					   <option selected="selected">Select...</option>
 					   <option value="Advertising">Advertising</option>
 					   <option value="Cleaning Supplies">Cleaning Supplies</option>
@@ -91,14 +91,15 @@ if(!isset($_SESSION['user_id'])){
 					   <option value="Repair and Maintenance">Repair and Maintenance</option>
                        <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>
-				  </div>
-			</form>
+                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+				  </div>                        
+			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
 			   <tr class="text-sm text-center">
 			     <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			       <thead class="thead-dark">
-			         <tr class="text-sm text-center">
+			         <tr class="text-center">
 			           <th width="16%">Date</th>
 			           <th width="16%">Vendor</th>
 			           <th width="16%">Amount</th>
@@ -161,9 +162,7 @@ if(!isset($_SESSION['user_id'])){
 			 </thead>
 		    </table>
           </div>
-			<a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
-		  
-        
+			<a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>        
         </div>
       </div>
     </section>
