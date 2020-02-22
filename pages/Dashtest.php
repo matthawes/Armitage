@@ -18,10 +18,10 @@ if(!isset($_SESSION['user_id'])){
 
   <main id="main">
 
-
+<?php
   $date = new DateTime('7 days ago');
 echo $date->format('Y-m-d');
-
+?>
 
   </main>
 
