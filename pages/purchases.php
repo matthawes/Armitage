@@ -90,9 +90,9 @@ if(!isset($_SESSION['user_id'])){
 					   <option value="Office Supplies">Office Supplies</option>
 					   <option value="Repair and Maintenance">Repair and Maintenance</option>
                        <option value="Restaurant Supplies">Restauraunt Supplies</option>
-                    </select>                                
-				  </div>
-                        <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+                    </select>
+                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+				  </div>                        
 			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
