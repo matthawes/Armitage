@@ -84,6 +84,8 @@ if(!isset($_SESSION['user_id'])){
                  <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
 					   <option selected="selected">Select...</option>
+                        <option value="Food Costs">Food Costs</option>
+                        <option value="Alcohol Costs">Alcohol Costs</option>
 					   <option value="Advertising">Advertising</option>
 					   <option value="Cleaning Supplies">Cleaning Supplies</option>
 					   <option value="Linen">Linen</option>
