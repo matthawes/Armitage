@@ -326,18 +326,10 @@ function toggleDataSeries(e) {
 
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 
-	  
+	  <thead>
 
 	   <tr>
-
-		 
-
-		    <th></th>
-
-           
-
-	   
-
+		 <th></th>
 	        <?php
 
 	            $ts = date(strtotime('last sunday'));
@@ -359,9 +351,8 @@ function toggleDataSeries(e) {
 	        ?>
 
 	    </tr>
- 	<thead class="thead-warning"> 
-	  <tr>
-		  
+
+	  <tr> 
 		  <th></th>
 		  <td>TOTAL</td>
               <?php
