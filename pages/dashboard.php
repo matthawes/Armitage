@@ -165,13 +165,13 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning"> 
 	   <tr>
 		<td scope="col" class="noborder"></td>
-		<th scope="col" class="dashDate"></th>
-           	<th scope="col" class="dashDate"></th>
-        	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
+		<th scope="col" class="dashDate"><a></a></th>
+           	<th scope="col" class="dashDate"><a></a></th>
+        	<th scope="col" class="dashDate"><a></a></th>
+              	<th scope="col" class="dashDate"><a></a></th>
+              	<th scope="col" class="dashDate"><a></a></th>
+              	<th scope="col" class="dashDate"><a></a></th>
+              	<th scope="col" class="dashDate"><a></a></th>
               	<td scope="col" class="noborder"></td>
 	   </tr>
 	    <tr>
@@ -182,7 +182,7 @@ function toggleDataSeries(e) {
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
-	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
+	                echo '<a>' . date("m-d-Y", $ts) . '</a>' ;
 	            }
 	        ?>
 	    </tr>
