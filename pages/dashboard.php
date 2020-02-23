@@ -99,7 +99,14 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 			{ y: 5500, label: "Friday" },
 			{ y: 5000, label: "Saturday" },
 			{ y: 2800, label: "Sunday" }
-		]dataPoints: [
+		]
+	},
+	{
+		type: "column",
+		showInLegend: true,
+		name: "Actual",
+		color: "#C77900",
+		dataPoints: [
 			{ y: 2500, label: "Monday" },
 			{ y: 3000, label: "Tuesday" },
 			{ y: 3200, label: "Wednesday" },
@@ -108,13 +115,6 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 			{ y: 5000, label: "Saturday" },
 			{ y: 2800, label: "Sunday" }
 		]
-	},
-	{
-		type: "column",
-		showInLegend: true,
-		name: "Actual",
-		color: "#C77900",
-		
 	}]
 });
 chart2.render();
