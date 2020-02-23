@@ -163,14 +163,14 @@ function toggleDataSeries(e) {
            <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 	    <tr>
-		<td scope="col" class="noborder">   </td>
-		<th scope="col"></th>
-           	<th scope="col"></th>
-        	<th scope="col"></th>
-              	<th scope="col"></th>
-              	<th scope="col"></th>
-              	<th scope="col"></th>
-              	<th scope="col"></th>
+		<td scope="col" class="noborder"></td>
+		<th scope="col" class="dashDate"></th>
+           	<th scope="col" class="dashDate"></th>
+        	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
               	<td scope="col" class="noborder"></td>
 	   </tr>
 	    <tr>
@@ -198,8 +198,8 @@ function toggleDataSeries(e) {
               <th width="10%" class="dashDate">Total</th>
               <td width="6%" class="noborder"></td>
               </tr>
-			</thead>
-			<tbody>   
+	</thead>
+	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,500" id="pf1"></td>
@@ -374,7 +374,7 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohpt"></td>
               </tr>
           </tbody>
-		</table>
+	</table>
   
 	<div class="row">
 		<div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
