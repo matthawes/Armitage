@@ -174,7 +174,7 @@ function toggleDataSeries(e) {
 	            $dow = date('w' , $ts);
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
-	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
+	            for ($x=0 ; $x<6 ; $x++, $ts += 86400) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
 	        ?>
