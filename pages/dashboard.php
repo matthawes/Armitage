@@ -164,8 +164,9 @@ function toggleDataSeries(e) {
 	  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
              	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
 	    
-		   <tr bgcolor="orange">
-			   <td></td>
+		   <tr>
+		
+			   <td bgcolor="orange"></td>
       	        <?php
 	            $ts = date(strtotime('last sunday'));
 	            $ts += $currentpage * 86400 * 7;
