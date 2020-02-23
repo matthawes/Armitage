@@ -12,7 +12,7 @@ if(!isset($_SESSION['user_id'])){
 ?>
 
 <?php
- (int)$currentpage = (!empty($_GET["currentpage"]))?$GET["currentpage"]:0;
+ (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
  (int)$nextpage = $currentpage + 1;
  (int)$previouspage = currentpage - 1;
 ?>
