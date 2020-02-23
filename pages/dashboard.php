@@ -7,7 +7,11 @@ if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
 ?>
-
+<?php
+	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
+	    (int)$nextpage = $currentpage + 1;
+	    (int)$prevpage = $currentpage - 1;
+	?>
 
 
 
@@ -159,11 +163,7 @@ function toggleDataSeries(e) {
         </div>
 		  
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-          <?php
-	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
-	    (int)$nextpage = $currentpage + 1;
-	    (int)$prevpage = $currentpage - 1;
-	?>
+          
 	<table>
 	    <tr>
 	        <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
@@ -186,7 +186,7 @@ function toggleDataSeries(e) {
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
-	                echo '<td>' . date("m-d-Y", $ts) . '</td>' ;
+	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 	            }
 	        ?>
 	    </tr>
