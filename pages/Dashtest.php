@@ -354,10 +354,9 @@ function toggleDataSeries(e) {
 	    </tr>
 
 	  <tr> 
-		  <td>TOTAL</td>
+		  
 		  <th></th>
-		  </tr>
-		  <tr>
+		  
               <?php
 
 	            $ts = date(strtotime('last sunday'));
