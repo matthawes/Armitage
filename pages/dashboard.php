@@ -166,7 +166,7 @@ function toggleDataSeries(e) {
 	    
 		   <tr>
 			
-			   <th align="left" bgcolor="orange"></th>
+			   <th align="left"></th>
       	        <?php
 	            $ts = date(strtotime('last sunday'));
 	            $ts += $currentpage * 86400 * 7;
