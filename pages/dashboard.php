@@ -165,13 +165,13 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning"> 
 	   <tr>
 		<td width="14%" class="noborder"></td>
-		<th width="10%"></th>
-           	<th width="10%"></th>
-        	<th width="10%"></th>
-              	<th width="10%"></th>
-              	<th width="10%"></th>
-              	<th width="10%"></th>
-              	<th width="10%"></th>
+		<th></th>
+           	<th></th>
+        	<th></th>
+              	<th></th>
+              	<th></th>
+              	<th></th>
+              	<th></th>
               	<td width="6%" class="noborder"></td>
 	   
 	        <?php
