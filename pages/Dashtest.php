@@ -148,7 +148,7 @@ function toggleDataSeries(e) {
 		<form>
 			<div>
 				<label for="week">Which Week Would You LikeTo Start With?</label>
-				<inpu id="week" type="week" namr="week" required>
+				<input id="week" type="week" namr="week" required>
 					<span class="validity"></span>
 			</div>
 			<div>
