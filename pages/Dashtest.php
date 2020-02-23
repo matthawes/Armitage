@@ -12,9 +12,9 @@ if(!isset($_SESSION['user_id'])){
 ?>
 
 <?php
- (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
+ (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"] :0;
  (int)$nextpage = $currentpage + 1;
- (int)$previouspage = currentpage - 1;
+ (int)$prevpage = currentpage - 1;
 ?>
 
 
@@ -26,7 +26,7 @@ if(!isset($_SESSION['user_id'])){
 
       <table>
           <tr>
-              <td><a href="<?php echo "{$SERVER['PHP_SELF']}?currentpage=$previouspage"; ?>"> << </a></td>
+              <td><a href="<?php echo "{$SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"> << </a></td>
               <td></td>
               <td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"> >> </a></td>
           </tr>
