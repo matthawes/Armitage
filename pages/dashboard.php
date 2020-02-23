@@ -180,7 +180,7 @@ function toggleDataSeries(e) {
 			   
 	    </tr>
 	 <tr>
-		<th width="14%" class="noborder"></th>
+		<th width="14%"></th>
               <th width="10%" class="dashDate">Sunday</th>
               <th width="10%" class="dashDate">Monday</th>
               <th width="10%" class="dashDate">Tuesday</th>
