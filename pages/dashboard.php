@@ -163,12 +163,12 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning">
 	    
 		   <tr>
-		  	<td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
+		  	<td scope="col" class="noborder" width="14"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
 			<th scope="col"></th>
 			   
       	        <?php
 	            $ts = date(strtotime('last sunday'));
-	            $ts += $currentpage * 86400 * 6;
+	            $ts += $currentpage * 86400 * 7;
 	            $dow = date('w' , $ts);
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
@@ -178,7 +178,7 @@ function toggleDataSeries(e) {
 	        ?>
 	    </tr>
 	 <tr>
-              <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
+              <td scope="col" class="noborder" width="14"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
               <th width="10%" class="dashDate">Sunday</th>
               <th width="10%" class="dashDate">Monday</th>
               <th width="10%" class="dashDate">Tuesday</th>
