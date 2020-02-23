@@ -321,7 +321,16 @@ function toggleDataSeries(e) {
         </div>
 
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-
+		<form>
+			<div>
+				<label for="week">Which Week Would You LikeTo Start With?</label>
+				<inpu id="week" type="week" namr="week" required>
+					<span class="validity"></span>
+			</div>
+			<div>
+				<input type="submit" value="Submitform">
+				</div>
+		</form>
 	   <thead class="thead-warning">
 
 	  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
@@ -396,23 +405,23 @@ function toggleDataSeries(e) {
 
               <th class="text-left bg-warning2">Proj. Food</th>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,500" id="pf1"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1"></td>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,000" id="pf2"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf2"></td>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,200" id="pf3"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf3"></td>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,500" id="pf4"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf4"></td>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,500" id="pf5"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf5"></td>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,000" id="pf6"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf6"></td>
 
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,800" id="pf7"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf7"></td>
 
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
+              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" id="pft"></td>
 
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>
+              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" id="pfp"></td>
 
               </tr>
 
