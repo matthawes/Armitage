@@ -164,7 +164,8 @@ function toggleDataSeries(e) {
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 	   <tr>
 	        <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
-	        <th scope="col"></th>
+		<td scope="col" class="noborder"></td>
+		<th scope="col"></th>
            	<th scope="col"></th>
         	<th scope="col"></th>
               	<th scope="col"></th>
