@@ -164,17 +164,8 @@ function toggleDataSeries(e) {
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 	   <thead class="thead-warning"> 
 	   <tr>
-		<td width="14%" class="noborder"></td>
 		<th></th>
-           	<th></th>
-        	<th></th>
-              	<th></th>
-              	<th></th>
-              	<th></th>
-              	<th></th>
-              	<td width="6%" class="noborder"></td>
-	   
-	        <?php
+      	        <?php
 	            $ts = date(strtotime('last sunday'));
 	            $ts += $currentpage * 86400 * 7;
 	            $dow = date('w' , $ts);
@@ -187,13 +178,13 @@ function toggleDataSeries(e) {
 	    </tr>
 	  <tr>
               <td class="noborder" width="14%"></td>
-              <th width="10%" class="dashDate"></th>
-              <th width="10%" class="dashDate"></th>
-              <th width="10%" class="dashDate"</th>
-              <th width="10%" class="dashDate"></th>
-              <th width="10%" class="dashDate"></th>
-              <th width="10%" class="dashDate"></th>
-              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate">Sunday</th>
+              <th width="10%" class="dashDate">Monday</th>
+              <th width="10%" class="dashDate">Tuesday</th>
+              <th width="10%" class="dashDate">Wednesday</th>
+              <th width="10%" class="dashDate">Thursday</th>
+              <th width="10%" class="dashDate">Friday</th>
+              <th width="10%" class="dashDate">Saturday</th>
               <th width="10%" class="dashDate">Total</th>
               <td width="6%" class="noborder"></td>
             
