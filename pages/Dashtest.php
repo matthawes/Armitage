@@ -320,16 +320,17 @@ function toggleDataSeries(e) {
 
         </div>
 
-           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
 
-           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
 
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 
-	  <thead>
+	  <thead >
 
-	   <tr>
-		 <th></th>
+	   	<tr>   
+		   <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
+		   <th></th>
+		   <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
+
 	        <?php
 
 	            $ts = date(strtotime('last sunday'));
@@ -355,7 +356,8 @@ function toggleDataSeries(e) {
 	  <tr> 
 		  <td>TOTAL</td>
 		  <th></th>
-		  
+		  </tr>
+		  <tr>
               <?php
 
 	            $ts = date(strtotime('last sunday'));
@@ -375,10 +377,6 @@ function toggleDataSeries(e) {
 		       }
 
 	        ?>
-
-
-	        
-
 	    </tr>
 
 	</thead>
