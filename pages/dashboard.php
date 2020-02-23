@@ -163,21 +163,7 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning">
 	           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
 	           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
-	   <tr>
-		   <td class="noborder"></td>
-		<th></th>
-      	        <?php
-	            $ts = date(strtotime('last sunday'));
-	            $ts += $currentpage * 86400 * 7;
-	            $dow = date('w' , $ts);
-	            $offset = $dow;
-	            $ts = $ts - $offset * 86400;
-	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
-	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
-		       }
-	        ?>
-	    </tr>
-	  <tr>
+	    <tr>
               <td width="14%"></td>
               <th width="10%" class="dashDate">Sunday</th>
               <th width="10%" class="dashDate">Monday</th>
@@ -191,6 +177,22 @@ function toggleDataSeries(e) {
             
 	        
 	    </tr>
+		   <tr>
+		   <td class="noborder"></td>
+		<th></th>
+			   <td class="noborder></td>
+      	        <?php
+	            $ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
+	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
+	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
+		       }
+	        ?>
+	    </tr>
+	 
 	</thead>
 	<tbody>   
             <tr>
