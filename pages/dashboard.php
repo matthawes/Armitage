@@ -165,8 +165,8 @@ function toggleDataSeries(e) {
              	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
 	    
 		   <tr>
-		
-			   <td bgcolor="orange"></td>
+			
+			   <th align="left" bgcolor="orange"></th>
       	        <?php
 	            $ts = date(strtotime('last sunday'));
 	            $ts += $currentpage * 86400 * 7;
@@ -174,7 +174,7 @@ function toggleDataSeries(e) {
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
 	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
-	                echo '<td>' . date("m-d-Y", $ts) . '</td>' ;
+	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
 	        ?>
 			   
