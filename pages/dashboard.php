@@ -163,9 +163,8 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning">
 	    
 		   <tr>
-		  	<td scope="col" class="noborder" width="14"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
+		  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
 			<td scope="col" width="10%"></td>
-			<td width="6%" class="noborder"></td>
 			   
       	        <?php
 	            $ts = date(strtotime('last sunday'));
