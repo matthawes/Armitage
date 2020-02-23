@@ -174,7 +174,20 @@ function toggleDataSeries(e) {
               	<th width="10%" class="dashDate"></th>
               	<td width="6%" class="noborder"></td>
 	   </tr>
-	   <tr>
+	   
+	    <tr>
+	        <?php
+	            $ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
+	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
+	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
+		       }
+	        ?>
+	    </tr>
+	  <tr>
               <td class="noborder" width="14%"></td>
               <th width="10%" class="dashDate"></th>
               <th width="10%" class="dashDate"></th>
@@ -186,7 +199,7 @@ function toggleDataSeries(e) {
               <th width="10%" class="dashDate">Total</th>
               <td width="6%" class="noborder"></td>
             </tr>	   
-	    <tr>
+             <tr>
 	        <?php
 	            $ts = date(strtotime('last sunday'));
 	            $ts += $currentpage * 86400 * 7;
@@ -194,13 +207,10 @@ function toggleDataSeries(e) {
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
-	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
-			echo '<th>' . date("w", $ts) . '</th> ;
+		    echo '<th>' . date("w", $ts) . '</th> ;
 	            }
 	        ?>
 	    </tr>
-	  
-            
 	</thead>
 	<tbody>   
             <tr>
