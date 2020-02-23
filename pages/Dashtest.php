@@ -326,7 +326,7 @@ function toggleDataSeries(e) {
 
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 
-	   <thead class="thead-warning"> 
+	  
 
 	   <tr>
 
@@ -359,7 +359,7 @@ function toggleDataSeries(e) {
 	        ?>
 
 	    </tr>
-
+ 	<thead class="thead-warning"> 
 	  <tr>
 
               <td class="noborder" width="14%"></td>
