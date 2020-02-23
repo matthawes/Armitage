@@ -361,28 +361,27 @@ function toggleDataSeries(e) {
 	    </tr>
  	<thead class="thead-warning"> 
 	  <tr>
+		  <th></th>
+              <?php
 
-              <td class="noborder" width="14%"></td>
+	            $ts = date(strtotime('last sunday'));
 
-              <th width="10%" class="dashDate"></th>
+	            $ts += $currentpage * 86400 * 7;
 
-              <th width="10%" class="dashDate"></th>
+	            $dow = date('w' , $ts);
 
-              <th width="10%" class="dashDate"</th>
+	            $offset = $dow;
 
-              <th width="10%" class="dashDate"></th>
+	            $ts = $ts - $offset * 86400;
 
-              <th width="10%" class="dashDate"></th>
+	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
 
-              <th width="10%" class="dashDate"></th>
+	                echo '<th>' . date("w", $ts) . '</th>' ;
 
-              <th width="10%" class="dashDate"></th>
+		       }
 
-              <th width="10%" class="dashDate">Total</th>
+	        ?>
 
-              <td width="6%" class="noborder"></td>
-
-            
 
 	        
 
