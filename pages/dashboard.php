@@ -162,9 +162,8 @@ function toggleDataSeries(e) {
            <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
            <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-	    <thead class="thead-warning">
 	    <tr>
-		    <th scope="col">blank</th>
+		<td scope="col" class="noborder"></th>
 		<th scope="col"></th>
            	<th scope="col"></th>
         	<th scope="col"></th>
