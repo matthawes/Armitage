@@ -330,7 +330,7 @@ function toggleDataSeries(e) {
 
 	   <tr>
 
-		    
+		   <td></td>
 
 		    <th></th>
 
@@ -361,6 +361,7 @@ function toggleDataSeries(e) {
 	    </tr>
  	<thead class="thead-warning"> 
 	  <tr>
+		  <td></td> 
 		  <th></th>
               <?php
 
