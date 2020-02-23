@@ -149,7 +149,9 @@ function toggleDataSeries(e) {
       Frequently Asked Questions Section
     ============================-->
     <section id="faq">
-      <div class="container">
+<td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
+              
+	    <div class="container">
 
         <div class="section-header wow fadeInUp">
           <h3 class="section-title">Dashboard</h3>
@@ -157,20 +159,39 @@ function toggleDataSeries(e) {
         </div>
 		  
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-          
-		  <thead class="thead-warning">
-            <tr>
-              <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
-              <th scope="col" class="dashDate">12/25</th>
-              <th scope="col" class="dashDate">12/26</th>
-              <th scope="col" class="dashDate">12/27</th>
-              <th scope="col" class="dashDate">12/28</th>
-              <th scope="col" class="dashDate">12/29</th>
-              <th scope="col" class="dashDate">12/30</th>
-              <th scope="col" class="dashDate">12/31</th>
-              <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
-              <td scope="col" class="noborder"></td>
-            </tr>
+          <?php
+	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
+	    (int)$nextpage = $currentpage + 1;
+	    (int)$prevpage = $currentpage - 1;
+	?>
+	<table>
+	    <tr>
+	        <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
+	        <th scope="col" class="dashDate"></th>
+           	<th scope="col" class="dashDate"></th>
+        	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<th scope="col" class="dashDate"></th>
+              	<td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
+              	<td scope="col" class="noborder"></td>
+	        
+	    </tr>
+	    <tr>
+	        <?php
+	            $ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
+	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
+	                echo '<td>' . date("m-d-Y", $ts) . '</td>' ;
+	            }
+	        ?>
+	    </tr>
+	</table>
+	  <thead class="thead-warning">
             <tr>
               <td class="noborder" width="14%"></td>
               <th width="10%" class="dashDate">Monday</th>
