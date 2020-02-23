@@ -153,7 +153,7 @@ function toggleDataSeries(e) {
       Frequently Asked Questions Section
     ============================-->
     <section id="faq">
-             
+            <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
 	    <div class="container">
 
         <div class="section-header wow fadeInUp">
@@ -162,9 +162,8 @@ function toggleDataSeries(e) {
         </div>
 		  
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-	   <tr>
-	        <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
-		<br>
+	    <thead class="thead-warning">
+	    <tr>
 		<th scope="col"></th>
            	<th scope="col"></th>
         	<th scope="col"></th>
