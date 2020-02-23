@@ -161,24 +161,10 @@ function toggleDataSeries(e) {
         </div>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 	   <thead class="thead-warning">
-	           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
-	           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
-	    <tr>
-              <td width="14%"></td>
-              <th width="10%" class="dashDate">Sunday</th>
-              <th width="10%" class="dashDate">Monday</th>
-              <th width="10%" class="dashDate">Tuesday</th>
-              <th width="10%" class="dashDate">Wednesday</th>
-              <th width="10%" class="dashDate">Thursday</th>
-              <th width="10%" class="dashDate">Friday</th>
-              <th width="10%" class="dashDate">Saturday</th>
-              <th width="10%" class="dashDate">Total</th>
-              <td width="6%" class="noborder"></td>
-            
-	        
-	    </tr>
+	    
 		   <tr>
-		   <td class="noborder"></td>
+		  	           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
+
 		<th></th>
 			   <td class="noborder></td>
       	        <?php
@@ -192,7 +178,21 @@ function toggleDataSeries(e) {
 		       }
 	        ?>
 	    </tr>
-	 
+	 <tr>
+              	           <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
+
+              <th width="10%" class="dashDate">Sunday</th>
+              <th width="10%" class="dashDate">Monday</th>
+              <th width="10%" class="dashDate">Tuesday</th>
+              <th width="10%" class="dashDate">Wednesday</th>
+              <th width="10%" class="dashDate">Thursday</th>
+              <th width="10%" class="dashDate">Friday</th>
+              <th width="10%" class="dashDate">Saturday</th>
+              <th width="10%" class="dashDate">Total</th>
+              <td width="6%" class="noborder"></td>
+            
+	        
+	    </tr>
 	</thead>
 	<tbody>   
             <tr>
