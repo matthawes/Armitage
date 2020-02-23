@@ -330,11 +330,11 @@ function toggleDataSeries(e) {
 
 	   <tr>
 
-		    <td width="14%" class="noborder"></td>
+		    
 
 		    <th></th>
 
-           <td width="6%" class="noborder"></td>
+           
 
 	   
 
