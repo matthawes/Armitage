@@ -153,8 +153,7 @@ function toggleDataSeries(e) {
       Frequently Asked Questions Section
     ============================-->
     <section id="faq">
-<td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
-              
+             
 	    <div class="container">
 
         <div class="section-header wow fadeInUp">
@@ -163,21 +162,18 @@ function toggleDataSeries(e) {
         </div>
 		  
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-          
-	<table>
-	    <tr>
+	   <tr>
 	        <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
-	        <th scope="col" class="dashDate"></th>
-           	<th scope="col" class="dashDate"></th>
-        	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
-              	<th scope="col" class="dashDate"></th>
+	        <th scope="col"></th>
+           	<th scope="col"></th>
+        	<th scope="col"></th>
+              	<th scope="col"></th>
+              	<th scope="col"></th>
+              	<th scope="col"></th>
+              	<th scope="col"></th>
               	<td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
               	<td scope="col" class="noborder"></td>
-	        
-	    </tr>
+	   </tr>
 	    <tr>
 	        <?php
 	            $ts = date(strtotime('last sunday'));
@@ -190,7 +186,6 @@ function toggleDataSeries(e) {
 	            }
 	        ?>
 	    </tr>
-	</table>
 	  <thead class="thead-warning">
             <tr>
               <td class="noborder" width="14%"></td>
