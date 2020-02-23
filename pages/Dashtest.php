@@ -376,7 +376,7 @@ function toggleDataSeries(e) {
 
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
 
-	                echo '<th>' . date("w", $ts) . '</th>' ;
+	                echo '<th>' . date("l", $ts) . '</th>' ;
 
 		       }
 
