@@ -11,10 +11,14 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
 	    (int)$nextpage = $currentpage + 1;
 	    (int)$prevpage = $currentpage - 1;
-	?>
+	
+		$ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
 
-
-
+?>
 
 
 	
@@ -165,23 +169,19 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning"> 
 	   <tr>
 		<td width="14%" class="noborder"></td>
-		<th width="10%" class="dashDate"></th>
-           	<th width="10%" class="dashDate"></th>
-        	<th width="10%" class="dashDate"></th>
-              	<th width="10%" class="dashDate"></th>
-              	<th width="10%" class="dashDate"></th>
-              	<th width="10%" class="dashDate"></th>
-              	<th width="10%" class="dashDate"></th>
+		<th width="10%"></th>
+           	<th width="10%"></th>
+        	<th width="10%"></th>
+              	<th width="10%"></th>
+              	<th width="10%"></th>
+              	<th width="10%"></th>
+              	<th width="10%"></th>
               	<td width="6%" class="noborder"></td>
 	   </tr>
 	   
 	    <tr>
 	        <?php
-	            $ts = date(strtotime('last sunday'));
-	            $ts += $currentpage * 86400 * 7;
-	            $dow = date('w' , $ts);
-	            $offset = $dow;
-	            $ts = $ts - $offset * 86400;
+	            
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
@@ -198,14 +198,8 @@ function toggleDataSeries(e) {
               <th width="10%" class="dashDate"></th>
               <th width="10%" class="dashDate">Total</th>
               <td width="6%" class="noborder"></td>
-            </tr>	   
-             <tr>
+            
 	        <?php
-	            $ts = date(strtotime('last sunday'));
-	            $ts += $currentpage * 86400 * 7;
-	            $dow = date('w' , $ts);
-	            $offset = $dow;
-	            $ts = $ts - $offset * 86400;
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
 		    echo '<th>' . date("w", $ts) . '</th> ;
 	            }
