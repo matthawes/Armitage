@@ -320,19 +320,23 @@ function toggleDataSeries(e) {
 
         </div>
 
-
-
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 
-	  <thead >
-		<tr>
-		   <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td>
-		   <td scope="col" class="noborder"><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
-		  </tr>	
-	   	<tr>   
-		   <th></th>
+	   <thead class="thead-warning">
 
-	        <?php
+	  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
+
+             	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
+
+	    
+
+		   <tr>
+
+			
+
+			   <th align="left"></th>
+
+      	        <?php
 
 	            $ts = date(strtotime('last sunday'));
 
@@ -344,7 +348,7 @@ function toggleDataSeries(e) {
 
 	            $ts = $ts - $offset * 86400;
 
-	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
+	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
 
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 
@@ -352,35 +356,41 @@ function toggleDataSeries(e) {
 
 	        ?>
 
+			   
+
 	    </tr>
 
-	  <tr> 
-		  
-		  <th></th>
-		  
-              <?php
+	 <tr>
 
-	            $ts = date(strtotime('last sunday'));
+		<th width="14%"></th>
 
-	            $ts += $currentpage * 86400 * 7;
+              <th width="10%" class="dashDate">Sunday</th>
 
-	            $dow = date('w' , $ts);
+              <th width="10%" class="dashDate">Monday</th>
 
-	            $offset = $dow;
+              <th width="10%" class="dashDate">Tuesday</th>
 
-	            $ts = $ts - $offset * 86400;
+              <th width="10%" class="dashDate">Wednesday</th>
 
-	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
+              <th width="10%" class="dashDate">Thursday</th>
 
-	                echo '<th>' . date("l", $ts) . '</th>' ;
+              <th width="10%" class="dashDate">Friday</th>
 
-		       }
+              <th width="10%" class="dashDate">Saturday</th>
 
-	        ?>
+              <th width="10%" class="dashDate">Total</th>
+
+              <td width="6%" class="noborder"></td>
+
+            
+
+	        
+
 	    </tr>
 
 	</thead>
-		<tbody>   
+
+	<tbody>   
 
             <tr>
 
@@ -745,12 +755,20 @@ function toggleDataSeries(e) {
       </div>
 
 
- </table>
+
     </section><!-- #faq -->
-           
+
+
+
   </main>
 
 </body>
+
+  
+
+
+
+<?php include "../pages/footer.php"?>
 
   
 
