@@ -91,30 +91,14 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		showInLegend: true,
 		name: "Projected",
 		color: "#ff9c00",
-		dataPoints: [
-			{ y: 500, label: "Monday" },
-			{ y: 600, label: "Tuesday" },
-			{ y: 800, label: "Wednesday" },
-			{ y: 1000, label: "Thursday" },
-			{ y: 2000, label: "Friday" },
-			{ y: 1800, label: "Saturday" },
-			{ y: 1000, label: "Sunday" }
-		]
+		
 	},
 	{
 		type: "column",
 		showInLegend: true,
 		name: "Actual",
 		color: "#C77900",
-		dataPoints: [
-			{ y: 600, label: "Monday" },
-			{ y: 900, label: "Tuesday" },
-			{ y: 1200, label: "Wednesday" },
-			{ y: 900, label: "Thursday" },
-			{ y: 2100, label: "Friday" },
-			{ y: 1200, label: "Saturday" },
-			{ y: 400, label: "Sunday" }
-		]
+		
 	}]
 });
 chart2.render();
@@ -164,15 +148,15 @@ function toggleDataSeries(e) {
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
 	   <thead class="thead-warning"> 
 	   <tr>
-		<td scope="col" class="noborder"></td>
-		<th scope="col" class="dashDate"><a></a></th>
-           	<th scope="col" class="dashDate"><a></a></th>
-        	<th scope="col" class="dashDate"><a></a></th>
-              	<th scope="col" class="dashDate"><a></a></th>
-              	<th scope="col" class="dashDate"><a></a></th>
-              	<th scope="col" class="dashDate"><a></a></th>
-              	<th scope="col" class="dashDate"><a></a></th>
-              	<td scope="col" class="noborder"></td>
+		<td width="14%" class="noborder"></td>
+		<th width="10%" class="dashDate"><a></a></th>
+           	<th width="10%" class="dashDate"><a></a></th>
+        	<th width="10%" class="dashDate"><a></a></th>
+              	<th width="10%" class="dashDate"><a></a></th>
+              	<th width="10%" class="dashDate"><a></a></th>
+              	<th width="10%" class="dashDate"><a></a></th>
+              	<th width="10%" class="dashDate"><a></a></th>
+              	<td width="6%" class="noborder"></td>
 	   </tr>
 	   <tr>
               <td class="noborder" width="14%"></td>
