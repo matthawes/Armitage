@@ -754,9 +754,9 @@ function toggleDataSeries(e) {
       </div>
 
 
-
+ </table>
     </section><!-- #faq -->
-   </table>         
+           
   </main>
 
 </body>
