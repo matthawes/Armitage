@@ -152,7 +152,7 @@ function toggleDataSeries(e) {
 					<span class="validity"></span>
 			</div>
 			<div>
-				<input type="submit" value="Submitform">
+				<input type="submit" value="Submit">
 				</div>
 		</form>
 	   <thead class="thead-warning">
