@@ -39,7 +39,7 @@ if(!isset($_SESSION['user_id'])){
                     
                     $ts = $ts - $offset * 86400;
                     for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
-                        echo "<td>' . dae("m/d/Y, $ts) . '</td>' ;
+                        echo "<td>' . date("m/d/Y, $ts) . '</td>' ;
                     }
               ?>
           </tr>
