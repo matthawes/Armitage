@@ -91,7 +91,23 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		showInLegend: true,
 		name: "Projected",
 		color: "#ff9c00",
-		
+		dataPoints: [
+			{ y: 2500, label: "Monday" },
+			{ y: 3000, label: "Tuesday" },
+			{ y: 3200, label: "Wednesday" },
+			{ y: 3500, label: "Thursday" },
+			{ y: 5500, label: "Friday" },
+			{ y: 5000, label: "Saturday" },
+			{ y: 2800, label: "Sunday" }
+		]dataPoints: [
+			{ y: 2500, label: "Monday" },
+			{ y: 3000, label: "Tuesday" },
+			{ y: 3200, label: "Wednesday" },
+			{ y: 3500, label: "Thursday" },
+			{ y: 5500, label: "Friday" },
+			{ y: 5000, label: "Saturday" },
+			{ y: 2800, label: "Sunday" }
+		]
 	},
 	{
 		type: "column",
@@ -149,13 +165,13 @@ function toggleDataSeries(e) {
 	   <thead class="thead-warning"> 
 	   <tr>
 		<td width="14%" class="noborder"></td>
-		<th width="10%" class="dashDate"><a></a></th>
-           	<th width="10%" class="dashDate"><a></a></th>
-        	<th width="10%" class="dashDate"><a></a></th>
-              	<th width="10%" class="dashDate"><a></a></th>
-              	<th width="10%" class="dashDate"><a></a></th>
-              	<th width="10%" class="dashDate"><a></a></th>
-              	<th width="10%" class="dashDate"><a></a></th>
+		<th width="10%" class="dashDate"></th>
+           	<th width="10%" class="dashDate"></th>
+        	<th width="10%" class="dashDate"></th>
+              	<th width="10%" class="dashDate"></th>
+              	<th width="10%" class="dashDate"></th>
+              	<th width="10%" class="dashDate"></th>
+              	<th width="10%" class="dashDate"></th>
               	<td width="6%" class="noborder"></td>
 	   </tr>
 	   <tr>
