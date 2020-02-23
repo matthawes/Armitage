@@ -174,6 +174,18 @@ function toggleDataSeries(e) {
               	<th scope="col" class="dashDate"><a></a></th>
               	<td scope="col" class="noborder"></td>
 	   </tr>
+	   <tr>
+              <td class="noborder" width="14%"></td>
+              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate"</th>
+              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate"></th>
+              <th width="10%" class="dashDate">Total</th>
+              <td width="6%" class="noborder"></td>
+            </tr>	   
 	    <tr>
 	        <?php
 	            $ts = date(strtotime('last sunday'));
@@ -182,23 +194,13 @@ function toggleDataSeries(e) {
 	            $offset = $dow;
 	            $ts = $ts - $offset * 86400;
 	            for ($x=0 ; $x<7 ; $x++,$ts += 86400) {
-	                echo '<a>' . date("m-d-Y", $ts) . '</a>' ;
+	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
+			echo '<th>' . date("w", $ts) . '</th> ;
 	            }
 	        ?>
 	    </tr>
 	  
-            <tr>
-              <td class="noborder" width="14%"></td>
-              <th width="10%" class="dashDate">Monday</th>
-              <th width="10%" class="dashDate">Tuesday</th>
-              <th width="10%" class="dashDate">Wednesday</th>
-              <th width="10%" class="dashDate">Thursday</th>
-              <th width="10%" class="dashDate">Friday</th>
-              <th width="10%" class="dashDate">Saturday</th>
-              <th width="10%" class="dashDate">Sunday</th>
-              <th width="10%" class="dashDate">Total</th>
-              <td width="6%" class="noborder"></td>
-              </tr>
+            
 	</thead>
 	<tbody>   
             <tr>
