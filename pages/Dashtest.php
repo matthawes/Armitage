@@ -145,10 +145,10 @@ function toggleDataSeries(e) {
 	          <span class="section-divider"></span>
         </div>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-		<form>
+		<form action="#" method="post">
 			<div>
 				<label for="week">Which Week Would You LikeTo Start With?</label>
-				<input id="week" type="week" namr="week" required>
+				<input id="week" type="week" name="week" required>
 					<span class="validity"></span>
 			</div>
 			<div>
