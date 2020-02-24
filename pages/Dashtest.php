@@ -12,6 +12,12 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$nextpage = $currentpage + 1;
 	    (int)$prevpage = $currentpage - 1;
 ?>
+<?php
+	$getValue = mysqli_real_escape_string($connect, $_GET["currentpage"]);
+	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' EQUALS 'currentpage';
+	$data_result = msqli_query($connect, $data_query);
+?>
+
 
 <script type="text/javascript">
 window.onload = function () {
@@ -178,15 +184,9 @@ function toggleDataSeries(e) {
 	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf2"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf3"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf4"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf5"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf6"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf7"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" id="pft"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" id="pfp"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1" placeholder="<?= $selectedData['projected_food'] ?? '' ?>></td>
+
+              
             </tr>
             <tr>
               <th class="text-left bg-warning2">Proj. Alcohol</th>
