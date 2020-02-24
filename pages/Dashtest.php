@@ -145,26 +145,14 @@ function toggleDataSeries(e) {
 	          <span class="section-divider"></span>
         </div>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-		<form action="#" method="post">
-			<div>
-				<label for="week">Which Week Would You LikeTo Start With?</label>
-				<input id="week" type="week" name="week" required>
-					<span class="validity"></span>
-			</div>
-			<div>
-				<input type="submit" name="submit" value="Submit">
-				</div>
-		</form> 
+		
 	   <thead class="thead-warning">
 	  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
              	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
 	        <tr>
 		   <th align="left"></th>
       	        <?php
-		    if ($_GET['submit']) {
-			    $week = $_POST['week'];
-			    $year = $POST['year']; 
-	            $ts = date(strtotime($week, $year));
+	            $ts = date(strtotime(last sunday));
 	            $ts += $currentpage * 86400 * 7;
 	            $dow = date('w' , $ts);
 	            $offset = $dow;
@@ -172,7 +160,6 @@ function toggleDataSeries(e) {
 	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
-		    }
 	        ?>
 	    </tr>
  	    <tr>
