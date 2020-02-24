@@ -152,7 +152,7 @@ function toggleDataSeries(e) {
 					<span class="validity"></span>
 			</div>
 			<div>
-				<input type="submit" value="Submit">
+				<input type="submit" name="submit" value="Submit">
 				</div>
 		</form>
 	   <thead class="thead-warning">
@@ -161,7 +161,8 @@ function toggleDataSeries(e) {
 	        <tr>
 		   <th align="left"></th>
       	        <?php
-	            $ts = date(strtotime('last sunday'));
+		    if ($_GET['submit']) {
+	            $ts = date(strtotime('week'));
 	            $ts += $currentpage * 86400 * 7;
 	            $dow = date('w' , $ts);
 	            $offset = $dow;
@@ -169,6 +170,7 @@ function toggleDataSeries(e) {
 	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
+		    }
 	        ?>
 	    </tr>
  	    <tr>
