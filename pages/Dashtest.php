@@ -162,7 +162,7 @@ function toggleDataSeries(e) {
 		   <th align="left"></th>
       	        <?php
 		    if ($_GET['submit']) {
-	            $ts = date(strtotime(last sunday));
+	            $ts = date(strtotime('sunday', $_POST);
 	            $ts += $currentpage * 86400 * 7;
 	            $dow = date('w' , $ts);
 	            $offset = $dow;
