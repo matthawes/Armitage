@@ -129,12 +129,8 @@
 					 	</tr>
 					</table>
 			  	   </div>
-			  </div>
-		 	  
-		 	 
-			  		 
+			  </div>   
 		 </div>
-	
 		 <div style="float: right; class="col-6 text-center">
 		 	  <table border="1" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 			  		 <thead>
