@@ -74,20 +74,7 @@ echo $message;
 ?>
                     <input name="username" type="text" id="username" placeholder=" username" autocomplete="on" class="form-control" size="30"><br>
                     <input name="password" pattern=".{10,}" type="password" id="password" placeholder=" password" class="form-control" size="30"><br>
-                    <!--allow user to choose company-->
-                    <?php
-            $companyID_query = "SELECT company_id, company_name FROM company ORDER BY company_name ASC";
-            $companyID_result = mysqli_query($connect, $companyID_query);
-            ?>Select a Company to access: <br>
-                    <select name="company">
-                        <?php
-                    while ($row = mysqli_fetch_array($companyID_result)){
-                    echo "<option value".$row[0].">",$row[1].$row[2].$row[3]."</option>";
-
-                    }
-                ?>
-                    </select><br>
-                    <br>
+                    
 
                     <!--
             ****
