@@ -14,7 +14,7 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <?php
 	$getValue = mysqli_real_escape_string($connect, $ts);
-	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' EQUALS 'currentpage';
+	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' <> $ts;
 	$data_result = msqli_query($connect, $data_query);
 ?>
 
