@@ -82,6 +82,23 @@ if(!isset($_SESSION['user_id'])){
 			input[type="date"]::-webkit-clear-button {display:none;}
 		</style>
             
+            <script>
+                function increaseDateByOne(){
+                    document.getElementById("date").stepUp(1);
+                    clearPage();   
+                }
+                function decreaseDateByOne(){
+                    document.getElementById("date").stepDown(1);
+                    clearPage();
+                }
+                function loadCurDate(){
+                    document.getElementById("date").valueAsDate = new Date();
+                }
+                window.onload = function(){
+                    loadCurDate();
+                }
+            </script>
+            
         </header>
           <div class="row">
           	<div class="col-4">                
