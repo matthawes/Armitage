@@ -13,7 +13,7 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
-	$getValue = mysqli_real_escape_string($connect, $currentpage);
+	$getValue = mysqli_real_escape_string($connect,'$ts');
 	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' EQUALS 'currentpage';
 	$data_result = msqli_query($connect, $data_query);
 ?>
