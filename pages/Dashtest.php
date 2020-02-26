@@ -184,7 +184,7 @@ function toggleDataSeries(e) {
 	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1" placeholder="<?= $selectedData['projected_food'] ?? '' ?>></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1" placeholder="<?= $data_result['projected_food'] ?? '' ?>></td>
 
               
             </tr>
