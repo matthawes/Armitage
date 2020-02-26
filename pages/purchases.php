@@ -18,6 +18,17 @@ if(!isset($_SESSION['user_id'])){
       <div class="container">
         <header class="section-header">
           <h3>Purchases</h3>
+            <div class="input-container">
+                <div id="dateDownOne" onClick="decreaseDateByOne()">
+                    <b>Previous</b>
+                </div>	
+                <form id="dateForm">
+                    <input type="date" class="tallInput" id="date" onblur="clearPage()">
+                </form>
+                <div id="dateUpOne" onClick="increaseDateByOne()">
+                    <b>Next</b>
+                </div>
+            </div>
         </header>
           <div class="row">
           	<div class="col-4">                
@@ -79,7 +90,6 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
           <div class="row">
           <div class="col-12">
-               <li class="fa fa-arrow-circle-left"></li> February 22, 2020 <li class="fa fa-arrow-circle-right"></li>
 			  <form>
                  <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
