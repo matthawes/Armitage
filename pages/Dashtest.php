@@ -13,6 +13,11 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
+	 $ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
 	/* $getValue = mysqli_real_escape_string($connect, $ts);
 	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' <> $ts;
 	$data_result = msqli_query($connect, $data_query); */
@@ -158,11 +163,7 @@ function toggleDataSeries(e) {
 	        <tr>
 		   <th align="left"></th>
       	        <?php
-	            $ts = date(strtotime('last sunday'));
-	            $ts += $currentpage * 86400 * 7;
-	            $dow = date('w' , $ts);
-	            $offset = $dow;
-	            $ts = $ts - $offset * 86400;
+	           
 	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
