@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include "../config.php"; ?>
+
 <?php include "../pages/navigation.html"; ?>
 
 <?php if(!isset($_SESSION['user_id'])){
@@ -7,25 +7,7 @@
     header("Location: ../index.php");
 	} ?>
 
-<?php 
-	  	/*$selectValue = mysqli_real_escape_string($connect, $_POST["cogDate"]);*/
-    		$cogdate_query = "SELECT entry_date FROM cost_of_goods WHERE entry_date <> '' ORDER BY entry_date ASC";
-    		$cogDate_result = mysqli_query($connect, $cogdate_query);
-			if ($_SERVER['REQUEST_METHOD']=="POST") {
-			   $selectValue = mysqli_real_escape_string($connect, $_POST["cogDate"]);
-               $cogDate_query = "SELECT cost_of_goods.*, cost_of_goods.entry_date, cost_of_goods.vendor_id, cost_of_goods.amount,company.target_food_cost_percentage, company.target_alcohol_cost_percentage
-                    FROM cost_of_goods
-                    INNER JOIN company ON cost_of_goods.company_id = company.company_id
-					WHERE entry_date='".$selectValue."'";
-               $cogDate_result = mysqli_query($connect, $cogDate_query);
-           	   $selectedCOG = mysqli_fetch_array($cogDate_result);
-			   }
-			   
-	$costPercent_query = "SELECT company_id FROM cost_of_goods
-		LEFT JOIN company_id ON cost_of_goods.company_id = company.company_id";
-	$costPercent_result = mysqli_query($connect, $costPercent_query;
 
-?>
 
 
 
