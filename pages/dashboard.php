@@ -376,6 +376,7 @@ function toggleDataSeries(e) {
 		<div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
 	</div>	
       </div>
+	    <span class="section-divider"></span>
 	    <div class="container">
 			<div class="row">
 		 		 <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
