@@ -132,7 +132,7 @@ if(!isset($_SESSION['user_id'])){
 					</table>
 		  	</div>
 			  <div class="col-4">               
-			   <table width="50% border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+			   <table width="50%" border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
                             <td width="75%" class="border-all text-left">Current Food Cost%</td>
