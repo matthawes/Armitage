@@ -32,6 +32,7 @@
             <div class="container">
                 <div class="section-header wow fadeInUp" style="visibility: visible;">
                     <h3 class="section-title">INVOICE</h3>
+                    <a href="add_invoice.php" class="btn btn-warning btn-md">New Invoice</a>
                     <span class="section-divider"></span>
                 </div>
                 <form method="post" action="invoice.php">

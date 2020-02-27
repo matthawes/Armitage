@@ -1,26 +1,26 @@
 <?php include "navigation.html"; ?>
+<?php include "../config.php"; ?>
 <?php session_start(); ?>
-
 <?php
-
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
 ?>
+
 <?php
 	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
 	    (int)$nextpage = $currentpage + 1;
 	    (int)$prevpage = $currentpage - 1;
-	
-		
-
+?>
+<?php
+	$getValue = mysqli_real_escape_string($connect, $_GET["currentpage"]);
+	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' EQUALS 'currentpage';
+	$data_result = msqli_query($connect, $data_query);
 ?>
 
 
-	
 <script type="text/javascript">
 window.onload = function () {
-
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title:{
@@ -69,7 +69,6 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 chart.render();
-
 var chart2 = new CanvasJS.Chart("chartContainer2", {
 	animationEnabled: true,
 	title:{
@@ -118,7 +117,6 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	}]
 });
 chart2.render();
-
 function toolTipFormatter(e) {
 	var str = "";
 	var total = 0 ;
@@ -128,10 +126,8 @@ function toolTipFormatter(e) {
 		str = str.concat(str1);
 	}
 	str2 = "<strong>" + e.entries[0].dataPoint.label + "</strong> <br/>";
-	
 	return (str2.concat(str));
 }
-
 function toggleDataSeries(e) {
 	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
 		e.dataSeries.visible = false;
@@ -140,33 +136,27 @@ function toggleDataSeries(e) {
 		e.dataSeries.visible = true;
 	}
 	chart.render();
-}
-
+    }
 }
 </script>
 <body>
-
-
   <main id="main">
-
     <!--==========================
       Frequently Asked Questions Section
     ============================-->
     <section id="faq">
-	    <div class="container">
-
-        <div class="section-header wow fadeInUp">
-          <h3 class="section-title">Dashboard</h3>
-          <span class="section-divider"></span>
+        <div class="container">
+    	    <div class="section-header wow fadeInUp">
+	          <h3 class="section-title">Dashboard</h3>
+	          <span class="section-divider"></span>
         </div>
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
+		
 	   <thead class="thead-warning">
 	  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
              	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
-	    
-		   <tr>
-			
-			   <th align="left"></th>
+	        <tr>
+		   <th align="left"></th>
       	        <?php
 	            $ts = date(strtotime('last sunday'));
 	            $ts += $currentpage * 86400 * 7;
@@ -177,36 +167,27 @@ function toggleDataSeries(e) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
 	        ?>
-			   
 	    </tr>
-	 <tr>
+ 	    <tr>
 		<th width="14%"></th>
-              <th width="10%" class="dashDate">Sunday</th>
-              <th width="10%" class="dashDate">Monday</th>
-              <th width="10%" class="dashDate">Tuesday</th>
-              <th width="10%" class="dashDate">Wednesday</th>
-              <th width="10%" class="dashDate">Thursday</th>
-              <th width="10%" class="dashDate">Friday</th>
-              <th width="10%" class="dashDate">Saturday</th>
-              <th width="10%" class="dashDate">Total</th>
-              <td width="6%" class="noborder"></td>
-            
-	        
+	        <th width="10%" class="dashDate">Sunday</th>
+	        <th width="10%" class="dashDate">Monday</th>
+                <th width="10%" class="dashDate">Tuesday</th>
+	        <th width="10%" class="dashDate">Wednesday</th>
+	        <th width="10%" class="dashDate">Thursday</th>
+	        <th width="10%" class="dashDate">Friday</th>
+	        <th width="10%" class="dashDate">Saturday</th>
+	        <th width="10%" class="dashDate">Total</th>
+	        <td width="6%" class="noborder"></td>
 	    </tr>
 	</thead>
 	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,500" id="pf1"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,000" id="pf2"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,200" id="pf3"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,500" id="pf4"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,500" id="pf5"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,000" id="pf6"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,800" id="pf7"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>
-              </tr>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1" placeholder="<?= $selectedData['projected_food'] ?? '' ?>></td>
+
+              
+            </tr>
             <tr>
               <th class="text-left bg-warning2">Proj. Alcohol</th>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="500" id="pa1"></td>
@@ -218,7 +199,7 @@ function toggleDataSeries(e) {
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="1,000" id="pa7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="7,700.00" id="pat"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="23.2%" id="pap"></td>
-              </tr>
+            </tr>
             <tr>
               <th class="text-left bg-warning2">Proj. Total</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="3,000" id="pt1"></td>
@@ -230,8 +211,8 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="3,800" id="pt7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="33,200.00" id="ptt"></td>
               <td class="noborder"></td>
-              </tr>
-             <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Actual Food</th>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,200" id="af1"></td>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,400" id="af2"></td>
@@ -242,7 +223,7 @@ function toggleDataSeries(e) {
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,700" id="af7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="26,600.00" id="aft"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="78.5%" id="afp"></td>
-              </tr>
+            </tr>
             <tr>
               <th class="text-left bg-warning2">Actual Alcohol</th>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="600" id="aa1"></td>
@@ -254,7 +235,7 @@ function toggleDataSeries(e) {
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="400" id="aa7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="7,300.00" id="aat"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="21.5%" id="aap"></td>
-              </tr>
+            </tr>
             <tr>
               <th class="text-left bg-warning2">Total Alcohol</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="2,800" id="ta1"></td>
@@ -266,7 +247,7 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="3,100" id="ta7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="33,900.00" id="tat"></td>
               <td class="noborder"></td>
-              </tr>
+            </tr>
             <tr>
               <th class="text-left bg-warning2">Variance</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-danger text-right" type="text" value="(200)" id="v1"></td>
@@ -278,9 +259,9 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-danger text-right" type="text" value="(700)" id="v7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-danger text-right" type="text" value="700.00" id="vt1"></td>
               <td class="noborder"></td>
-              </tr>
-				<thead class="thead-light"><tr><th colspan="9">LABOR</th></tr></thead>
-			  <tr>
+            </tr>
+    <thead class="thead-light"><tr><th colspan="9">LABOR</th></tr></thead>
+	  <tr>
               <th class="text-left bg-warning2">Proj. BOH $</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="168" id="pboh1"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="198" id="pboh2"></td>
@@ -290,8 +271,8 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="230" id="pboh6"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="139" id="pboh7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="1432.50" id="pboht"></td>
-              </tr>
-              <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Proj. FOH $</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="119" id="pfoh1"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="105" id="pfoh2"></td>
@@ -301,8 +282,8 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="181" id="pfoh6"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="171" id="pfoh7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="888.25" id="pfoht"></td>
-              </tr>
-              <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Proj. BOH %</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="5.6%" id="pbohp1"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="5.5%" id="pbohp2"></td>
@@ -312,8 +293,8 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="3.4%" id="pbohp6"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="3.7%" id="pbohp7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="4.3%" id="pbohpt"></td>
-              </tr>
-              <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Proj. FOH %</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="4.0%" id="pfohp1"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="2.9%" id="pfohp2"></td>
@@ -323,8 +304,8 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="2.7%" id="pfohp6"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="4.5%" id="pfohp7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="2.7%" id="pfohpt"></td>
-              </tr>
-			  <tr>
+           </tr>
+	   <tr>
               <th class="text-left bg-warning2">Actual BOH $</th>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="aboh1"></td>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="aboh2"></td>
@@ -334,8 +315,8 @@ function toggleDataSeries(e) {
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="aboh6"></td>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="aboh7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0" id="aboht"></td>
-              </tr>
-              <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Actual FOH $</th>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="afoh1"></td>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="afoh2"></td>
@@ -345,8 +326,8 @@ function toggleDataSeries(e) {
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="afoh6"></td>
               <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="&nbsp;" id="afoh7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0" id="afoht"></td>
-              </tr>
-              <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Actual BOH %</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="abohp1"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="abohp2"></td>
@@ -356,8 +337,8 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="abohp6"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="abohp7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="abohpt"></td>
-              </tr>
-              <tr>
+           </tr>
+           <tr>
               <th class="text-left bg-warning2">Actual FOH %</th>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohp1"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohp2"></td>
@@ -367,20 +348,21 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohp6"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohp7"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohpt"></td>
-              </tr>
-          </tbody>
+           </tr>
+        </tbody>
 	</table>
-  
 	<div class="row">
 		<div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
 		<div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
 	</div>	
       </div>
-
     </section><!-- #faq -->
-
-  </main>
+ </main>
 </body>
+<?php include "../pages/footer.php"?>
+
   
 
-<?php include "../pages/footer.php"?>
+
+
+
