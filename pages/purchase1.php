@@ -164,14 +164,14 @@ if(!isset($_SESSION['user_id'])){
                  <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
 					   <option selected="selected">Select...</option>
-                        <option value="Food Costs">Food Costs</option>
-                        <option value="Alcohol Costs">Alcohol Costs</option>
+                        		   <option value="Food Costs">Food Costs</option>
+                       			   <option value="Alcohol Costs">Alcohol Costs</option>
 					   <option value="Advertising">Advertising</option>
 					   <option value="Cleaning Supplies">Cleaning Supplies</option>
 					   <option value="Linen">Linen</option>
 					   <option value="Office Supplies">Office Supplies</option>
 					   <option value="Repair and Maintenance">Repair and Maintenance</option>
-                       <option value="Restaurant Supplies">Restauraunt Supplies</option>
+                       			   <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>
                      <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
 				  </div>                        
