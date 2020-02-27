@@ -79,7 +79,7 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
           <div class="row">
           <div class="col-12">
-               <li class="fa fa-arrow-circle-left"></li> February 22, 2020 <li class="fa fa-arrow-circle-right"></li>
+             
 			  <form>
                  <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
