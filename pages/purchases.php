@@ -18,6 +18,7 @@ if(!isset($_SESSION['user_id'])){
       <div class="container">
         <header class="section-header">
           <h3>Purchases</h3>
+	<span class="section-divider"></span>
         </header>
 	      <div class="input-container">
                 <div id="dateDownOne" onClick="decreaseDateByOne()">
