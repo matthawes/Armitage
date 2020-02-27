@@ -101,8 +101,8 @@ if(!isset($_SESSION['user_id'])){
             
         </header>
           <div class="row">
-          	<div class="col-4">                
-				  <table width="50%" border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+          	<div class="col-6">                
+				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Advertising%</td>
@@ -131,8 +131,8 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="col-4">               
-			   <table width="50%" border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+			  <div class="col-6">               
+			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
                             <td width="75%" class="border-all text-left">Current Food Cost%</td>
