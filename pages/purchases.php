@@ -31,6 +31,73 @@ if(!isset($_SESSION['user_id'])){
                     <b>Next</b>
                 </div>
             </div>
+	       <style>
+			.rollInput {width:50%;}
+			#dateForm {text-align:center; display:table;}
+			#dateUpOne {display:table;}
+			#dateDownOne {display:table;}
+			.input-container {padding:5px; align: center; width: 25%; margin:auto; display:grid; grid-template-columns: 1fr 1fr 1fr;}
+			.container {overflow:hidden;}
+			#startingCash {border:2px solid #000; margin:0px 0px 5px 5px; background-color:#ffe8b8;}
+			input {width:100%; height:20px;}
+			.finalDiv {height:25px;}
+			.tallInput {height:30px;}
+			.cashHeader {margin:5px 5px -2px 5px;}
+			.cashFooter {margin:-2px 5px 5px 5px;}
+			.cashLabeltd {border:2px solid #000;}
+			.oddRow {background-color:#ffe8b8;}
+			.evenRow {background-color:#e8e8e8;}
+			.filler {background-color:#ff9c00; border:0;}
+			.headerFiller {background-color:#fff; border:0;}
+			#cashFlow {table-layout: fixed;}
+			#cashContainer {padding:5px; background-color:#ff9c00; width:63%; border: 2px solid #000;}
+			#countContainer {padding:5px; background-color:#ff9c00; width:35%; border: 2px solid #000; float:right;}
+			#overShortContainer {margin:0 auto; width:25%; background-color:#ff9c00;}
+			input[type="date"] {
+				position: relative;}
+
+			/* create a new arrow, because we are going to mess up the native one*/
+			input[type="date"]:after {
+			padding: 0 5px;
+			display:none;}
+
+
+			/* make the native arrow invisible and stretch it over the whole field so you can click anywhere 
+				in the input field to trigger the native datepicker*/
+			input[type="date"]::-webkit-calendar-picker-indicator {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: auto;
+				height: auto;
+				color: transparent;
+				background: transparent;}
+
+			/* adjust increase/decrease button */
+			input[type="date"]::-webkit-inner-spin-button {display: none;}
+
+			/* adjust clear button */
+			input[type="date"]::-webkit-clear-button {display:none;}
+		</style>
+            
+            <script>
+                function increaseDateByOne(){
+                    document.getElementById("date").stepUp(1);
+                    clearPage();   
+                }
+                function decreaseDateByOne(){
+                    document.getElementById("date").stepDown(1);
+                    clearPage();
+                }
+                function loadCurDate(){
+                    document.getElementById("date").valueAsDate = new Date();
+                }
+                window.onload = function(){
+                    loadCurDate();
+                }
+            </script>
           <div class="row">
           	<div class="col-4">                
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
