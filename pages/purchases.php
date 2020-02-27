@@ -19,6 +19,17 @@ if(!isset($_SESSION['user_id'])){
         <header class="section-header">
           <h3>Purchases</h3>
         </header>
+	      <div class="input-container">
+                <div id="dateDownOne" onClick="decreaseDateByOne()">
+                    <b>Previous</b>
+                </div>	
+                <form id="dateForm">
+                    <input type="date" class="tallInput" id="date" onblur="clearPage()">
+                </form>
+                <div id="dateUpOne" onClick="increaseDateByOne()">
+                    <b>Next</b>
+                </div>
+            </div>
           <div class="row">
           	<div class="col-4">                
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
