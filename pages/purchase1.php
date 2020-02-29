@@ -8,6 +8,16 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
+<?php
+	$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title"]);
+	if($SERVER['REQUEST_METHOD']=="POST") {
+		$purchase_title = $_POST["purchase_title"];
+		if($purchase_title == 'Alcohol Costs'){
+			$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title]);
+			$selectOption = "SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
+				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
+				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id";
+			$purchase_result = mysqli_query($connect, $selectOption);
 <body>
 
 
@@ -160,20 +170,20 @@ if(!isset($_SESSION['user_id'])){
 		  	</div>
 		  </div>
           <div class="row">
-         /* <div class="col-12">
+          <div class="col-12">
 			  <form>
                  <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
-					   <option selected="selected">Select...</option>
-                        		   <option value="Food Costs">Food Costs</option>
-                       			   <option value="Alcohol Costs">Alcohol Costs</option>
-					   <option value="Advertising">Advertising</option>
-					   <option value="Cleaning Supplies">Cleaning Supplies</option>
-					   <option value="Linen">Linen</option>
-					   <option value="Office Supplies">Office Supplies</option>
-					   <option value="Repair and Maintenance">Repair and Maintenance</option>
-                       			   <option value="Restaurant Supplies">Restauraunt Supplies</option>
-                    </select> */
+					   <option value="none">Select...</option>
+                        		   <option value="Food Costs" <? if(@$_POST['purchase_title'] == 'Food Costs') { echo 'selected = \"selected\"'; }?>>Food Costs</option>
+                       			   <option value="Alcohol Costs" <? if(@$_POST['purchase_title'] == 'Alcohol Costs') { echo 'selected = \"selected\"'; }?>>Alcohol Costs</option>
+					   <option value="Advertising" <? if(@$_POST['purchase_title'] == 'Advertising') { echo 'selected = \"selected\"'; }?>>Advertising</option>
+					   <option value="Cleaning Supplies" <? if(@$_POST['purchase_title'] == 'Cleaning Supplies') { echo 'selected = \"selected\"'; }?>>Cleaning Supplies</option>
+					   <option value="Linen" <? if(@$_POST['purchase_title'] == 'Linen') { echo 'selected = \"selected\"'; }?>>Linen</option>
+					   <option value="Office Supplies" <? if(@$_POST['purchase_title'] == 'Office Supplies') { echo 'selected = \"selected\"'; }?>>Office Supplies</option>
+					   <option value="Repair and Maintenance" <? if(@$_POST['purchase_title'] == 'Repair and Maintenance') { echo 'selected = \"selected\"'; }?>>Repair and Maintenance</option>
+                       			   <option value="Restaurant Supplies" <? if(@$_POST['purchase_title'] == 'Restaurant Supples') { echo 'selected = \"selected\"'; }?>>Restauraunt Supplies</option>
+                    </select> 
                      <a class="btn btn-warning btn-lg" name="submitSelect" href="#" role="button">Submit</a>
 				  </div>                        
 			</form>                
@@ -187,61 +197,16 @@ if(!isset($_SESSION['user_id'])){
 			           <th width="16%">Vendor</th>
 			           <th width="16%">Amount</th>
 			         </tr>
-		            </thead>
-			       <tbody>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
+		           	</thead>
+			    <tbody>
+				<?php 
+					if($_SERVER['REQUEST_METHOD']=="POST') {
+					while($selectedOption = mysqli_fetch_array($purchase_result)) {
+					echo "<tr><td>".$selectedOption['entry_date']."</td><td>".$selectedOption['vendor_name']."</td><td>".$selectedOption['cost']."</td>
+				<td></td>
+			       
 		            </tbody>
-		         </table></th>
-			   </tr>
+		         </table>
 			 </thead>
 		    </table>
           </div>
