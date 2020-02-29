@@ -188,52 +188,54 @@ if(!isset($_SESSION['user_id'])){
 		            </thead>
 			       <tbody>
 			         <tr>
-			           <td>02/29/2020</td>
+                         <td class="bg-white2">
+                             <input class="form-cntrol1 bg-white2 text-right" type="text" value="02-29-2020">
+                         </td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>002-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>02/29/2020</td>
+			           <td>02-29-2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
