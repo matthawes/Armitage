@@ -39,7 +39,7 @@ if(!isset($_SESSION['user_id'])){
 			.input-container {padding:5px; align: center; width: 25%; margin:auto; display:grid; grid-template-columns: 1fr 1fr 1fr;}
 			.container {overflow:hidden;}
 			#startingCash {border:2px solid #000; margin:0px 0px 5px 5px; background-color:#ffe8b8;}
-			input {width:100%; height:20px;}
+			input {width:90%; height:20px;}
 			.finalDiv {height:25px;}
 			.tallInput {height:30px;}
 			.cashHeader {margin:5px 5px -2px 5px;}
@@ -53,8 +53,7 @@ if(!isset($_SESSION['user_id'])){
 			#cashContainer {padding:5px; background-color:#ff9c00; width:63%; border: 2px solid #000;}
 			#countContainer {padding:5px; background-color:#ff9c00; width:35%; border: 2px solid #000; float:right;}
 			#overShortContainer {margin:0 auto; width:25%; background-color:#ff9c00;}
-			input[type="date"] {
-				position: relative;}
+			input[type="date"] {position: relative;}
 
 			/* create a new arrow, because we are going to mess up the native one*/
 			input[type="date"]:after {
@@ -189,52 +188,52 @@ if(!isset($_SESSION['user_id'])){
 		            </thead>
 			       <tbody>
 			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
-			           <td>&nbsp;</td>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
 			         <tr>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>02/29/2020</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>02/29/2020</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>02/29/2020</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>02/29/2020</td>
 			           <td>&nbsp;</td>
 			           <td>&nbsp;</td>
 			         </tr>
