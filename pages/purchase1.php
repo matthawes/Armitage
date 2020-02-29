@@ -9,8 +9,7 @@ if(!isset($_SESSION['user_id'])){
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
 <?php
-	$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title"]);
-	if($SERVER['REQUEST_METHOD']=="POST") {
+	
 		
 		$purchase_title = $_POST["purchase_title"];
 		if($purchase_title == 'Alcohol Costs'){
@@ -20,7 +19,7 @@ if(!isset($_SESSION['user_id'])){
 				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id";
 			$purchase_result = mysqli_query($connect, $selectOption);
 			}
-			}
+			
 <body>
 
 
