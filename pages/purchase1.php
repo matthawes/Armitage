@@ -5,8 +5,9 @@
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
-?><?php include "navigation.html"; ?>
-
+?>
+<?php include "navigation.html"; ?>
+<?php include "../config.php"; ?>
 <body>
 
 
@@ -159,7 +160,7 @@ if(!isset($_SESSION['user_id'])){
 		  	</div>
 		  </div>
           <div class="row">
-          <div class="col-12">
+         /* <div class="col-12">
 			  <form>
                  <div class="form-group w-50">                   
 					<select class="form-control" id="exampleFormControlSelect1">                
@@ -172,8 +173,8 @@ if(!isset($_SESSION['user_id'])){
 					   <option value="Office Supplies">Office Supplies</option>
 					   <option value="Repair and Maintenance">Repair and Maintenance</option>
                        			   <option value="Restaurant Supplies">Restauraunt Supplies</option>
-                    </select>
-                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+                    </select> */
+                     <a class="btn btn-warning btn-lg" name="submitSelect" href="#" role="button">Submit</a>
 				  </div>                        
 			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
