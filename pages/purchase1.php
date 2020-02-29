@@ -11,6 +11,7 @@ if(!isset($_SESSION['user_id'])){
 <?php
 	$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title"]);
 	if($SERVER['REQUEST_METHOD']=="POST") {
+		
 		$purchase_title = $_POST["purchase_title"];
 		if($purchase_title == 'Alcohol Costs'){
 			$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title]);
@@ -18,6 +19,8 @@ if(!isset($_SESSION['user_id'])){
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
 				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id";
 			$purchase_result = mysqli_query($connect, $selectOption);
+			}
+			}
 <body>
 
 
