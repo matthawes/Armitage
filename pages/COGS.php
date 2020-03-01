@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include "../config.php"; ?>
+
 <?php include "../pages/navigation.html"; ?>
 
 <?php if(!isset($_SESSION['user_id'])){
@@ -7,23 +7,7 @@
     header("Location: ../index.php");
 	} ?>
 
-<?php 
-	  		$selectValue = mysqli_string($connect, $_POST["cogDate"]);
-    		$cogdate_query = "SELECT entry_date FROM cost_of_goods";
-    		$cogDate_result = mysqli_query($connect, $cogDate_query);
-			if ($_SERVER['REQUEST_METHOD']=="POST") {
-			   $selectValue = mysqli_string($connect, $_POST["cogDate"]);
-               $cogDate_query = "SELECT cost_of_goods.*, oost_of_goods.entry_date, cost_of_goods.vendor_id, cost_of_goods.amount,company.target_food_cost_percentage, company.target_alcohol_cost_percentage
-                    FROM cost_of_goods
-                    LEFT JOIN company ON company.company_id = cost_of_goods.company_id
-					WHERE entry_date='".$selectValue."'";
-               $cogDate_result = mysqli_query($connect, $cogDate_query);
-           	   $selectedCOG = mysqli_fetch_array($cogDate_result);
-			   }
-			   
-			   
 
-?>
 
 
 
@@ -57,7 +41,7 @@
 					 		<tbody>	
 									<tr>
                             			<th width="80%" class="border-all text-center">Target Food Costs %</th>
-                           				<td width="20%" placeholder= "<?= $selectValue['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
+                           				<td width="20%" placeholder= "<?= $selectedCOG['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
 									</tr>
 									<tr>
 										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
@@ -150,9 +134,14 @@
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
                                     while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
                                         echo "<tr>
+
 										<td class="border-all">".$selectedcogLines['entry_date']."</td>
 										<td class="border-all">".$selectedcogLines['vendor_id']."</td>
 										<td class="border-all">".$selectedcogLines['amount']."</td></tr>";
+
+						<td class='border-all'>".$selectedCOG['entry_date']."</td>
+						<td class='border-all'>".$selectedCOG['vendor_id']."</td>
+						<td class='border-all'>".$selectedCOG['amount']."</td></tr>";
                                     }
                                 }
                             ?>
@@ -172,9 +161,15 @@
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
                                     while ($selectedcogLines = mysqli_fetch_array($cogDate_result)){
                                         echo "<tr>
+
 										<td class="border-all">".$selectedcogLines['entry_date']."</td>
 										<td class="border-all">".$selectedcogLines['vendor_id']."</td>
 										<td class="border-all">".$selectedcogLines['amount']."</td></tr>";
+
+						<td class='border-all'>".$selectedCOG['entry_date']."</td>
+						<td class='border-all'>".$selectedCOG['vendor_id']."</td>
+						<td class='border-all'>".$selectedCOG['amount']."</td></tr>";
+
                                     }
                                 }
                             ?>

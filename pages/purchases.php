@@ -18,9 +18,88 @@ if(!isset($_SESSION['user_id'])){
       <div class="container">
         <header class="section-header">
           <h3>Purchases</h3>
+	<span class="section-divider"></span>
         </header>
+	      <div class="input-container">
+                <div id="dateDownOne" onClick="decreaseDateByOne()">
+                    <b>Previous</b>
+                </div>	
+                <form id="dateForm">
+                    <input type="date" class="tallInput" id="date" onblur="clearPage()">
+                </form>
+                <div id="dateUpOne" onClick="increaseDateByOne()">
+                    <b>Next</b>
+                </div>
+            </div>
+	       <style>
+			.rollInput {width:50%;}
+			#dateForm {text-align:center; display:table;}
+			#dateUpOne {display:table;}
+			#dateDownOne {display:table;}
+			.input-container {padding:5px; align: center; width: 25%; margin:auto; display:grid; grid-template-columns: 1fr 1fr 1fr;}
+			.container {overflow:hidden;}
+			#startingCash {border:2px solid #000; margin:0px 0px 5px 5px; background-color:#ffe8b8;}
+			input {width:100%; height:20px;}
+			.finalDiv {height:25px;}
+			.tallInput {height:30px;}
+			.cashHeader {margin:5px 5px -2px 5px;}
+			.cashFooter {margin:-2px 5px 5px 5px;}
+			.cashLabeltd {border:2px solid #000;}
+			.oddRow {background-color:#ffe8b8;}
+			.evenRow {background-color:#e8e8e8;}
+			.filler {background-color:#ff9c00; border:0;}
+			.headerFiller {background-color:#fff; border:0;}
+			#cashFlow {table-layout: fixed;}
+			#cashContainer {padding:5px; background-color:#ff9c00; width:63%; border: 2px solid #000;}
+			#countContainer {padding:5px; background-color:#ff9c00; width:35%; border: 2px solid #000; float:right;}
+			#overShortContainer {margin:0 auto; width:25%; background-color:#ff9c00;}
+			input[type="date"] {
+				position: relative;}
+
+			/* create a new arrow, because we are going to mess up the native one*/
+			input[type="date"]:after {
+			padding: 0 5px;
+			display:none;}
+
+
+			/* make the native arrow invisible and stretch it over the whole field so you can click anywhere 
+				in the input field to trigger the native datepicker*/
+			input[type="date"]::-webkit-calendar-picker-indicator {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: auto;
+				height: auto;
+				color: transparent;
+				background: transparent;}
+
+			/* adjust increase/decrease button */
+			input[type="date"]::-webkit-inner-spin-button {display: none;}
+
+			/* adjust clear button */
+			input[type="date"]::-webkit-clear-button {display:none;}
+		</style>
+            
+            <script>
+                function increaseDateByOne(){
+                    document.getElementById("date").stepUp(1);
+                    clearPage();   
+                }
+                function decreaseDateByOne(){
+                    document.getElementById("date").stepDown(1);
+                    clearPage();
+                }
+                function loadCurDate(){
+                    document.getElementById("date").valueAsDate = new Date();
+                }
+                window.onload = function(){
+                    loadCurDate();
+                }
+            </script>
           <div class="row">
-          	<div class="col-4">
+          	<div class="col-4">                
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
@@ -50,7 +129,7 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="col-4">
+			  <div class="col-4">               
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
@@ -79,11 +158,13 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
           <div class="row">
           <div class="col-12">
-			  <hr>
-			 <form>
-				  <div class="form-group w-50">
-					<select class="form-control" id="exampleFormControlSelect1">
+             
+			  <form>
+                 <div class="form-group w-50">                   
+					<select class="form-control" id="exampleFormControlSelect1">                
 					   <option selected="selected">Select...</option>
+                        <option value="Food Costs">Food Costs</option>
+                        <option value="Alcohol Costs">Alcohol Costs</option>
 					   <option value="Advertising">Advertising</option>
 					   <option value="Cleaning Supplies">Cleaning Supplies</option>
 					   <option value="Linen">Linen</option>
@@ -91,14 +172,15 @@ if(!isset($_SESSION['user_id'])){
 					   <option value="Repair and Maintenance">Repair and Maintenance</option>
                        <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>
-				  </div>
-			</form>
+                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+				  </div>                        
+			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
-			   <tr class="text-sm text-center">
+			   <tr class="text-center">
 			     <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			       <thead class="thead-dark">
-			         <tr class="text-sm text-center">
+			         <tr class="text-center">
 			           <th width="16%">Date</th>
 			           <th width="16%">Vendor</th>
 			           <th width="16%">Amount</th>
@@ -161,10 +243,7 @@ if(!isset($_SESSION['user_id'])){
 			 </thead>
 		    </table>
           </div>
-			<a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
-		  
-        
-        </div>
+		</div>
       </div>
     </section>
     <!-- #about -->
