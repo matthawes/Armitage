@@ -9,10 +9,9 @@ if(!isset($_SESSION['user_id'])){
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
 <?php
-	$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title"]);
-	if($SERVER['REQUEST_METHOD']=="POST") {
-		
-		$purchase_title = $_POST["purchase_title"];
+	
+	if(isset(_POST['submit'])) {
+		$purchaseTitle = $_POST["purchase_title"];
 		if($purchase_title == 'Alcohol Costs'){
 			$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title]);
 			$selectOption = "SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
