@@ -174,9 +174,9 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
           <div class="row">
           <div class="col-12">
-			  <form>
+			  <form method="post">
                  <div class="form-group w-50">                   
-					<select class="form-control" id="exampleFormControlSelect1">                
+					<select class="form-control"  id="exampleFormControlSelect1">                
 					   <option value="none">Select...</option>
                         		   <option value="Food Costs" <? if(@$_POST['purchase_title'] == 'Food Costs') { echo 'selected = \"selected\"'; }?>>Food Costs</option>
                        			   <option value="Alcohol Costs" <? if(@$_POST['purchase_title'] == 'Alcohol Costs') { echo 'selected = \"selected\"'; }?>>Alcohol Costs</option>
