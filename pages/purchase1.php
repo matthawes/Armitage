@@ -9,7 +9,7 @@ if(!isset($_SESSION['user_id'])){
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
 <?php
-	
+		
 		$purchaseTitle = $_POST['purchase_title'];
 		if($purchaseTitle == "Alcohol Costs")
 		{
@@ -190,22 +190,18 @@ if(!isset($_SESSION['user_id'])){
                      <a class="btn btn-warning btn-lg" type="submit" name="submit" role="button">Submit</a>
 				</div>                        
 			</form>                
-		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered"
+		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			    <thead class="thead-dark">
 			        <tr class="text-center">
 			           <th width="16%">Date</th>
 			           <th width="16%">Vendor</th>
 			           <th width="16%">Amount</th>
 					</tr>
-		         </thead>
-			    <tbody>
 				<?php 
 					if($_SERVER['REQUEST_METHOD']=="POST') {
 					while($selectedOption = mysqli_fetch_array($purchase_result)) {
-					echo "<tr><td>".$selectedOption['entry_date']."</td><td>".$selectedOption['vendor_name']."</td><td>".$selectedOption['cost']."</td>
+					echo "<tr><td>". $selectedOption['entry_date'] ."</td><td>". $selectedOption['vendor_name'] ."</td><td>". $selectedOption['cost'] ."</td>
 				?>
-			       
-		        </tbody>
 		        
 		    </table>
 		</div>
