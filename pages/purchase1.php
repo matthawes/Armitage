@@ -10,17 +10,15 @@ if(!isset($_SESSION['user_id'])){
 <?php include "../config.php"; ?>
 <?php
 	
-	if(isset(_POST['submit'])) {
-		$purchaseTitle = $_POST["purchase_title"];
-		if($purchaseTitle == "Alcohol Costs){
-			$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title]);
-			$selectOption = "SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
+		$purchaseTitle = $_POST['purchase_title'];
+		if($purchaseTitle == "Alcohol Costs")
+		{
+			$selectOption = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id;
-				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id";
+				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id;
 		$purchase_result = mysqli_query($connect, $selectOption);
 		}
 	
-	}
 ?>
 
 <body>
@@ -31,21 +29,21 @@ if(!isset($_SESSION['user_id'])){
       About Us Section
     ============================-->
     <section id="about">
-      <div class="container">
-        <header class="section-header">
-          <h3>Purchases</h3>
-            <span class="section-divider"></span>
-            <div class="input-container">
-                <div id="dateDownOne" onClick="decreaseDateByOne()">
+		<div class="container">
+			<header class="section-header">
+			<h3>Purchases</h3>
+			<span class="section-divider"></span>
+				<div class="input-container">
+					<div id="dateDownOne" onClick="decreaseDateByOne()">
                     <b>Previous</b>
-                </div>	
+					</div>	
                 <form id="dateForm">
                     <input type="date" class="tallInput" id="date" onblur="clearPage()">
                 </form>
-                <div id="dateUpOne" onClick="increaseDateByOne()">
+					<div id="dateUpOne" onClick="increaseDateByOne()">
                     <b>Next</b>
-                </div>
-            </div>
+					</div>
+           
             
             <style>
 			.rollInput {width:50%;}
@@ -96,7 +94,7 @@ if(!isset($_SESSION['user_id'])){
 
 			/* adjust clear button */
 			input[type="date"]::-webkit-clear-button {display:none;}
-		</style>
+			</style>
             
             <script>
                 function increaseDateByOne(){
@@ -115,7 +113,7 @@ if(!isset($_SESSION['user_id'])){
                 }
             </script>
             
-        </header>
+			</header>
           <div class="row">
           	<div class="col-6">                
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
@@ -147,7 +145,7 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="col-6">               
+			 <div class="col-6">               
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
@@ -174,35 +172,32 @@ if(!isset($_SESSION['user_id'])){
 				</table>
 		  	</div>
 		  </div>
-          <div class="row">
-          <div class="col-12">
-			  <form method="post">
-                 <div class="form-group w-50">                   
+         
+         <div class="col-12">
+			<form method="post">
+                <div class="form-group w-50">                   
 					<select class="form-control"  id="exampleFormControlSelect1">                
-					   <option value="none">Select...</option>
-                        		   <option value="Food Costs">Food Costs</option>
-                       			   <option value="Alcohol Costs">Alcohol Costs</option>
-					   <option value="Advertising">Advertising</option>
-					   <option value="Cleaning Supplies">Cleaning Supplies</option>
-					   <option value="Linen">Linen</option>
-					   <option value="Office Supplies">Office Supplies</option>
-					   <option value="Repair and Maintenance">Repair and Maintenance</option>
-                       			   <option value="Restaurant Supplies">Restauraunt Supplies</option>
+						<option value="none">Select...</option>
+						<option value="Food Costs">Food Costs</option>
+						<option value="Alcohol Costs">Alcohol Costs</option>
+						<option value="Advertising">Advertising</option>
+						<option value="Cleaning Supplies">Cleaning Supplies</option>
+						<option value="Linen">Linen</option>
+						<option value="Office Supplies">Office Supplies</option>
+						<option value="Repair and Maintenance">Repair and Maintenance</option>
+                       	<option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select> 
-                     <a class="btn btn-warning btn-lg" name="submit" href="#" role="button">Submit</a>
-				  </div>                        
+                     <a class="btn btn-warning btn-lg" name="submit" role="button">Submit</a>
+				</div>                        
 			</form>                
-		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
-			 <thead class="thead-dark">
-			   <tr class="text-center">
-			     <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
-			       <thead class="thead-dark">
-			         <tr class="text-center">
+		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered"
+			    <thead class="thead-dark">
+			        <tr class="text-center">
 			           <th width="16%">Date</th>
 			           <th width="16%">Vendor</th>
 			           <th width="16%">Amount</th>
-			         </tr>
-		           	</thead>
+					</tr>
+		         </thead>
 			    <tbody>
 				<?php 
 					if($_SERVER['REQUEST_METHOD']=="POST') {
@@ -210,13 +205,11 @@ if(!isset($_SESSION['user_id'])){
 					echo "<tr><td>".$selectedOption['entry_date']."</td><td>".$selectedOption['vendor_name']."</td><td>".$selectedOption['cost']."</td>
 				?>
 			       
-		            </tbody>
-		         </table>
-			 </thead>
+		        </tbody>
+		        
 		    </table>
-          </div>
 		</div>
-      </div>
+		</div>
     </section>
     <!-- #about -->
 
@@ -280,25 +273,6 @@ if(!isset($_SESSION['user_id'])){
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="../lib/jquery/jquery.min.js"></script>
-  <script src="../lib/jquery/jquery-migrate.min.js"></script>
-  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../lib/easing/easing.min.js"></script>
-  <script src="../lib/superfish/hoverIntent.js"></script>
-  <script src="../lib/superfish/superfish.min.js"></script>
-  <script src="../lib/wow/wow.min.js"></script>
-  <script src="../lib/waypoints/waypoints.min.js"></script>
-  <script src="../lib/counterup/counterup.min.js"></script>
-  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="../lib/lightbox/js/lightbox.min.js"></script>
-  <script src="../lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="../contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
-  <script src="../js/main.js"></script>
+  
 
 </body>
-<!-- InstanceEnd --></html>
