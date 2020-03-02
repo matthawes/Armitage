@@ -8,17 +8,6 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
-<?php
-		$option = $POST['option'];
-		if($option == "alcohol")
-		{
-			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
-				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
-				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id;
-		$purchase_result = mysqli_query($connect, $selectOption_query);
-		}
-	}
-?>
 
 <body>
 
@@ -173,7 +162,7 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
          
          <div class="col-12">
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div class="form-group w-50">                   
 					<select name="option" onload="displayProject(this.value);" onchange="displayProject(this.value);">                
 						<option value="">Select...</option>
@@ -186,9 +175,21 @@ if(!isset($_SESSION['user_id'])){
 						<option value="repmaint">Repair and Maintenance</option>
                        	<option value="restaurant">Restauraunt Supplies</option>
                     </select> 
-                     <input class="btn btn-warning btn-lg" type="submit" value="View Purchases">
+                     <input  type="submit" name="submit" value="View Purchases">
 				</div>                        
-			</form>                
+			</form> 
+		 <?php
+		$option = $POST['option'];
+		if($option == "alcohol")
+		{
+			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
+				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
+				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id;
+		$purchase_result = mysqli_query($connect, $selectOption_query);
+		}
+	}
+?>
+
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			    <thead class="thead-dark">
 			        <tr class="text-center">
