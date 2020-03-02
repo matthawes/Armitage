@@ -8,7 +8,18 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <?php include "navigation.html"; ?>
 
-
+<?php include "../config.php"; ?>
+<?php
+		$option = $POST['option'];
+		if($option == "alcoholCosts")
+		{
+			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
+				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
+				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id;
+		$purchase_result = mysqli_query($connect, $selectOption_query);
+		}
+	}
+?>
 
 
 <body>
@@ -163,20 +174,21 @@ if(!isset($_SESSION['user_id'])){
           <div class="row">
           <div class="col-12">
              
-			  <form>
+			 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">>
                  <div class="form-group w-50">                   
-					<select class="form-control" id="exampleFormControlSelect1">                
-					   <option selected="selected">Select...</option>
-                        <option value="Food Costs">Food Costs</option>
-                        <option value="Alcohol Costs">Alcohol Costs</option>
-					   <option value="Advertising">Advertising</option>
-					   <option value="Cleaning Supplies">Cleaning Supplies</option>
-					   <option value="Linen">Linen</option>
-					   <option value="Office Supplies">Office Supplies</option>
-					   <option value="Repair and Maintenance">Repair and Maintenance</option>
-                       <option value="Restaurant Supplies">Restauraunt Supplies</option>
+					<select name="option" onload="displayProject(this.value);" onchange="displayProject(this.value);">                
+					  <option value="">Select...</option>
+						<option value="">Select...</option>
+						<option value="food">Food Costs</option>
+						<option value="alcohol">Alcohol Costs</option>
+						<option value="advertising">Advertising</option>
+						<option value="cleaning">Cleaning Supplies</option>
+						<option value="linen">Linen</option>
+						<option value="office">Office Supplies</option>
+						<option value="repmaint">Repair and Maintenance</option>
+                       	<option value="restaurant">Restauraunt Supplies</option>
                     </select>
-                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+                     <input type="submit" value="View Purchases">
 				  </div>                        
 			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
