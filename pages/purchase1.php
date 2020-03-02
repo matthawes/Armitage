@@ -200,7 +200,7 @@ if(!isset($_SESSION['user_id'])){
 
 				
 					while($selectedOption = mysqli_fetch_array($purchase_result)) {
-					echo "<tr><td>". $selectedOption['entry_date'] ."</td><td>". $selectedOption['vendor_name'] ."</td><td>". $selectedOption['cost'] ."</td></tr>";
+					echo "<tr><td>" . $selectedOption['entry_date'] . "</td><td>" . $selectedOption['vendor_name'] . "</td><td>" . $selectedOption['cost'] . "</td></tr>";
 					}
 				
 				?>
