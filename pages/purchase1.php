@@ -9,15 +9,12 @@ if(!isset($_SESSION['user_id'])){
 <?php include "navigation.html"; ?>
 <?php include "config.php"; ?>
 <?php
-	if($_SERVER['REQUEST_METHOD']=="POST")
-	{
-		$selectValue = mysqli_real_escape_string($connect, $_POST["purchase_title"]);
 		if($_POST == "Alcohol Costs")
 		{
-			/*$selectOption = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
+			$selectOption = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id;
 				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id;
-		$purchase_result = mysqli_query($connect, $selectOption);*/
+		$purchase_result = mysqli_query($connect, $selectOption);
 		}
 	}
 ?>
@@ -200,7 +197,7 @@ if(!isset($_SESSION['user_id'])){
 					</tr>
 				<?php 
 					if($_SERVER['REQUEST_METHOD']=="POST') {
-					while($selectedOption = mysqli_fetch_array($purchase_result)) {
+					while($selectedOption = mysqli_fetch_array[$purchase_result]) {
 					echo "<tr><td>". $selectedOption['entry_date'] ."</td><td>". $selectedOption['vendor_name'] ."</td><td>". $selectedOption['cost'] ."</td>
 				?>
 		        
