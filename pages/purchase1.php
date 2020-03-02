@@ -162,7 +162,7 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
          
          <div class="col-12">
-			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+			<form method="POST">
                 <div class="form-group w-50">                   
 					<select name="option" onload="displayProject(this.value);" onchange="displayProject(this.value);">                
 						<option value="">Select...</option>
@@ -179,7 +179,7 @@ if(!isset($_SESSION['user_id'])){
 				</div>                        
 			</form> 
 		 <?php
-		$option = $POST['option'];
+		if(isset($_POST['option'];
 		if($option == "alcohol")
 		{
 			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
