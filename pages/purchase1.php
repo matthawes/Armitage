@@ -7,7 +7,6 @@ if(!isset($_SESSION['user_id'])){
 }
 ?>
 <?php include "navigation.html"; ?>
-<?php include "config.php"; ?>
 <?php
 		if($_POST == "Alcohol Costs")
 		{
@@ -196,9 +195,12 @@ if(!isset($_SESSION['user_id'])){
 			           <th width="16%">Amount</th>
 					</tr>
 				<?php 
-					if($_SERVER['REQUEST_METHOD']=="POST') {
-					while($selectedOption = mysqli_fetch_array[$purchase_result]) {
-					echo "<tr><td>". $selectedOption['entry_date'] ."</td><td>". $selectedOption['vendor_name'] ."</td><td>". $selectedOption['cost'] ."</td>
+
+				if($_SERVER['REQUEST_METHOD']=="POST") {
+					while($selectedOption = mysqli_fetch_array($purchase_result)) {
+					echo "<tr><td>". $selectedOption['entry_date'] ."</td><td>". $selectedOption['vendor_name'] ."</td><td>". $selectedOption['cost'] ."</td></tr>"
+					}
+				}
 				?>
 		        
 		    </table>
