@@ -7,7 +7,7 @@ if(!isset($_SESSION['user_id'])){
 }
 ?>
 <?php include "navigation.html"; ?>
-<?php include "config.php"; ?>
+<?php include "../config.php"; ?>
 <?php
 		if($_POST == "Alcohol Costs")
 		{
