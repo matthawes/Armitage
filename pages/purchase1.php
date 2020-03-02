@@ -9,7 +9,7 @@ if(!isset($_SESSION['user_id'])){
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
 <?php
-		if($_POST == "Alcohol Costs")
+		if($_POST == "alcoholCosts")
 		{
 			$selectOption = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
@@ -175,15 +175,15 @@ if(!isset($_SESSION['user_id'])){
 			<form method="post">
                 <div class="form-group w-50">                   
 					<select class="form-control"  id="exampleFormControlSelect1">                
-						<option value="none">Select...</option>
-						<option value="Food Costs">Food Costs</option>
-						<option value="Alcohol Costs">Alcohol Costs</option>
-						<option value="Advertising">Advertising</option>
-						<option value="Cleaning Supplies">Cleaning Supplies</option>
-						<option value="Linen">Linen</option>
-						<option value="Office Supplies">Office Supplies</option>
-						<option value="Repair and Maintenance">Repair and Maintenance</option>
-                       	<option value="Restaurant Supplies">Restauraunt Supplies</option>
+						<option value="">Select...</option>
+						<option value="Food Costs" name="foodCosts">Food Costs</option>
+						<option value="Alcohol Costs" name="alcoholCosts">Alcohol Costs</option>
+						<option value="Advertising" name="advertising">Advertising</option>
+						<option value="Cleaning Supplies" name="cleaningSupplies">Cleaning Supplies</option>
+						<option value="Linen" name="linen">Linen</option>
+						<option value="Office Supplies" name="officeSupplies">Office Supplies</option>
+						<option value="Repair and Maintenance" name="repairMaintenance">Repair and Maintenance</option>
+                       	<option value="Restaurant Supplies" name="restaurantSupplies">Restauraunt Supplies</option>
                     </select> 
                      <a class="btn btn-warning btn-lg" type="submit" name="submit" role="button">Submit</a>
 				</div>                        
