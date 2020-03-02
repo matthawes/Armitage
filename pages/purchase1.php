@@ -10,7 +10,7 @@ if(!isset($_SESSION['user_id'])){
 <?php include "../config.php"; ?>
 <?php
 		$option = $POST['option'];
-		if($option == "alcoholCosts")
+		if($option == "alcohol")
 		{
 			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
@@ -177,14 +177,14 @@ if(!isset($_SESSION['user_id'])){
                 <div class="form-group w-50">                   
 					<select name="option" onload="displayProject(this.value);" onchange="displayProject(this.value);">                
 						<option value="">Select...</option>
-						<option value="Food Costs" name="foodCosts">Food Costs</option>
-						<option value="Alcohol Costs" name="alcoholCosts">Alcohol Costs</option>
-						<option value="Advertising" name="advertising">Advertising</option>
-						<option value="Cleaning Supplies" name="cleaningSupplies">Cleaning Supplies</option>
-						<option value="Linen" name="linen">Linen</option>
-						<option value="Office Supplies" name="officeSupplies">Office Supplies</option>
-						<option value="Repair and Maintenance" name="repairMaintenance">Repair and Maintenance</option>
-                       	<option value="Restaurant Supplies" name="restaurantSupplies">Restauraunt Supplies</option>
+						<option value="food">Food Costs</option>
+						<option value="alcohol">Alcohol Costs</option>
+						<option value="advertising">Advertising</option>
+						<option value="cleaning">Cleaning Supplies</option>
+						<option value="linen">Linen</option>
+						<option value="office">Office Supplies</option>
+						<option value="repmaint">Repair and Maintenance</option>
+                       	<option value="restaurant">Restauraunt Supplies</option>
                     </select> 
                      <input class="btn btn-warning btn-lg" type="submit" value="View Purchases">
 				</div>                        
@@ -204,6 +204,7 @@ if(!isset($_SESSION['user_id'])){
 					}
 				
 				?>
+				</thead>
 		        
 		    </table>
 		</div>
