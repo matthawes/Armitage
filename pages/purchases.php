@@ -5,8 +5,14 @@
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
-?><?php include "navigation.html"; ?>
-
+?>
+<?php include "navigation.html"; ?>
+<?php include="config.php"; ?>
+<?php
+	$connect;
+	if($_POST == "Alcohol Costs: {
+		$purchase_query= "Select * FROM alcohol_inventory;"
+		$purchase_result= mysqli_query($connect, $purchase_query);
 
 
 <body>
