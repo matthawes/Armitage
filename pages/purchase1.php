@@ -8,7 +8,12 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
-
+<?php
+error_reporting(-1); // reports all errors
+ini_set("display_errors", "1"); // shows all errors
+ini_set("log_errors", 1);
+ini_set("error_log", "/tmp/php-error.log");
+?>
 <body>
 
 
