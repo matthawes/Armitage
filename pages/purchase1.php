@@ -11,10 +11,10 @@ if(!isset($_SESSION['user_id'])){
 <?php
 		if($_POST == "alcoholCosts")
 		{
-			$selectOption = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
+			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
 				LEFT JOIN cost_of_goods ON costs_of_goods.cost_of_goods_id = alcohol_inventory.cost_of_goods_id;
-		$purchase_result = mysqli_query($connect, $selectOption);
+		$purchase_result = mysqli_query($connect, $selectOption_query);
 		}
 	}
 ?>
