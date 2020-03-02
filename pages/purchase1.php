@@ -9,7 +9,8 @@ if(!isset($_SESSION['user_id'])){
 <?php include "navigation.html"; ?>
 <?php include "../config.php"; ?>
 <?php
-		if($_POST == "alcoholCosts")
+		$option = $POST['option'];
+		if($option == "alcoholCosts")
 		{
 			$selectOption_query = SELECT alcohol_inventory.*, vendor.vendor_name, cost_of_goods.entry_date FROM alcohol_inventory
 				LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id
@@ -172,9 +173,9 @@ if(!isset($_SESSION['user_id'])){
 		  </div>
          
          <div class="col-12">
-			<form method="post">
+			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div class="form-group w-50">                   
-					<select class="form-control"  id="exampleFormControlSelect1">                
+					<select name="option" onload="displayProject(this.value);" onchange="displayProject(this.value);">                
 						<option value="">Select...</option>
 						<option value="Food Costs" name="foodCosts">Food Costs</option>
 						<option value="Alcohol Costs" name="alcoholCosts">Alcohol Costs</option>
@@ -185,7 +186,7 @@ if(!isset($_SESSION['user_id'])){
 						<option value="Repair and Maintenance" name="repairMaintenance">Repair and Maintenance</option>
                        	<option value="Restaurant Supplies" name="restaurantSupplies">Restauraunt Supplies</option>
                     </select> 
-                     <input class="btn btn-warning btn-lg" type="submit" name="submit" value="View Purchases">
+                     <input class="btn btn-warning btn-lg" type="submit" value="View Purchases">
 				</div>                        
 			</form>                
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
@@ -195,7 +196,14 @@ if(!isset($_SESSION['user_id'])){
 			           <th width="16%">Vendor</th>
 			           <th width="16%">Amount</th>
 					</tr>
+				<?php 
+
 				
+					while($selectedOption = mysqli_fetch_array($purchase_result)) {
+					echo "<tr><td>". $selectedOption['entry_date'] ."</td><td>". $selectedOption['vendor_name'] ."</td><td>". $selectedOption['cost'] ."</td></tr>"
+					}
+				
+				?>
 		        
 		    </table>
 		</div>
