@@ -103,7 +103,7 @@ if(!isset($_SESSION['user_id'])){
                 }
             </script>
           <div class="row">
-          	<div class="col-4">                
+          	<div class="col-4" width="50%">                
 				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 					  <tbody>
 						<tr>
@@ -133,7 +133,7 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		  	</div>
-			  <div class="col-4">               
+			  <div class="col-4" width="50%">               
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
