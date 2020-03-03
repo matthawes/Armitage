@@ -176,7 +176,7 @@ if(!isset($_SESSION['user_id'])){
 					   <option value="repair_maint">Repair and Maintenance</option>
                        <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>
-                     <input class="btn btn-warning btn-lg"  name="submit" />
+                     <input class="btn btn-warning btn-lg"  name="submit" >
 				  </div>                        
 			</form>  
                         <?php
