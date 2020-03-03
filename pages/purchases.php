@@ -208,6 +208,7 @@ if(!isset($_SESSION['user_id'])){
                                    while($selectedPurchase = mysqli_fetch_array($purchase_result)){
                                         echo "<tr><td>".$selectedpurchase['2/20/2020']."</td><td>".$selectedPurchase['vendor_name']."</td><td>".$selectedPurchase['cost']."</td></tr>";
                                         }
+                                    ?>
 			        
 		            </tbody>
 		         </table></th>
