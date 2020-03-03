@@ -190,7 +190,7 @@ if(!isset($_SESSION['user_id'])){
                         LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
-                        
+                        ?>
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
 			   <tr class="text-center">
