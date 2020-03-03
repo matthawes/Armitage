@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_id'])){
 ?>
 <?php include "navigation.html"; ?>
 
-
+<?php include "config.php"; ?>
 
 
 <body>
@@ -163,22 +163,33 @@ if(!isset($_SESSION['user_id'])){
           <div class="row">
           <div class="col-12">
              
-			  <form>
+			  <form method="POST">
                  <div class="form-group w-50">                   
-					<select class="form-control" id="exampleFormControlSelect1">                
+					<select name="purchases" class="form-control" id="exampleFormControlSelect1">                
 					   <option selected="selected">Select...</option>
-                        <option value="Food Costs">Food Costs</option>
-                        <option value="Alcohol Costs">Alcohol Costs</option>
-					   <option value="Advertising">Advertising</option>
-					   <option value="Cleaning Supplies">Cleaning Supplies</option>
-					   <option value="Linen">Linen</option>
-					   <option value="Office Supplies">Office Supplies</option>
-					   <option value="Repair and Maintenance">Repair and Maintenance</option>
+                        <option value="food">Food Costs</option>
+                        <option value="alcohol">Alcohol Costs</option>
+					   <option value="advertising">Advertising</option>
+					   <option value="cleaning">Cleaning Supplies</option>
+					   <option value="linen">Linen</option>
+					   <option value="office">Office Supplies</option>
+					   <option value="repair_maint">Repair and Maintenance</option>
                        <option value="Restaurant Supplies">Restauraunt Supplies</option>
                     </select>
-                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+                     <input class="btn btn-warning btn-lg" href="#" name="submit" role="button">Submit />
 				  </div>                        
-			</form>                
+			</form>  
+                        <?php
+                        if(isset($_POST['submit']))
+                        {
+                            $option = $_POST['purchases'];
+                            {
+                        if($option == "alcohol")
+                        {
+                        $purchaseOption = "SELECT alcohol_inventory.*, vendor.vendor_name FROM alcohol_inventory
+                        LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id";
+                        $purchase_result = mysqli_query($connect, $purchaseOption);
+                        
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
 			   <tr class="text-center">
@@ -192,9 +203,11 @@ if(!isset($_SESSION['user_id'])){
 		            </thead>
 			       <tbody>
 			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
+			           <?php 
+                                
+                                   while($selectedPurchase = mysqli_fetch_array($purchase_result)){
+                                        echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
+                                        }
 			         </tr>
 			         <tr>
 			           <td>&nbsp;</td>
