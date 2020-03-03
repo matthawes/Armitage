@@ -102,9 +102,10 @@ if(!isset($_SESSION['user_id'])){
                     loadCurDate();
                 }
             </script>
-          <div class="row">
-          	<div class="col-4" width="50%">                
-				  <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+            <div class="container">
+		<div class="row">
+                    <div style="float: left; padding-top: 2%; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+ 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">             
 					  <tbody>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Advertising%</td>
@@ -118,7 +119,7 @@ if(!isset($_SESSION['user_id'])){
 						  <td width="80%" class="border-all text-left">Target Linen%</td>
 						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
-                        <tr>
+                                                <tr>
 						  <td width="80%" class="border-all text-left">Target Office Supplies%</td>
 						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
@@ -132,8 +133,8 @@ if(!isset($_SESSION['user_id'])){
 						</tr> 
 					  </tbody>
 					</table>
-		  	</div>
-			  <div class="col-4" width="50%">               
+		    </div>
+		    <div class="col-4" width="50%">               
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
 						<tr>
@@ -158,8 +159,9 @@ if(!isset($_SESSION['user_id'])){
 						</tr>
 				    </tbody>
 				</table>
-		  	</div>
-		  </div>
+		    </div>
+		</div>
+            </div>
           <div class="row">
           <div class="col-12">
              
