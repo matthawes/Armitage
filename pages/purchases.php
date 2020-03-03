@@ -134,8 +134,8 @@ if(!isset($_SESSION['user_id'])){
 					  </tbody>
 					</table>
 		    </div>
-		    <div class="col-4" width="50%">               
-			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
+		    <div style="float: right; padding-top: 2%; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+ 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">   
 				  <tbody>
 						<tr>
                             <td width="75%" class="border-all text-left">Current Food Cost%</td>
