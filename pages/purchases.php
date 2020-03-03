@@ -202,14 +202,59 @@ if(!isset($_SESSION['user_id'])){
 			         </tr>
 		            </thead>
 			       <tbody>
-			        
+			         <tr>
 			           <?php 
                                 
                                    while($selectedPurchase = mysqli_fetch_array($purchase_result)){
-                                        echo "<tr><td>".$selectedpurchase['2/20/2020']."</td><td>".$selectedPurchase['vendor_name']."</td><td>".$selectedPurchase['cost']."</td></tr>";
+                                        echo "<td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td>";
                                         }
                                     ?>
-			        
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
+			         <tr>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			           <td>&nbsp;</td>
+			         </tr>
 		            </tbody>
 		         </table></th>
 			   </tr>
