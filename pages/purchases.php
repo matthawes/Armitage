@@ -138,24 +138,24 @@ if(!isset($_SESSION['user_id'])){
  	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">   
 				  <tbody>
 						<tr>
-                            <td width="75%" class="border-all text-left">Current Food Cost%</td>
-                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+                            <td width="80%" class="border-all text-left">Current Food Cost%</td>
+                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
                         <tr>
-                            <td width="75%" class="border-all text-left">Current Alcohol Cost%</td>
-                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
+                            <td width="80%" class="border-all text-left">Current Alcohol Cost%</td>
+                            <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="75%" class="border-all text-left">Adjusted Budget</td>
-						  <td width="25%" class="border-all">&nbsp;</td>
+						  <td width="80%" class="border-all text-left">Adjusted Budget</td>
+						  <td width="20%" class="border-all">&nbsp;</td>
 						</tr>
 						<tr>
-						  <td width="75%" class="border-all text-left">Remaining Budget</td>
-						  <td width="25%" class="bg-yellow border-all">&nbsp;</td>
+						  <td width="80%" class="border-all text-left">Remaining Budget</td>
+						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
                         <tr>
-						  <td width="75%" class="border-all text-left">Purchases</td>
-						  <td width="25%" class="bg-yellow border-all">&nbsp;</td>
+						  <td width="80%" class="border-all text-left">Purchases</td>
+						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
 						</tr>
 				    </tbody>
 				</table>
