@@ -184,13 +184,33 @@ if(!isset($_SESSION['user_id'])){
                         if(isset($_POST['submit']))
                         {
                             $option = $_POST['purchases'];
-                            }
-                        if($option == "alcohol")
+                        }
+                        if($option == "food")
+                        {
+                        
+                        }
+                        else if($option == "alcohol")
                         {
                         $purchaseOption = "SELECT alcohol_inventory.*, vendor.vendor_name FROM alcohol_inventory
                         LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
+                        else if($option == "advertising")
+                        {
+                        }
+                        else if(($option == "cleaning")
+                        {
+                        }
+                        else if(($option == "linen")
+                        {
+                        }
+                        else if(($option == "repair_maint")
+                        {
+                        }
+                        else if(($option == "restaurant")
+                        {
+                        };
+
                         ?>
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
