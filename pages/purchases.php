@@ -164,19 +164,18 @@ if(!isset($_SESSION['user_id'])){
             </div>
           <div class="row">
           <div class="col-12">
-             
-			  <form method="POST">
+        	<form method="POST">
                  <div class="form-group w-50">                   
-					<select name="purchases" class="form-control" id="exampleFormControlSelect1">                
-					   <option selected="selected">Select...</option>
+                    <select name="purchases" class="form-control" id="exampleFormControlSelect1">                
+			<option selected="selected">Select...</option>
                         <option value="food">Food Costs</option>
                         <option value="alcohol">Alcohol Costs</option>
-					   <option value="advertising">Advertising</option>
-					   <option value="cleaning">Cleaning Supplies</option>
-					   <option value="linen">Linen</option>
-					   <option value="office">Office Supplies</option>
-					   <option value="repair_maint">Repair and Maintenance</option>
-                       <option value="Restaurant Supplies">Restauraunt Supplies</option>
+			<option value="advertising">Advertising</option>
+			<option value="cleaning">Cleaning Supplies</option>
+			<option value="linen">Linen</option>
+			<option value="office">Office Supplies</option>
+			<option value="repair_maint">Repair and Maintenance</option>
+                        <option value="restaurant">Restauraunt Supplies</option>
                     </select>
                      <input class="btn btn-warning btn-sm" type="submit" name="submit" value="View Purchases">
 				  </div>                        
