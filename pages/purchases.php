@@ -206,7 +206,7 @@ if(!isset($_SESSION['user_id'])){
 			           <?php 
                                 
                                    while($selectedPurchase = mysqli_fetch_array($purchase_result)){
-                                        echo "<td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td>";
+                                        echo "<td>".$selectedPurchase['invoice_number']."</td><td>".$selectedPurchase['invoice_line_id']."</td><td>".$selectedPurchase['type']."</td>";
                                         }
                                     ?>
 			         </tr>
