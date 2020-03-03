@@ -183,7 +183,7 @@ if(!isset($_SESSION['user_id'])){
                         if(isset($_POST['submit']))
                         {
                             $option = $_POST['purchases'];
-                            {
+                            }
                         if($option == "alcohol")
                         {
                         $purchaseOption = "SELECT alcohol_inventory.*, vendor.vendor_name FROM alcohol_inventory
