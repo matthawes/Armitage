@@ -167,7 +167,7 @@ if(!isset($_SESSION['user_id'])){
         	<form method="POST">
                  <div class="form-group w-50">                   
                     <select name="purchases" class="form-control" id="exampleFormControlSelect1">                
-			<option selected="selected">Select...</option>
+			<option value="">Select...</option>
                         <option value="food">Food Costs</option>
                         <option value="alcohol">Alcohol Costs</option>
 			<option value="advertising">Advertising</option>
