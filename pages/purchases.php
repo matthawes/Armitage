@@ -206,7 +206,7 @@ if(!isset($_SESSION['user_id'])){
                         else if(($option == "repair_maint")
                         {
                         }
-                        else if(($option == "restaurant")
+                        else(($option == "restaurant")
                         {
                         };
 
