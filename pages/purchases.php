@@ -135,15 +135,15 @@ if(!isset($_SESSION['user_id'])){
 				  <tbody>
                       <tr>
                           <td width="75%" class="border-all text-left">Adjusted Budget</td>
-						  <td width="25%" class="border-all">$25000</td>
+						  <td width="25%" class="border-all">$25,000</td>
                       </tr>
                       <tr>
                           <td width="75%" class="border-all text-left">Remaining Budget</td>
-						  <td width="25%" class="bg-yellow border-all">$5000</td>
+						  <td width="25%" class="bg-yellow border-all">$5,000</td>
                       </tr>
                       <tr>
-                          <td width="75%" class="border-all text-left">$20000</td>
-						  <td width="25%" class="bg-yellow border-all">&nbsp;</td>
+                          <td width="75%" class="border-all text-left">Purchases</td>
+						  <td width="25%" class="bg-yellow border-all">$20,000</td>
                       </tr>
                    </tbody>
                   </table>
