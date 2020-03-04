@@ -231,51 +231,7 @@ if(!isset($_SESSION['user_id'])){
                                         }
                                     ?>
 			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
+			        
 		            </tbody>
 		         </table></th>
 			   </tr>
