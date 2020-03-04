@@ -226,7 +226,7 @@ if(!isset($_SESSION['user_id'])){
 			           <?php 
                                 
                                    while($selectedPurchase = mysqli_fetch_array($purchase_result)){
-                                        echo "<td>".$selectedPurchase['invoice_number']."</td><td>".$selectedPurchase['invoice_line_id']."</td><td>".$selectedPurchase['type']."</td>";
+                                        echo "<td>".$selectedPurchase['date']."</td><td>".$selectedPurchase['vendor_name']."</td><td>".$selectedPurchase['cost']."</td>";
                                         }
                                     ?>
 			         </tr>
