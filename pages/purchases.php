@@ -185,7 +185,7 @@ if(!isset($_SESSION['user_id'])){
                         {
                             $option = $_POST['purchases'];
                         }
-                        if($option == "food")
+                       /* if($option == "food")
                         {
                         }
                         else if($option == "alcohol")
@@ -208,7 +208,7 @@ if(!isset($_SESSION['user_id'])){
                         }
                         else(($option == "restaurant")
                         {
-                        };
+                        }; */
 
                         ?>
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
