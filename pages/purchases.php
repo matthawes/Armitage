@@ -191,7 +191,7 @@ if(!isset($_SESSION['user_id'])){
                         }
                         else if($option == "alcohol")
                         {
-                        $purchaseOption = "SELECT alcohol_inventory.cost, vendor.vendor_name FROM alcohol_inventory,vendor";
+                        $purchaseOption = "SELECT alcohol_inventory.cost, vendor.vendor_name FROM alcohol_inventory, vendor";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
                         else if($option == "advertising")
