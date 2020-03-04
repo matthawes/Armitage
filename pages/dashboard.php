@@ -370,11 +370,6 @@ function toggleDataSeries(e) {
               </tr>
           </tbody>
 	</table>
-  
-	<div class="row">
-		<div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
-		<div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
-	</div>	
       </div>
 	   
 	    <div class="container">
@@ -431,6 +426,10 @@ function toggleDataSeries(e) {
 		 		 </div>
 			 </div>
 		</div>
+                <div class="row">
+                    <div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
+                    <div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
+	</div>	
 
     </section><!-- #faq -->
 
