@@ -105,27 +105,27 @@ if(!isset($_SESSION['user_id'])){
 					  <tbody>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Advertising%</td>
-						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+						  <td width="20%" class="bg-yellow border-all">3%</td>
 						</tr>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Cleaning Supplies%</td>
-						  <td width="20%" class="border-all">&nbsp;</td>
+						  <td width="20%" class="border-all">1%</td>
 						</tr>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Linen%</td>
-						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+						  <td width="20%" class="bg-yellow border-all">1%</td>
 						</tr>
                         <tr>
 						  <td width="80%" class="border-all text-left">Target Office Supplies%</td>
-						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+						  <td width="20%" class="bg-yellow border-all">1%</td>
 						</tr>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Repairs and Maintenance%</td>
-						  <td width="20%" class="border-all">&nbsp;</td>
+						  <td width="20%" class="border-all">4%</td>
 						</tr>
 						<tr>
 						  <td width="80%" class="border-all text-left">Target Restaurant Supplies%</td>
-						  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+						  <td width="20%" class="bg-yellow border-all">5%</td>
 						</tr> 
 					  </tbody>
 					</table>
@@ -133,122 +133,114 @@ if(!isset($_SESSION['user_id'])){
 			  <div class="col-4">               
 			   <table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-sm">
 				  <tbody>
-						<tr>
-                            <td width="75%" class="border-all text-left">Current Food Cost%</td>
-                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
-                            <td width="75%" class="border-all text-left">Current Alcohol Cost%</td>
-                            <td width="50%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-						<tr>
-						  <td width="75%" class="border-all text-left">Adjusted Budget</td>
+                      <tr>
+                          <td width="75%" class="border-all text-left">Adjusted Budget</td>
 						  <td width="25%" class="border-all">&nbsp;</td>
-						</tr>
-						<tr>
-						  <td width="75%" class="border-all text-left">Remaining Budget</td>
+                      </tr>
+                      <tr>
+                          <td width="75%" class="border-all text-left">Remaining Budget</td>
 						  <td width="25%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-                        <tr>
-						  <td width="75%" class="border-all text-left">Purchases</td>
+                      </tr>
+                      <tr>
+                          <td width="75%" class="border-all text-left">Purchases</td>
 						  <td width="25%" class="bg-yellow border-all">&nbsp;</td>
-						</tr>
-				    </tbody>
-				</table>
-		  	</div>
-		  </div>
-          <div class="row">
-          <div class="col-12">
-			  <form>
-                 <div class="form-group w-50">                   
-					<select class="form-control" id="exampleFormControlSelect1">                
-					   <option selected="selected">Select...</option>
-                        <option value="Food Costs">Food Costs</option>
-                        <option value="Alcohol Costs">Alcohol Costs</option>
-					   <option value="Advertising">Advertising</option>
-					   <option value="Cleaning Supplies">Cleaning Supplies</option>
-					   <option value="Linen">Linen</option>
-					   <option value="Office Supplies">Office Supplies</option>
-					   <option value="Repair and Maintenance">Repair and Maintenance</option>
-                       <option value="Restaurant Supplies">Restauraunt Supplies</option>
-                    </select>
-                     <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
-				  </div>                        
-			</form>                
-		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
-			 <thead class="thead-dark">
-			   <tr class="text-center">
-			     <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
-			       <thead class="thead-dark">
-			         <tr class="text-center">
-			           <th width="16%">Date</th>
-			           <th width="16%">Vendor</th>
-			           <th width="16%">Amount</th>
-			         </tr>
-		            </thead>
-			       <tbody>
-			         <tr>
-                         <td class="text-bold">02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>002-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-			         <tr>
-			           <td>02-29-2020</td>
-			           <td>&nbsp;</td>
-			           <td>&nbsp;</td>
-			         </tr>
-		            </tbody>
-		         </table></th>
-			   </tr>
-			 </thead>
-		    </table>
+                      </tr>
+                   </tbody>
+                  </table>
+              </div>
           </div>
-		</div>
-      </div>
+          <div class="row">
+              <div class="col-12">
+                  <form>
+                      <div class="form-group w-50">
+                          <select class="form-control" id="exampleFormControlSelect1">          
+                              <option selected="selected">Select...</option>
+                              <option value="Food Costs">Food Costs</option>
+                              <option value="Alcohol Costs">Alcohol Costs</option>
+                              <option value="Advertising">Advertising</option>
+                              <option value="Cleaning Supplies">Cleaning Supplies</option>
+                              <option value="Linen">Linen</option>
+                              <option value="Office Supplies">Office Supplies</option>
+                              <option value="Repair and Maintenance">Repair and Maintenance</option>
+                              <option value="Restaurant Supplies">Restauraunt Supplies</option>
+                          </select>
+                          <a class="btn btn-warning btn-lg" href="#" role="button">Submit</a>
+                      </div>
+                  </form>
+                  <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
+                      <thead class="thead-dark">
+                          <tr class="text-center">
+                              <th width="8%"><table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
+                                  <thead class="thead-dark">
+                                      <tr class="text-center">
+                                          <th width="16%">Date</th>
+                                          <th width="16%">Vendor</th>
+                                          <th width="16%">Amount</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                          <td>&nbsp;</td>
+                                      </tr>
+                                  </tbody>
+                                  </table>
+                              </th>
+                          </tr>
+                      </thead>
+                  </table>
+              </div>
+          </div>
+        </div>
     </section>
-    <!-- #about -->
-
-  </main>
+      <!-- #about -->
+    </main>
   <!-- InstanceEndEditable --><!--==========================
     Footer
   ============================-->
