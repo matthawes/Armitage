@@ -191,7 +191,7 @@ if(!isset($_SESSION['user_id'])){
                         }
                         else if($option == "alcohol")
                         {
-                        $purchaseOption = "SELECT alcohol_inventory.cost, vendor.vendor_name FROM alcohol_inventory
+                        $purchaseOption = "SELECT alcohol_inventory.*, alcohol_inventory.cost, vendor.vendor_name FROM alcohol_inventory
                         LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
