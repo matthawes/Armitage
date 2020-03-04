@@ -187,14 +187,14 @@ if(!isset($_SESSION['user_id'])){
                         }
                        /* if($option == "food")
                         {
-                        }
-                        else if($option == "alcohol")
+                        } */
+                        if($option == "alcohol")
                         {
-                        $purchaseOption = "SELECT alcohol_inventory.*, vendor.vendor_name FROM alcohol_inventory
+                        $purchaseOption = "SELECT alcohol_inventory.cost, vendor.vendor_name FROM alcohol_inventory, vendor
                         LEFT JOIN vendor ON vendor.vendor_id = alcohol_inventory.vendor_id";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
-                        else if($option == "advertising")
+                        /* else if($option == "advertising")
                         {
                         }
                         else if(($option == "cleaning")
