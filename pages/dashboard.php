@@ -403,33 +403,7 @@ function toggleDataSeries(e) {
 				</div>		
 			</div>
 		</div>	
-		<div class="container">
-			<div class="row">
-		 		 <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
-		 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">
-			  			   <tbody>
-						   		  <tr>
-					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Food</th>
-								  </tr>
-								  <tr>
-						 		  	  <th width="80%" class="border-all text-center">Current Food Cost %</th>
-						 			  <td width="20%" class="border-all">&nbsp;</td>
-								  </tr>
-					 			  <tr>
-  					 	 		  	  <th width="80%" class="border-all text-left">Adjusted Budget</th>
-						 			  <td width="20%" class="border-all">&nbsp;</td>
-								  </tr>
-					 			  <tr>
-					 	 		  	  <th width="80%" class="border-all text-left">Remaining Budget</th>
-						 			  <td width="20" class="border-all"></td>
-								  </tr>
-					 			  <tr>
-					 			  	  <th width="80%" class="border-all text-left">Purchases</th>
-						 			  <td width="20%" class="border-all"></td>
-								  </tr>
-					 		</tbody>
-					</table>
-		 	    </div>
+		
 	    <div class="container">
 			<div class="row">
 		 		 <div style="float: left; padding-top: 2%; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
