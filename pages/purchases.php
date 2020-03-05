@@ -185,12 +185,15 @@ if(!isset($_SESSION['user_id'])){
                         {
                             $option = $_POST['purchases'];
                         }
-                       /* if($option == "food")
+                        if($option == "food")
                         {
-                        } */
-                        if($option == "alcohol")
+                        $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor.vendor.vendor_name FROM food_item_cost, vendor
+                        LEFT JOIN vendor ON vendor.vendor_id = food_item_cost.vendor_id";
+                        $purchase_result = mysqli_query($connect, $foodOption);
+                        }
+                        else if($option == "alcohol")
                         {
-                        $purchaseOption = "SELECT vendor_name FROM vendor WHERE vendor_id = 1";
+                        $purchaseOption = "SELECT vendor_name FROM vendor WHERE vendor_id ='1'";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
                         /* else if($option == "advertising")
