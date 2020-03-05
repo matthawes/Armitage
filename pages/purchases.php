@@ -190,7 +190,7 @@ if(!isset($_SESSION['user_id'])){
                         } */
                         if($option == "alcohol")
                         {
-                        $purchaseOption = "SELECT vendor_name FROM vendor";
+                        $purchaseOption = "SELECT vendor_name FROM vendor WHERE endor_id = 1";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
                         /* else if($option == "advertising")
@@ -226,7 +226,7 @@ if(!isset($_SESSION['user_id'])){
 			           <?php 
                                 
                                    while($selectedPurchase = mysqli_fetch_array($purchase_result)){
-                                        /*echo "<td>".$selectedPurchase['date']."</td><td>".$selectedPurchase['vendor_name']."</td><td>".$selectedPurchase['cost']."</td>";*/
+                                        echo "<td>".$selectedPurchase['date']."</td><td>".$selectedPurchase['vendor_name']."</td><td>".$selectedPurchase['cost']."</td>";
                                         }
                                     ?>
 			         </tr>
