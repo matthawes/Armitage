@@ -37,6 +37,7 @@ while($row = mysqli_fetch_array($select_user_query)){
     $db_password = $row['password'];
     $db_user_firstname = $row['firstname'];
     $db_user_lastname = $row['lastname'];
+    $db_user_company_id = $row['company_id'];
     }
 //password verify is a function used to match a password to a hash
 //if (password_verify($_POST["password"], $db_password)) {
@@ -46,6 +47,7 @@ if ($_POST["password"] == $db_password) {
     $_SESSION['first_name'] = $db_user_firstname;
     $_SESSION['last_name'] = $db_user_lastname;
     $_SESSION['user_id'] = $db_user_id;
+    $_SESSION['company_id'] = $db_user_company_id;
 
     header("Location: pages/dashboard.php");
     
