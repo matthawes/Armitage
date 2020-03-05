@@ -181,8 +181,10 @@ if(!isset($_SESSION['user_id'])){
 				  </div>                        
 			</form>  
                         <?php
-                        if ($_SERVER['REQUEST_METHOD']=="POST") {
-                        $option = mysqli_real_escape_string($connect, $_POST["purchases"]);
+                        if(isset($_POST['submit']))
+                        {
+                            $option = $_POST['purchases'];
+                        }
                         if($option == "food")
                         {
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor.vendor.vendor_name FROM food_item_cost, vendor
