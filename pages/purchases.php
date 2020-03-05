@@ -193,7 +193,7 @@ if(!isset($_SESSION['user_id'])){
                         }
                         else if($option == "alcohol")
                         {
-                        $purchaseOption = "SELECT vendor_name FROM vendor WHERE vendor_id ='1'";
+                        $purchaseOption = "SELECT vendor_name FROM vendor WHERE payment = '1'";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
                         /* else if($option == "advertising")
