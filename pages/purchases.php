@@ -192,11 +192,11 @@ if(!isset($_SESSION['user_id'])){
 			LEFT JOIN vendor ON vendor.vendor_id = food_item_cost.vendor_id";
                         $purchase_result = mysqli_query($connect, $foodOption);
                         }
-                        else if($option == alcohol")
+                       /* else if($option == alcohol")
                         {
                         $purchaseOption = "SELECT vendor_name FROM vendor";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
-                        }
+                        }*/
                         /* else if($option == "advertising")
                         {
                         }
