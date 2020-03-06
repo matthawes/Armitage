@@ -140,7 +140,7 @@
                                 </table>
                             </div>
                         </div>
-                        <input onclick="alert('Validation will happen here soon.')" class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
+                        <input onclick="alert(document.getElementById('amountDue').value + document.getElementById('amount1').value + document.getElementById('amount2').value + document.getElementById('amount3').value)" class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
                     </fieldset>
                 </form>
             </div>
