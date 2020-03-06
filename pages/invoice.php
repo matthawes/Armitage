@@ -27,7 +27,7 @@
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
     }
 ?>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar navbar-expand-lg navbar-light bg-warning">
         <span><?php echo($_SESSION['company_name']); ?></span>
     </div>
     <main id="main">
