@@ -31,7 +31,7 @@
                     <h3 class="section-title">NEW INVOICE</h3>
                     <span class="section-divider"></span>
                 </div>
-                <form method="post" action="add_invoice.php" onsubmit="if (parseFloat(document.getElementById('amountDue').value) != parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)) {alert('invalid'); return false;};">
+                <form method="post" action="add_invoice.php" onsubmit="if (parseFloat(document.getElementById('amountDue').value) != parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)) {alert(parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)); return false;};">
                     <fieldset>
                         <div class="section-header wow fadeInUp">
                             <hr class="wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.3s;">
