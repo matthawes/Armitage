@@ -15,10 +15,10 @@
     $payment_method_query = "SELECT payment_method_id, payment_method FROM payment_method";
     $payment_method_result = mysqli_query($connect, $payment_method_query);
 
-    $food_item_cost_query = "SELECT food_item_cost_id, type FROM food_item_cost";
-    $food_item_cost_result1 = mysqli_query($connect, $food_item_cost_query);
-    $food_item_cost_result2 = mysqli_query($connect, $food_item_cost_query);
-    $food_item_cost_result3 = mysqli_query($connect, $food_item_cost_query);
+    $gl_code_query = "SELECT gl_code_id, gl_code FROM gl_code";
+    $gl_code_result1 = mysqli_query($connect, $gl_code_query);
+    $gl_code_result2 = mysqli_query($connect, $gl_code_query);
+    $gl_code_result3 = mysqli_query($connect, $gl_code_query);
 
     ?>
     <div class="navbar bg-yellow" style="border-bottom: 1px solid gray;">
@@ -95,10 +95,10 @@
                                     <tr>
                                         <td>
                                             <select id="foodItemCost1" name="foodItemCost1" class="bg-yellow form-control">
-                                                <option value="">Select Food Item Cost Type</option>
+                                                <option value="">Select GL Code</option>
                                                 <?php
-                                                    while ($food_item_cost1 = mysqli_fetch_array($food_item_cost_result1)){
-                                                        echo "<option value='".$food_item_cost1[0]."'>".$food_item_cost1[1]."</option>";
+                                                    while ($gl_code1 = mysqli_fetch_array($gl_code_result1)){
+                                                        echo "<option value='".$gl_code1[0]."'>".$gl_code1[1]."</option>";
                                                     }
                                                 ?>
                                             </select>
@@ -110,10 +110,10 @@
                                     <tr>
                                         <td>
                                             <select id="foodItemCost2" name="foodItemCost2" class="bg-yellow form-control">
-                                                <option value="">Select Food Item Cost Type</option>
+                                                <option value="">Select Food GL Code</option>
                                                 <?php
-                                                    while ($food_item_cost2 = mysqli_fetch_array($food_item_cost_result2)){
-                                                        echo "<option value='".$food_item_cost2[0]."'>".$food_item_cost2[1]."</option>";
+                                                    while ($gl_code2 = mysqli_fetch_array($gl_code_result2)){
+                                                        echo "<option value='".$gl_code2[0]."'>".$gl_code2[1]."</option>";
                                                     }
                                                 ?>
                                             </select>
@@ -125,10 +125,10 @@
                                     <tr>
                                         <td>
                                             <select id="foodItemCost3" name="foodItemCost3" class="bg-yellow form-control">
-                                                <option value="">Select Food Item Cost Type</option>
+                                                <option value="">Select GL Code</option>
                                                 <?php
-                                                    while ($food_item_cost3 = mysqli_fetch_array($food_item_cost_result3)){
-                                                        echo "<option value='".$food_item_cost3[0]."'>".$food_item_cost3[1]."</option>";
+                                                    while ($gl_code3 = mysqli_fetch_array($gl_code_result3)){
+                                                        echo "<option value='".$gl_code3[0]."'>".$gl_code3[1]."</option>";
                                                     }
                                                 ?>
                                             </select>
