@@ -28,7 +28,7 @@
     }
 ?>
     <div class="navbar bg-yellow">
-        <span style="text-align: right;">You are viewing: <?php echo($_SESSION['company_name']); ?></span>
+        <div style="text-align: right;">You are viewing: <strong><?php echo($_SESSION['company_name']); ?></strong></div>
     </div>
     <main id="main">
         <section id="services">
