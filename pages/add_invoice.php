@@ -9,7 +9,7 @@
     $terms_query = "SELECT term_id, term FROM term";
     $terms_result = mysqli_query($connect, $terms_query);
 
-    $vendors_query = "SELECT vendor_id, vendor_name FROM vendor";
+    $vendors_query = "SELECT vendor_id, vendor_name, term.term FROM vendor LEFT JOIN term ON term.term_id = vendor.term_id";
     $vendors_result = mysqli_query($connect, $vendors_query);
 
     $payment_method_query = "SELECT payment_method_id, payment_method FROM payment_method";
@@ -62,7 +62,7 @@
                                     <option value="">Select Vendor</option>
                                     <?php
                                         while ($vendors = mysqli_fetch_array($vendors_result)){
-                                            echo "<option value='".$vendors[0]."'>".$vendors[1]." (Terms:"."my terms".")"."</option>";
+                                            echo "<option value='".$vendors[0]."'>".$vendors[1]." (Payment Terms: ".$vendors[2].")"."</option>";
                                         }
                                     ?>
                                 </select>
