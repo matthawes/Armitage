@@ -184,7 +184,7 @@ if(!isset($_SESSION['user_id'])){
                         if(isset($_POST['submit']))
                         {
                             $option = $_POST['purchases'];
-                        }
+                        
                         if($option == "food")
                         {
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name FROM food_item_cost, vendor
@@ -211,7 +211,7 @@ if(!isset($_SESSION['user_id'])){
                         else(($option == "restaurant")
                         {
                         }; */
-
+			}
                         ?>
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
