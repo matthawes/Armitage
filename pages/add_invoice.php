@@ -31,7 +31,7 @@
                     <h3 class="section-title">NEW INVOICE</h3>
                     <span class="section-divider"></span>
                 </div>
-                <form method="post" action="add_invoice.php" onsubmit="if (parseFloat(document.getElementById('amountDue').value) + parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value) == 'NaN') {alert(0);} else if (parseFloat(document.getElementById('amountDue').value) != parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)) {alert(1);} else {};">
+                <form method="post" action="add_invoice.php" onsubmit="if (parseFloat(document.getElementById('amountDue').value) != parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)) {alert(1); return false} else {};">
                     <fieldset>
                         <div class="section-header wow fadeInUp">
                             <hr class="wow fadeInRight" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.3s;">
