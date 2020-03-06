@@ -1,14 +1,9 @@
-<?php include "navigation.html"; ?>
+<?php include "../config.php"; ?>
 <?php session_start(); ?>
+<?php if(!isset($_SESSION['user_id'])){header("Location: ../index.php");} ?>
+<?php include "navigation.html";?>
 
-<?php
-
-if(!isset($_SESSION['user_id'])){
-    header("Location: ../index.php");
-}
-$cname = $_SESSION['company_name'];
-?>
-<?php
+    <?php
 	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
 	    (int)$nextpage = $currentpage + 1;
 	    (int)$prevpage = $currentpage - 1;
@@ -148,7 +143,7 @@ function toggleDataSeries(e) {
 <body>
 
     <div class="navbar bg-yellow" style="border-bottom: 1px solid gray;">
-        <div style="text-align: right; width: 100%;">You are viewing: <strong><?PHP echo($cname); ?></strong></div>
+        <div style="text-align: right; width: 100%;">You are viewing: <strong><?PHP echo($_SESSION['company_name']); ?></strong></div>
     </div>
 
   <main id="main">
