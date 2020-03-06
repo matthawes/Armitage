@@ -5,7 +5,8 @@
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
-?><?php include "navigation.php"; ?>
+?>
+<?php include "navigation.html"; ?>
 
 <body>
 
@@ -670,4 +671,4 @@ if(!isset($_SESSION['user_id'])){
   <script src="../js/main.js"></script>
 
 </body>
-<!-- InstanceEnd --></html>
+

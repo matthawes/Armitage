@@ -37,6 +37,7 @@ while($row = mysqli_fetch_array($select_user_query)){
     $db_password = $row['password'];
     $db_user_firstname = $row['firstname'];
     $db_user_lastname = $row['lastname'];
+    $db_user_company_id = $row['company_id'];
     }
 //password verify is a function used to match a password to a hash
 //if (password_verify($_POST["password"], $db_password)) {
@@ -46,6 +47,12 @@ if ($_POST["password"] == $db_password) {
     $_SESSION['first_name'] = $db_user_firstname;
     $_SESSION['last_name'] = $db_user_lastname;
     $_SESSION['user_id'] = $db_user_id;
+    $_SESSION['company_id'] = $db_user_company_id;
+    
+    $company_query = "SELECT company_name FROM company WHERE company_id =" . $db_user_company_id;
+    $company_result = mysqli_query($connect, $company_query);
+    $companyName_result = mysqli_fetch_array($company_result);
+    $_SESSION['company_name'] = $companyName_result[0];
 
     header("Location: pages/dashboard.php");
     
@@ -74,20 +81,7 @@ echo $message;
 ?>
                     <input name="username" type="text" id="username" placeholder=" username" autocomplete="on" class="form-control" size="30"><br>
                     <input name="password" pattern=".{10,}" type="password" id="password" placeholder=" password" class="form-control" size="30"><br>
-                    <!--allow user to choose company-->
-                    <?php
-            $companyID_query = "SELECT company_id, company_name FROM company ORDER BY company_name ASC";
-            $companyID_result = mysqli_query($connect, $companyID_query);
-            ?>Select a Company to access: <br>
-                    <select name="company">
-                        <?php
-                    while ($row = mysqli_fetch_array($companyID_result)){
-                    echo "<option value".$row[0].">",$row[1].$row[2].$row[3]."</option>";
-
-                    }
-                ?>
-                    </select><br>
-                    <br>
+                    
 
                     <!--
             ****
