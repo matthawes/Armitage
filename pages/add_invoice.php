@@ -21,6 +21,9 @@
     $food_item_cost_result3 = mysqli_query($connect, $food_item_cost_query);
 
     ?>
+    <div class="navbar bg-yellow" style="border-bottom: 1px solid gray;">
+        <div style="text-align: right; width: 100%;">You are viewing: <strong><?= $_SESSION['company_name'] ?? '' ?></strong></div>
+    </div>
     <main id="main">
         <section id="services">
             <div class="container">
@@ -43,15 +46,8 @@
                                 <input id="amountDue" name="amountDue" type="text" placeholder="" class="bg-yellow form-control">
                             </div>
                             <div class="col-2">
-                                <label class="control-label" for="terms">Terms</label>  
-                                <select id="term" name="term" class="bg-yellow form-control">
-                                    <option value="">Select Term</option>
-                                    <?php
-                                        while ($terms = mysqli_fetch_array($terms_result)){
-                                            echo "<option value='".$terms[0]."'>".$terms[1]."</option>";
-                                        }
-                                    ?>
-                                </select>
+                                <label class="control-label" for="date">Date</label>
+                                <input id="date" name="date" type="text" placeholder="" class="bg-yellow form-control">
                             </div>
                             <div class="col-4">
 				<label class="control-label" for="invoiceNum">Invoice #</label><br/>
@@ -60,24 +56,16 @@
 			</div>        
                         <hr class="wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s;">
                         <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="col-2">
+                            <div class="col-6">
                                 <label class="control-label" for="vendor">Vendor</label>
                                 <select id="vendor" name="vendor" class="bg-yellow form-control">
                                     <option value="">Select Vendor</option>
                                     <?php
                                         while ($vendors = mysqli_fetch_array($vendors_result)){
-                                            echo "<option value='".$vendors[0]."'>".$vendors[1]."</option>";
+                                            echo "<option value='".$vendors[0]."'>".$vendors[1]." (Terms:"."my terms".")"."</option>";
                                         }
                                     ?>
                                 </select>
-                            </div>
-                            <div class="col-2">
-				<label class="control-label" for="date">Date</label>
-                                <input id="date" name="date" type="text" placeholder="" class="bg-yellow form-control">
-                            </div>
-                            <div class="col-2">
-                                <label class="control-label" for="dueDate">Due Date</label>
-                                <input id="dueDate" name="dueDate" type="text" placeholder="" class="bg-yellow form-control">
                             </div>
                             <div class="col-2">
                                 <label class="control-label" for="paymentMethod">Payment Method</label>
