@@ -140,7 +140,7 @@
                                 </table>
                             </div>
                         </div>
-                        <input onclick="if (parseFloat(document.getElementById('amountDue').value) != parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)) {alert('invalid'); preventDefault();};" class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
+                        <input onsubmit="if (parseFloat(document.getElementById('amountDue').value) != parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value)) {alert('invalid'); return false;};" class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
                     </fieldset>
                 </form>
             </div>
