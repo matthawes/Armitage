@@ -89,7 +89,7 @@
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-left table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
                                     <thead class="thead-warning">
                                         <tr>
-                                            <th>Food Item Cost Type</th>
+                                            <th>GL Code</th>
                                             <th>Amount</th>
                                         </tr>
                                     <tr>
@@ -110,7 +110,7 @@
                                     <tr>
                                         <td>
                                             <select id="foodItemCost2" name="foodItemCost2" class="bg-yellow form-control">
-                                                <option value="">Select Food GL Code</option>
+                                                <option value="">Select GL Code</option>
                                                 <?php
                                                     while ($gl_code2 = mysqli_fetch_array($gl_code_result2)){
                                                         echo "<option value='".$gl_code2[0]."'>".$gl_code2[1]."</option>";
