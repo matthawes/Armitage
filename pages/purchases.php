@@ -181,17 +181,13 @@ if(!isset($_SESSION['user_id'])){
 				  </div>                        
 			</form>  
                         <?php
-                        if(isset($_POST['submit']))
-                        {
-                            $option = $_POST['purchases'];
-                        
-                        if($option == "food")
+                        if(isset($_POST['food']))
                         {
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name FROM food_item_cost, vendor
                         LEFT JOIN vendor ON vendor.vendor_id = food_item_cost.vendor_id";
                         $purchase_result = mysqli_query($connect, $foodOption);
                         }
-                        else if($option == "alcohol")
+                        else if(isset($_POST['alcohol'))
                         {
                         $purchaseOption = "SELECT vendor_name FROM vendor";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
@@ -211,7 +207,7 @@ if(!isset($_SESSION['user_id'])){
                         else(($option == "restaurant")
                         {
                         }; */
-			}
+			
                         ?>
 		    <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered">
 			 <thead class="thead-dark">
