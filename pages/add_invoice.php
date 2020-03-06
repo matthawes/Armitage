@@ -140,7 +140,7 @@
                                 </table>
                             </div>
                         </div>
-                        <input onclick="alert(number(document.getElementById('amountDue').value) + number(document.getElementById('amount1').value) + number(document.getElementById('amount2').value) + number(document.getElementById('amount3').value))" class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
+                        <input onclick="alert(parseFloat(document.getElementById('amountDue').value) + parseFloat(document.getElementById('amount1').value) + parseFloat(document.getElementById('amount2').value) + parseFloat(document.getElementById('amount3').value))" class="btn btn-warning btn-md" type="submit" name="submit" value="Save Invoice">
                     </fieldset>
                 </form>
             </div>
