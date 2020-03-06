@@ -147,7 +147,7 @@ function toggleDataSeries(e) {
 <body>
 
     <div class="navbar bg-yellow" style="border-bottom: 1px solid gray;">
-        <div style="text-align: right; width: 100%;">You are viewing: <strong><?= $_SESSION['company_name'] ?? '' ?></strong></div>
+        <div style="text-align: right; width: 100%;">You are viewing: <strong><?PHP echo($_SESSION['company_name']); ?></strong></div>
     </div>
 
   <main id="main">
