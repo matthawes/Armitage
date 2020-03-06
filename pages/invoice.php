@@ -4,7 +4,7 @@
 <?php include "navigation.html"; ?>
 <?php
     $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
-    $invoiceNum_query = "SELECT invoice_number FROM invoice WHERE invoice_number <> '' AND company_id =" . $_SESSION['company_id'] . "ORDER BY invoice_number ASC";
+    $invoiceNum_query = "SELECT invoice_number FROM invoice WHERE invoice_number <> '' AND company_id =" . $_SESSION['company_id'] . " ORDER BY invoice_number ASC";
     $invoiceNum_result = mysqli_query($connect, $invoiceNum_query);
     if ($_SERVER['REQUEST_METHOD']=="POST") {
             $selectValue = mysqli_real_escape_string($connect, $_POST["invoiceNum"]);
