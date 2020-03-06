@@ -27,7 +27,7 @@
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
     }
 ?>
-    <main id="main"> <?php echo($_SESSION['company_id']); ?>
+    <main id="main"> <?php echo($_SESSION['company_name']); ?>
         <section id="services">
             <div class="container">
                 <div class="section-header wow fadeInUp" style="visibility: visible;">

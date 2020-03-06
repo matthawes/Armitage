@@ -51,6 +51,8 @@ if ($_POST["password"] == $db_password) {
     
     $company_query = "SELECT company_name FROM company WHERE company_id =" . $_SESSION['company_id'];
     $company_result = mysqli_query($connect, $company_query);
+    $companyName_result = mysqli_fetch_array($company_result);
+    $_SESSION['company_name'] = $companyName_result[0];
 
     header("Location: pages/dashboard.php");
     
