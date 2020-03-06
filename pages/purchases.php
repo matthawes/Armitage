@@ -185,7 +185,7 @@ if(!isset($_SESSION['user_id'])){
                         {
 				$option = ($_POST['purchases']);
 			}
-		  	*if($option == "food")
+		  	if($option == "food")
 			{
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name 
 			FROM food_item_cost, vendor 
