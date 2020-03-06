@@ -49,7 +49,7 @@ if ($_POST["password"] == $db_password) {
     $_SESSION['user_id'] = $db_user_id;
     $_SESSION['company_id'] = $db_user_company_id;
     
-    $company_query = "SELECT company_name FROM company WHERE company_id =" . $_SESSION['company_id'];
+    $company_query = "SELECT company_name FROM company WHERE company_id =" . $db_user_company_id;
     $company_result = mysqli_query($connect, $company_query);
     $companyName_result = mysqli_fetch_array($company_result);
     $_SESSION['company_name'] = $companyName_result[0];

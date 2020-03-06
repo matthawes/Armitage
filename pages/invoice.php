@@ -27,7 +27,10 @@
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
     }
 ?>
-    <main id="main"> <?php echo($_SESSION['company_name']); ?>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <span><?php echo($_SESSION['company_name']); ?></span>
+    </div>
+    <main id="main">
         <section id="services">
             <div class="container">
                 <div class="section-header wow fadeInUp" style="visibility: visible;">
