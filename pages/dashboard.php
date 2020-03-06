@@ -6,6 +6,7 @@
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
+$cname = $_SESSION['company_name'];
 ?>
 <?php
 	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
@@ -147,7 +148,7 @@ function toggleDataSeries(e) {
 <body>
 
     <div class="navbar bg-yellow" style="border-bottom: 1px solid gray;">
-        <div style="text-align: right; width: 100%;">You are viewing: <strong><?PHP echo($_SESSION['company_name']); ?></strong></div>
+        <div style="text-align: right; width: 100%;">You are viewing: <strong><?PHP echo($cname); ?></strong></div>
     </div>
 
   <main id="main">
