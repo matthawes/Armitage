@@ -1,13 +1,9 @@
-<?php include "navigation.html"; ?>
+<?php include "../config.php"; ?>
 <?php session_start(); ?>
+<?php if(!isset($_SESSION['user_id'])){header("Location: ../index.php");} ?>
+<?php include "navigation.html";?>
 
-<?php
-
-if(!isset($_SESSION['user_id'])){
-    header("Location: ../index.php");
-}
-?>
-<?php
+    <?php
 	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
 	    (int)$nextpage = $currentpage + 1;
 	    (int)$prevpage = $currentpage - 1;
@@ -146,6 +142,9 @@ function toggleDataSeries(e) {
 </script>
 <body>
 
+    <div class="navbar bg-yellow" style="border-bottom: 1px solid gray;">
+        <div style="text-align: right; width: 100%;">You are viewing: <strong><?PHP echo($_SESSION['company_name']); ?></strong></div>
+    </div>
 
   <main id="main">
 
@@ -370,12 +369,98 @@ function toggleDataSeries(e) {
               </tr>
           </tbody>
 	</table>
-  
-	<div class="row">
-		<div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
-		<div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
-	</div>	
       </div>
+	    <div class="container" style="padding-top:5%">
+	  	   <div class="row">
+          		<div style="float:left; padding-top: 1%;  padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">	
+             	 	 <table border="1" cellspacing="0" cellpadding="0" class="table">	
+					 		<tbody>	
+									<tr>
+                            			<th width="80%" class="border-all text-center">Target Food Costs %</th>
+                           				<td width="20%" placeholder= "<?= $selectedCOG['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
+									</tr>
+									<tr>
+										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
+                            			<td width="20%" class="border-all">&nbsp;</td>
+									</tr>
+							</tbody>
+					</table>
+				</div>
+				<div style="float: right; padding-top: 1%; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+					<table border="1" cellspacing="0" cellpadding="0" class="table">	
+				 		   <tbody>
+						   		  <tr>	
+                            	  	  <th width="80%" class="border-all text-center">Target Alcohol Costs %</th>
+                           			  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+								  </tr>
+								  <tr>
+                            	  	  <th width="80%" class="border-all text-center">Projected Alcohol Costs %</th>
+                            		  <td width="20%" class="border-all">&nbsp;</td>
+								  </tr>
+                   			</tbody>
+					</table>
+				</div>		
+			</div>
+		</div>	
+		
+	    <div class="container">
+			<div class="row">
+		 		 <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+		 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">
+			  			   <tbody>
+						   		  <tr>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Food</th>
+								  </tr>
+								  <tr>
+						 		  	  <th width="80%" class="border-all text-center">Current Food Cost %</th>
+						 			  <td width="20%" class="border-all">&nbsp;</td>
+								  </tr>
+					 			  <tr>
+  					 	 		  	  <th width="80%" class="border-all text-left">Adjusted Budget</th>
+						 			  <td width="20%" class="border-all">&nbsp;</td>
+								  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Remaining Budget</th>
+						 			  <td width="20" class="border-all"></td>
+								  </tr>
+					 			  <tr>
+					 			  	  <th width="80%" class="border-all text-left">Purchases</th>
+						 			  <td width="20%" class="border-all"></td>
+								  </tr>
+					 		</tbody>
+					</table>
+		 	    </div>
+		 	   	<div style="float: right; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+		 	   		<table border="1" cellspacing="0" cellpadding="0" class="table">
+			  		 	   <tbody>
+					 	   		  <tr>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
+					 			  </tr>
+					 			  <tr>
+						 		  	  <th width="80%" class="border-all text-center">Current Alcohol Cost %</th>
+						 			  <td width="20%" class="border-all">&nbsp;</td>
+					 			  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Adjusted Budget</th>
+									  <td width="20%" class="border-all">&nbsp;</td>
+					 			  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Remaining Budget</th>
+						 			  <td width="20" class="border-all"></td>
+					 			  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Purchases</th>
+						 			  <td width="20%" class="border-all"></td>
+					 			  </tr>	
+					 		</tbody> 			 
+					 </table>
+		 		 </div>
+			 </div>
+		</div>
+                <div class="row">
+                    <div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
+                    <div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
+	</div>	
 
     </section><!-- #faq -->
 

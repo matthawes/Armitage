@@ -13,9 +13,14 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
-	$getValue = mysqli_real_escape_string($connect, $_GET["currentpage"]);
-	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' EQUALS 'currentpage';
-	$data_result = msqli_query($connect, $data_query);
+	 $ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
+	/* $getValue = mysqli_real_escape_string($connect, $ts);
+	$data_query = "SELECT * FROM dashboard_data WHERE 'dashboard_date' <> $ts;
+	$data_result = msqli_query($connect, $data_query); */
 ?>
 
 
@@ -158,11 +163,7 @@ function toggleDataSeries(e) {
 	        <tr>
 		   <th align="left"></th>
       	        <?php
-	            $ts = date(strtotime('last sunday'));
-	            $ts += $currentpage * 86400 * 7;
-	            $dow = date('w' , $ts);
-	            $offset = $dow;
-	            $ts = $ts - $offset * 86400;
+	           
 	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
 	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
 		       }
@@ -184,7 +185,7 @@ function toggleDataSeries(e) {
 	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1" placeholder="<?= $selectedData['projected_food'] ?? '' ?>></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1" placeholder="<?= $data_result['projected_food'] ?? '' ?>></td>
 
               
             </tr>
