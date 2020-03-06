@@ -27,8 +27,8 @@
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
     }
 ?>
-    <div class="navbar bg-success">
-        <span>You are viewing: <?php echo($_SESSION['company_name']); ?></span>
+    <div class="navbar bg-yellow">
+        <span style="text-align: right;">You are viewing: <?php echo($_SESSION['company_name']); ?></span>
     </div>
     <main id="main">
         <section id="services">
