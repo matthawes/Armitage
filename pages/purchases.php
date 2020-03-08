@@ -184,6 +184,7 @@ if(!isset($_SESSION['user_id'])){
                         if(isset($_POST['submit']))
                         {
 				$option = ($_POST['purchases']);
+				return $option;
 			}
 		  	if($option == "food")
 			{
