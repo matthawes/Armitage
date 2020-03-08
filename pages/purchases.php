@@ -184,7 +184,6 @@ if(!isset($_SESSION['user_id'])){
                         if(isset($_POST['submit']))
                         {
 				$option = ($_POST['purchases']);
-				return $option;
 			}
 		  	if($option == "food")
 			{
@@ -229,7 +228,7 @@ if(!isset($_SESSION['user_id'])){
 			       <tbody>
 			         <tr>
 			           <?php 
-                                if($_POST['purchases'])
+                                if(isset($_POST['submit']))
                                    while($selectedPurchase = mysqli_fetch_array($purchase_result)){
                                         echo "<td>".$selectedPurchase['date']."</td><td>".$selectedPurchase['vendor_name']."</td><td>".$selectedPurchase['cost']."</td>";
                                         }
