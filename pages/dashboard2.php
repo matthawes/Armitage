@@ -16,7 +16,7 @@ if(!isset($_SESSION['user_id'])){
  $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('. date("m-d-Y", $ts) .' AS DATETIME)";
  $dashboard_result = mysqli_query($connect,$dashboard_query);
 $selecteddashboard = mysqli_fetch_array($dashboard_result);
-	
+?>	
 <script type="text/javascript">
 window.onload = function () {
 
@@ -201,7 +201,8 @@ function toggleDataSeries(e) {
 		      while($selecteddashboard = mysqli_fetch_array($dashboard_result)
 			    {
 			echo ".$selecteddashboard."</td>
-              
+			    }
+			    ?>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>
               </tr>
