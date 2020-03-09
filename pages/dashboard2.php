@@ -13,7 +13,7 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
- $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('. date("m-d-Y", $ts) .' AS DATETIME)";
+ $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('2020-02-17' AS DATETIME)";
  $dashboard_result = mysqli_query($connect,$dashboard_query);
 $selecteddashboard = mysqli_fetch_array($dashboard_result);
 ?>	
