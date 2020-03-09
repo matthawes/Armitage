@@ -200,9 +200,9 @@ function toggleDataSeries(e) {
 		    <?php
 		      while($selecteddashboard = mysqli_fetch_array($dashboard_result)
 			    {
-			echo ".$selecteddashboard."</td>
+			echo ".$selecteddashboard."?></td>
 			    }
-			    ?>
+			    
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>
               </tr>
