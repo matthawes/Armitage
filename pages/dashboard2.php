@@ -1,4 +1,4 @@
-<?php include "navigation.php"; ?>
+<?php include "navigation.html"; ?>
 <?php session_start(); ?>
 
 <?php
@@ -7,8 +7,17 @@ if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
 ?>
+<?php
+	    (int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
+	    (int)$nextpage = $currentpage + 1;
+	    (int)$prevpage = $currentpage - 1;
+?>
+<?php
+ $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('. date("m-d-Y", $ts) .' AS DATETIME)";
+ $dashboard_result = mysqli_query($connect,$dashboard_query);
+$selecteddashboard = mysqli_fetch_array($dashboard_result);
 	
-	<script type="text/javascript">
+<script type="text/javascript">
 window.onload = function () {
 
 var chart = new CanvasJS.Chart("chartContainer", {
@@ -82,13 +91,13 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		name: "Projected",
 		color: "#ff9c00",
 		dataPoints: [
-			{ y: 500, label: "Monday" },
-			{ y: 600, label: "Tuesday" },
-			{ y: 800, label: "Wednesday" },
-			{ y: 1000, label: "Thursday" },
-			{ y: 2000, label: "Friday" },
-			{ y: 1800, label: "Saturday" },
-			{ y: 1000, label: "Sunday" }
+			{ y: 2500, label: "Monday" },
+			{ y: 3000, label: "Tuesday" },
+			{ y: 3200, label: "Wednesday" },
+			{ y: 3500, label: "Thursday" },
+			{ y: 5500, label: "Friday" },
+			{ y: 5000, label: "Saturday" },
+			{ y: 2800, label: "Sunday" }
 		]
 	},
 	{
@@ -97,13 +106,13 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		name: "Actual",
 		color: "#C77900",
 		dataPoints: [
-			{ y: 600, label: "Monday" },
-			{ y: 900, label: "Tuesday" },
-			{ y: 1200, label: "Wednesday" },
-			{ y: 900, label: "Thursday" },
-			{ y: 2100, label: "Friday" },
-			{ y: 1200, label: "Saturday" },
-			{ y: 400, label: "Sunday" }
+			{ y: 2500, label: "Monday" },
+			{ y: 3000, label: "Tuesday" },
+			{ y: 3200, label: "Wednesday" },
+			{ y: 3500, label: "Thursday" },
+			{ y: 5500, label: "Friday" },
+			{ y: 5000, label: "Saturday" },
+			{ y: 2800, label: "Sunday" }
 		]
 	}]
 });
@@ -134,8 +143,6 @@ function toggleDataSeries(e) {
 
 }
 </script>
-
-
 <body>
 
 
@@ -145,51 +152,56 @@ function toggleDataSeries(e) {
       Frequently Asked Questions Section
     ============================-->
     <section id="faq">
-      <div class="container">
+	    <div class="container">
 
         <div class="section-header wow fadeInUp">
           <h3 class="section-title">Dashboard</h3>
           <span class="section-divider"></span>
         </div>
-		  
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="text-center table table-bordered table-sm table-hover table-responsive-lg wow fadeInUpBig">
-          
-		  <thead class="thead-warning">
-            <tr>
-              <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-left"></i></a></td>
-              <th scope="col" class="dashDate">12/25</th>
-              <th scope="col" class="dashDate">12/26</th>
-              <th scope="col" class="dashDate">12/27</th>
-              <th scope="col" class="dashDate">12/28</th>
-              <th scope="col" class="dashDate">12/29</th>
-              <th scope="col" class="dashDate">12/30</th>
-              <th scope="col" class="dashDate">12/31</th>
-              <td scope="col" class="noborder"><a href="#"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
-              <td scope="col" class="noborder"></td>
-            </tr>
-            <tr>
-              <td class="noborder" width="14%"></td>
+	   <thead class="thead-warning">
+	  	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$prevpage"; ?>"><i class="fa fa-2x fa-arrow-circle-left"></i></a> </td> 
+             	<td><a href="<?php echo "{$_SERVER['PHP_SELF']}?currentpage=$nextpage"; ?>"><i class="fa fa-2x fa-arrow-circle-right"></i></a></td>
+	    
+		   <tr>
+			
+			   <th align="left"></th>
+      	        <?php
+	            $ts = date(strtotime('last sunday'));
+	            $ts += $currentpage * 86400 * 7;
+	            $dow = date('w' , $ts);
+	            $offset = $dow;
+	            $ts = $ts - $offset * 86400;
+	            for ($x=0 ; $x<7 ; $x++, $ts += 86400) {
+	                echo '<th>' . date("m-d-Y", $ts) . '</th>' ;
+		       }
+	        ?>
+			   
+	    </tr>
+	 <tr>
+		<th width="14%"></th>
+              <th width="10%" class="dashDate">Sunday</th>
               <th width="10%" class="dashDate">Monday</th>
               <th width="10%" class="dashDate">Tuesday</th>
               <th width="10%" class="dashDate">Wednesday</th>
               <th width="10%" class="dashDate">Thursday</th>
               <th width="10%" class="dashDate">Friday</th>
               <th width="10%" class="dashDate">Saturday</th>
-              <th width="10%" class="dashDate">Sunday</th>
               <th width="10%" class="dashDate">Total</th>
               <td width="6%" class="noborder"></td>
-              </tr>
-			</thead>
-			<tbody>   
+            
+	        
+	    </tr>
+	</thead>
+	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,500" id="pf1"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,000" id="pf2"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,200" id="pf3"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,500" id="pf4"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,500" id="pf5"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,000" id="pf6"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,800" id="pf7"></td>
+              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1">
+		    <?php
+		      while($selecteddashboard = mysqli_fetch_array($dashboard_result)
+			    {
+			echo ".$selecteddashboard."</td>
+              
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>
               </tr>
@@ -355,18 +367,104 @@ function toggleDataSeries(e) {
               <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="0%" id="afohpt"></td>
               </tr>
           </tbody>
-		</table>
-  
-	<div class="row">
-		<div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
-		<div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
-	</div>	
+	</table>
       </div>
+	    <div class="container" style="padding-top:5%">
+	  	   <div class="row">
+          		<div style="float:left; padding-top: 1%;  padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">	
+             	 	 <table border="1" cellspacing="0" cellpadding="0" class="table">	
+					 		<tbody>	
+									<tr>
+                            			<th width="80%" class="border-all text-center">Target Food Costs %</th>
+                           				<td width="20%" placeholder= "<?= $selectedCOG['target_food_cost_percentage'] ?>" class="bg-yellow border-all"></td>
+									</tr>
+									<tr>
+										<th width="80%" float="left" class="border-all text-center">Projected Food Costs %</th>
+                            			<td width="20%" class="border-all">&nbsp;</td>
+									</tr>
+							</tbody>
+					</table>
+				</div>
+				<div style="float: right; padding-top: 1%; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+					<table border="1" cellspacing="0" cellpadding="0" class="table">	
+				 		   <tbody>
+						   		  <tr>	
+                            	  	  <th width="80%" class="border-all text-center">Target Alcohol Costs %</th>
+                           			  <td width="20%" class="bg-yellow border-all">&nbsp;</td>
+								  </tr>
+								  <tr>
+                            	  	  <th width="80%" class="border-all text-center">Projected Alcohol Costs %</th>
+                            		  <td width="20%" class="border-all">&nbsp;</td>
+								  </tr>
+                   			</tbody>
+					</table>
+				</div>		
+			</div>
+		</div>	
+		
+	    <div class="container">
+			<div class="row">
+		 		 <div style="float: left; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+		 	  	 	<table border="1" cellspacing="0" cellpadding="0" class="table">
+			  			   <tbody>
+						   		  <tr>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Food</th>
+								  </tr>
+								  <tr>
+						 		  	  <th width="80%" class="border-all text-center">Current Food Cost %</th>
+						 			  <td width="20%" class="border-all">&nbsp;</td>
+								  </tr>
+					 			  <tr>
+  					 	 		  	  <th width="80%" class="border-all text-left">Adjusted Budget</th>
+						 			  <td width="20%" class="border-all">&nbsp;</td>
+								  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Remaining Budget</th>
+						 			  <td width="20" class="border-all"></td>
+								  </tr>
+					 			  <tr>
+					 			  	  <th width="80%" class="border-all text-left">Purchases</th>
+						 			  <td width="20%" class="border-all"></td>
+								  </tr>
+					 		</tbody>
+					</table>
+		 	    </div>
+		 	   	<div style="float: right; padding-left: 5%; padding-right: 5%; padding-bottom: 2%" class="col-6 text-center">
+		 	   		<table border="1" cellspacing="0" cellpadding="0" class="table">
+			  		 	   <tbody>
+					 	   		  <tr>
+					 	 		  	  <th colspan="2" class="border-all bg-yellow text-center">Alcohol</th>
+					 			  </tr>
+					 			  <tr>
+						 		  	  <th width="80%" class="border-all text-center">Current Alcohol Cost %</th>
+						 			  <td width="20%" class="border-all">&nbsp;</td>
+					 			  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Adjusted Budget</th>
+									  <td width="20%" class="border-all">&nbsp;</td>
+					 			  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Remaining Budget</th>
+						 			  <td width="20" class="border-all"></td>
+					 			  </tr>
+					 			  <tr>
+					 	 		  	  <th width="80%" class="border-all text-left">Purchases</th>
+						 			  <td width="20%" class="border-all"></td>
+					 			  </tr>	
+					 		</tbody> 			 
+					 </table>
+		 		 </div>
+			 </div>
+		</div>
+                <div class="row">
+                    <div id="chartContainer" class="col-lg-6 col-md-12 wow fadeInLeft" style="height:300px"></div>
+                    <div id="chartContainer2" class="col-lg-6 col-md-12 wow fadeInRight" style="height:300px"></div>
+	</div>	
 
     </section><!-- #faq -->
 
   </main>
-
-  
 </body>
-<?php include "footer.php"; ?>
+  
+
+<?php include "../pages/footer.php"?>
