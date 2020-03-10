@@ -1,6 +1,6 @@
 <?php include "navigation.html"; ?>
 <?php session_start(); ?>
-<?php include "../config";
+<?php include "../config"; ?>
 <?php
 
 if(!isset($_SESSION['user_id'])){
@@ -13,8 +13,8 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
-/* $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('2020-02-17' AS DATETIME)";
- $dashboard_result = mysqli_query($connect,$dashboard_query);*/
+ $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('2020-02-17' AS DATETIME)";
+ $dashboard_result = mysqli_query($connect,$dashboard_query);
 ?>	
 <script type="text/javascript">
 window.onload = function () {
