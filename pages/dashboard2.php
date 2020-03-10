@@ -1,8 +1,7 @@
 <?php include "navigation.html"; ?>
 <?php session_start(); ?>
-
+<?php include "../config.php"; ?>
 <?php
-
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
 }
@@ -11,7 +10,11 @@ if(!isset($_SESSION['user_id'])){
 	(int)$currentpage = (!empty($_GET["currentpage"]))?$_GET["currentpage"]:0;
 	(int)$nextpage = $currentpage + 1;
 	(int)$prevpage = $currentpage - 1;
-?>	
+?>
+<?php 
+$dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date BETWEEN CONVERT(DATETIME, $ts)";
+$dashboard_result = mysqli_query($connect, $dashboard_query);
+?>
 <script type="text/javascript">
 window.onload = function () {
 
@@ -192,15 +195,16 @@ function toggleDataSeries(e) {
             <tr>
 		    
 	   <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,500" id="pf1"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,000" id="pf2"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,200" id="pf3"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,500" id="pf4"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,500" id="pf5"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,000" id="pf6"></td>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,800" id="pf7"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>
+		    <?php
+		    while($selectdashboard = mysqli_fetch_array($dashboard_result)
+			  {
+				  echo
+              "<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,500" id="pf1">".$selectdashboard['projected_food']."</td>"
+              
+              "<td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
+              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>"
+			  }
+			  ?>
               </tr>
 
               </tr>
