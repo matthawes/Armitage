@@ -13,8 +13,9 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
- $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST('2020-02-17' AS DATETIME)";
- $dashboard_result = mysqli_query($connect,$dashboard_query);
+ $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST($ts)";
+ $dashboard_result = mysqli_query($connect, $dashboard_query);
+$selecteddashboard = (mysqli_fetch_array($dashboard_result);
 ?>	
 <script type="text/javascript">
 window.onload = function () {
@@ -194,15 +195,14 @@ function toggleDataSeries(e) {
 	</thead>
 	<tbody>   
             <tr>
-              <th class="text-left bg-warning2">Proj. Food</th>
-		<?php  
-		    While($selecteddashboard = (mysqli_fetch_array($dashboard_result))
-			  {
-            echo  "<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1">"   .$selecteddashboard['projected_food']. "</td>"
-			  }
-			  ?>
-		   
-
+		<th class="text-left bg-warning2">Proj. Food</th>
+              	<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" placeholder="<? .$selecteddashboard['project_foods']."></td>
+		<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,000" id="pf2"></td>
+             	<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,200" id="pf3"></td>
+              	<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="3,500" id="pf4"></td>
+              	<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,500" id="pf5"></td>
+              	<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="5,000" id="pf6"></td>
+              	<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" value="2,800" id="pf7"></td>
 			    
 			
 			  
