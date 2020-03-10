@@ -1,6 +1,7 @@
-<?php include "navigation.html"; ?>
-<?php session_start(); ?>
 <?php include "../config.php"; ?>
+
+<?php session_start(); ?>
+<?php include "navigation.html"; ?>
 <?php
 if(!isset($_SESSION['user_id'])){
     header("Location: ../index.php");
@@ -12,7 +13,7 @@ if(!isset($_SESSION['user_id'])){
 	(int)$prevpage = $currentpage - 1;
 ?>
 <?php
-mysqli_real_escape_srting($connect);
+$selectValue = mysqli_real_escape_string($connect);
 $dashboard_query = "SELECT * FROM dashboard_data WHERE dashboard_date BETWEEN CONVERT(DATETIME, '2020-02-17') and CONVERT(DATETIME, '2020-02-21')";
 $dashboard_result = mysqli_query($connect, $dashboard_query);
 ?>
