@@ -193,11 +193,11 @@ function toggleDataSeries(e) {
 		    
 	    <?php
 
- 		$dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date BETWEEN DATEADD($ts)";
+ 		/*$dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date BETWEEN DATEADD($ts)";
  		$dashboard_result = mysqli_query($connect, $dashboard_query);
  		$selecteddashboard = mysqli_fetch_array($dashboard_result);
 
-	    echo "<th class="text-left bg-warning2">Proj. Food</th><td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right">".$selecteddashboard['projected_food']."</td><td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td><td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>"
+	    echo "<th class="text-left bg-warning2">Proj. Food</th><td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right">".$selecteddashboard['projected_food']."</td>*/<td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td><td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>"
 		?>
               </tr>
             <tr>
