@@ -195,7 +195,12 @@ function toggleDataSeries(e) {
 	<tbody>   
             <tr>
               <th class="text-left bg-warning2">Proj. Food</th>
-              <td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1"> <?php echo .$selecteddashboard['projected_food']. ?> </td>
+		<?php  
+		    While($selecteddashboard = (mysqli_fetch_array($dashboard_result))
+			  {
+            echo  "<td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right" type="text" id="pf1">"   .$selecteddashboard['projected_food']. "</td>"
+			  }
+			  ?>
 		   
 
 			    
