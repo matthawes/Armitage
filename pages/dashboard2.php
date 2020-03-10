@@ -1,6 +1,6 @@
 <?php include "navigation.html"; ?>
 <?php session_start(); ?>
-<?php include "../config.php"; ?>
+
 <?php
 
 if(!isset($_SESSION['user_id'])){
