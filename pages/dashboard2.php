@@ -12,7 +12,7 @@ if(!isset($_SESSION['user_id'])){
 	(int)$prevpage = $currentpage - 1;
 ?>
 <?php
-$connect;
+mysqli_real_escape_srting($connect);
 $dashboard_query = "SELECT * FROM dashboard_data WHERE dashboard_date BETWEEN CONVERT(DATETIME, '2020-02-17') and CONVERT(DATETIME, '2020-02-21')";
 $dashboard_result = mysqli_query($connect, $dashboard_query);
 ?>
