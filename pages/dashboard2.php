@@ -13,9 +13,9 @@ if(!isset($_SESSION['user_id'])){
 	    (int)$prevpage = $currentpage - 1;
 ?>
 <?php
- $dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST($ts)";
+ /*$dashboard_query = "SELECT projected_food FROM dashboard_data WHERE dashboard_date = CAST($ts)";
  $dashboard_result = mysqli_query($connect, $dashboard_query);
-$selecteddashboard = (mysqli_fetch_array($dashboard_result);
+$selecteddashboard = (mysqli_fetch_array($dashboard_result);*/
 ?>	
 <script type="text/javascript">
 window.onload = function () {
