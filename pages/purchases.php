@@ -43,7 +43,7 @@ if(!isset($_SESSION['user_id'])){
 			.input-container {padding:5px; align: center; width: 25%; margin:auto; display:grid; grid-template-columns: 1fr 1fr 1fr;}
 			.container {overflow:hidden;}
 			#startingCash {border:2px solid #000; margin:0px 0px 5px 5px; background-color:#ffe8b8;}
-			input {width:100%; height:20px;}
+			input {width:100%; height:40px;}
 			.finalDiv {height:25px;}
 			.tallInput {height:30px;}
 			.cashHeader {margin:5px 5px -2px 5px;}
