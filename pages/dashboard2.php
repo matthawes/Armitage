@@ -202,7 +202,7 @@ function toggleDataSeries(e) {
 	   "<th class="text-left bg-warning2">Proj. Food</th><td class="bg-yellow"><input class="form-control1 bg-yellow2 text-right">".$selectdashboard['projected_food']."</td>"
               
               "<td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="25,500.00" id="pft"></td>
-              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>"
+              <td class="bg-white2"><input class="form-control1 bg-white2 text-right" type="text" value="76.8%" id="pfp"></td>";
 			  }
 			  ?>
               </tr>
