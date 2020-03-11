@@ -19,10 +19,10 @@
             $invoice_result = mysqli_query($connect, $invoice_query);
             $selectedInvoice = mysqli_fetch_array($invoice_result);
 
-            $invoice_lines_query = "SELECT invoice.invoice_id, invoice.invoice_number, invoice_line.*, food_item_cost.type
+            $invoice_lines_query = "SELECT invoice.invoice_id, invoice.invoice_number, invoice_line.*, gl_code.gl_code
                     FROM invoice
                     INNER JOIN invoice_line ON invoice_line.invoice_id = invoice.invoice_id
-                    LEFT JOIN food_item_cost ON food_item_cost.food_item_cost_id = invoice_line.food_item_cost_id
+                    LEFT JOIN gl_code ON gl_code.gl_code_id = invoice_line.gl_code_id
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_line_id ASC";
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
     }
@@ -104,13 +104,13 @@
                                 <tr>
                                     <th>Invoice Number</th>
                                     <th>Invoice Line ID</th>
-                                    <th>Type</th>
+                                    <th>GL Code</th>
                                     <th>Amount</th>
                                 </tr>
                             <?php
                                 if ($_SERVER['REQUEST_METHOD']=="POST") {
                                     while ($selectedInvoiceLines = mysqli_fetch_array($invoice_lines_result)){
-                                        echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['type']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
+                                        echo "<tr><td>".$selectedInvoiceLines['invoice_number']."</td><td>".$selectedInvoiceLines['invoice_line_id']."</td><td>".$selectedInvoiceLines['gl_code']."</td><td>".$selectedInvoiceLines['amount']."</td></tr>";
                                     }
                                 }
                             ?>
