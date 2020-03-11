@@ -44,41 +44,41 @@ if(!isset($_SESSION['user_id'])){
                         <?php
                         if(isset($_POST['submit']))
                         {
-				$option = ($_POST['purchases']);
-			}
-		  	if($option == "food")
+				
+			
+		  	if($_POST['purchases' == "food")
 			{
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name 
 			FROM food_item_cost, vendor 
 			LEFT JOIN vendor ON vendor.vendor_id = food_item_cost.vendor_id";
                         $purchase_result = mysqli_query($connect, $foodOption);
                         }
-                        else if($option == alcohol")
+                        else if($_POST['purchases' == alcohol")
                         {
                         $purchaseOption = "SELECT vendor_name FROM vendor";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
-                        /* else if($option == "advertising")
+                        else if($_POST['purchases' == "advertising")
                         {
                         }
-                        else if(($option == "cleaning")
+                        else if($_POST['purchases' == "cleaning")
                         {
                         }
-                        else if(($option == "linen")
+                        else if($_POST['purchases' == "linen")
                         {
                         }
-                        else if(($option == "repair_maint")
+                        else if($_POST['purchases' == "repair_maint")
                         {
                         }
-                        else(($option == "restaurant")
+                        else($_POST['purchases' == "restaurant")
                         {
-                        }; */
-			
+                        };
+			}
                         ?>
 		  <?php
 			<tr>
 				while($selectedPurchase = mysqli_fetch_array($purchase_result)){
-                                        echo "<td>".$selectedPurchase['vendor_name']";
+                                        echo "<td>".$selectedPurchase['vendor_name']"</td>";
                                         }
 			</tr>
 		  ?>
