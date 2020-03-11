@@ -65,7 +65,7 @@
                                         while ($invoiceNum = mysqli_fetch_array($invoiceNum_result)){
                                             echo "<option value='".$invoiceNum[0]."'";
                                             if ($selectValue == $invoiceNum[0]) {echo " selected ";}
-                                            echo ">".$invoiceNum[0]." - ".$invoiceNum[1]."</option>";
+                                            echo ">".$invoiceNum[0]." - ".date_format(date_create_from_format("Y-n-d H:i:s",$invoiceNum[1]),"m/d/Y")."</option>";
                                         }
                                     ?>
                                 </select>
