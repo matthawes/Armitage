@@ -22,7 +22,8 @@
             $invoice_lines_query = "SELECT invoice.invoice_id, invoice.invoice_number, invoice_line.*, gl_code.gl_code
                     FROM invoice
                     INNER JOIN invoice_line ON invoice_line.invoice_id = invoice.invoice_id
-                    LEFT JOIN gl_code ON gl_code.gl_code_id = invoice_line.gl_code_id
+		    LEFT JOIN food_item_cost ON food_item_cost.food_item_cost_id = invoice_line.food_item_cost_id
+                    LEFT JOIN gl_code ON gl_code.gl_code_id = food_item_cost.gl_code_id
                     WHERE invoice_number='".$selectValue."' ORDER BY invoice_line_id ASC";
                     $invoice_lines_result = mysqli_query($connect, $invoice_lines_query);
     }
