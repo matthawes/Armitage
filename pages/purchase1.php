@@ -42,11 +42,10 @@ if(!isset($_SESSION['user_id'])){
 		</div>                        
 		</form>  
                         <?php
-                        if(isset($_POST['submit']))
-                        {
-				
+                        
+			$option = $_POST['purchases'];	
 			
-		  	if($_POST['purchases'] == "food")
+		  	if($option == "food")
 			{
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name 
 			FROM food_item_cost, vendor 
@@ -72,8 +71,8 @@ if(!isset($_SESSION['user_id'])){
                         }
                         else($_POST['purchases'] == "restaurant")
                         {
-                        };
-			}
+                        }
+			
                         ?>
 		  <?php
 			
