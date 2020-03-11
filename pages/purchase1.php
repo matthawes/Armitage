@@ -46,31 +46,31 @@ if(!isset($_SESSION['user_id'])){
                         {
 				
 			
-		  	if($_POST['purchases' == "food")
+		  	if($_POST['purchases'] == "food")
 			{
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name 
 			FROM food_item_cost, vendor 
 			LEFT JOIN vendor ON vendor.vendor_id = food_item_cost.vendor_id";
                         $purchase_result = mysqli_query($connect, $foodOption);
                         }
-                        else if($_POST['purchases' == alcohol")
+                        else if($_POST['purchases'] == alcohol")
                         {
                         $purchaseOption = "SELECT vendor_name FROM vendor";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
-                        else if($_POST['purchases' == "advertising")
+                        else if($_POST['purchases'] == "advertising")
                         {
                         }
-                        else if($_POST['purchases' == "cleaning")
+                        else if($_POST['purchases'] == "cleaning")
                         {
                         }
-                        else if($_POST['purchases' == "linen")
+                        else if($_POST['purchases'] == "linen")
                         {
                         }
-                        else if($_POST['purchases' == "repair_maint")
+                        else if($_POST['purchases'] == "repair_maint")
                         {
                         }
-                        else($_POST['purchases' == "restaurant")
+                        else($_POST['purchases'] == "restaurant")
                         {
                         };
 			}
