@@ -29,23 +29,22 @@ if(!isset($_SESSION['user_id'])){
                  <div class="form-group w-50">                   
                     <select name="purchases" class="form-control" id="exampleFormControlSelect1">                
 			<option value="">Select...</option>
-                        <option value="food">Food Costs</option>
-                        <option value="alcohol">Alcohol Costs</option>
-			<option value="advertising">Advertising</option>
-			<option value="cleaning">Cleaning Supplies</option>
-			<option value="linen">Linen</option>
-			<option value="office">Office Supplies</option>
-			<option value="repair_maint">Repair and Maintenance</option>
-                        <option value="restaurant">Restauraunt Supplies</option>
+                        <option name="food" value="food">Food Costs</option>
+                        <option name="alcohol" value="alcohol">Alcohol Costs</option>
+			<option name="advertising" value="advertising">Advertising</option>
+			<option name='cleaning" value="cleaning">Cleaning Supplies</option>
+			<option name="linen" value="linen">Linen</option>
+			<option name="office" value="office">Office Supplies</option>
+			<option name="repair_maint" value="repair_maint">Repair and Maintenance</option>
+                        <option name="restaurant" value="restaurant">Restauraunt Supplies</option>
                     </select>
                      <input class="btn btn-warning btn-sm" type="submit" name="submit" value="View Purchases">
 		</div>                        
 		</form>  
                         <?php
-                        if(isset($_POST['submit']))
-                        {
-				$option = ($_POST['purchases']);
-			}
+                        
+			$option = $_POST['purchases'];	
+			
 		  	if($option == "food")
 			{
                         $foodOption = "SELECT food_item_cost.*, cost, start_date, vendor_name 
@@ -53,34 +52,34 @@ if(!isset($_SESSION['user_id'])){
 			LEFT JOIN vendor ON vendor.vendor_id = food_item_cost.vendor_id";
                         $purchase_result = mysqli_query($connect, $foodOption);
                         }
-                        else if($option == alcohol")
+                        else if($_POST['purchases'] == "alcohol")
                         {
                         $purchaseOption = "SELECT vendor_name FROM vendor";
                         $purchase_result = mysqli_query($connect, $purchaseOption);
                         }
-                        /* else if($option == "advertising")
+                        else if($_POST['purchases'] == "advertising")
                         {
                         }
-                        else if(($option == "cleaning")
+                        else if($_POST['purchases'] == "cleaning")
                         {
                         }
-                        else if(($option == "linen")
+                        else if($_POST['purchases'] == "linen")
                         {
                         }
-                        else if(($option == "repair_maint")
+                        else if($_POST['purchases'] == "repair_maint")
                         {
                         }
-                        else(($option == "restaurant")
+                        else($_POST['purchases'] == "restaurant")
                         {
-                        }; */
+                        }
 			
                         ?>
 		  <?php
-			<tr>
+			
 				while($selectedPurchase = mysqli_fetch_array($purchase_result)){
-                                        echo "<td>".$selectedPurchase['vendor_name']";
+                                        echo "<tr><td>".$selectedPurchase['date']"</td><td>".$selectedPurchase['vendor_name']"</td><td>".$selectedPurchase['cost']"</td></tr>";
                                         }
-			</tr>
+			
 		  ?>
 		</div>
 	</div>	
